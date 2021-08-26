@@ -1,0 +1,76 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Fonts
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css');
+
+// Vuetify
+@import '~vuetify/dist/vuetify.min.css';
+
+
+
+.titulo2{
+
+    margin-left: 1200px;
+    color: whitesmoke;
+
+}
+
+.imagen{
+    position: relative;
+    margin-left: 590px;
+}
+
+.imagen1{
+    position: absolute;
+    margin-left: 30px;
+    
+}
+
+.principal{
+    color: black;
+    margin-left: 682px;
+}
+
+.paso1{
+    margin-left: 500px;
+
+}
+
+.paso2{
+    margin-left: 500px;
+}
+
+.paso3{
+    margin-left: 500px;
+}
+
+.imagen2{
+    
+    margin-left: 316px;
+}
+
+.imagen3{
+    position: relative;
+    margin-left: 868px;
+    margin-top: -325px;
+
+}
+
+.estudiante{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 908px;
+}
+
+.empresa{
+    position: relative;
+    margin-top: -47px;
+    margin-left: 377px;
+}
