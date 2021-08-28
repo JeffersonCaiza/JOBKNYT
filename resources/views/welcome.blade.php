@@ -53,7 +53,7 @@
                         <div class="p-5">
                             <h2 class="display-4">JOBKNY</h2>
                             <p>JOBKNY es un sistema destinado a ayudar a bachilleres y profesionales que recien culminan sus estudios 
-                                para que puedan por primera vez ingresar al campo laboral busacndo entre varias ofertas laborales que no 
+                                para que puedan por primera vez ingresar al campo laboral buscando entre varias ofertas laborales que no 
                                 requieran experiencia  
                             </p>
                         </div>
@@ -71,7 +71,7 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                             <h2 class="display-4">BACHILLERES Y PROFESIONALES</h2>
-                            <p>Lllena el formulario para que el administrador del sistema cree tu usuario y puedas ingresar al sistema para ver las ofertas laborales</p>
+                            <p>Llena el formulario para que el administrador del sistema cree tu usuario y puedas ingresar al sistema para ver las ofertas laborales</p>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUJt9uGY_fEaUq8Aer7FtxLVnrEuuylux7LFJVPXKuTRLkzw/viewform?usp=sf_link" class="button">Registrate</a>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
                             <h2 class="display-4">EMPRESAS</h2>
-                            <p>Lllena el formulario para que el administrador del sistema cree tu usuario y puedas ingresar al sistema para que puedas publicar tus ofertas laborales</p>
+                            <p>Llena el formulario para que el administrador del sistema cree tu usuario y puedas ingresar al sistema para que puedas publicar tus ofertas laborales</p>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdI91xRtldvSEqwiO9mpqhGarNkrUaY0JR4RfbMpdfIJCP_rA/viewform?usp=sf_link" class="button">Registrate</a>
                         </div>
                     </div>
