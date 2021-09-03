@@ -80,7 +80,7 @@ export default {
                 text: "Perfil",
                 path: "/perfil",
                 icon: mdiAccount,
-                roles: [1, 2, 3]
+                roles: [1, 2]
             },
             {
                 text: "Registrar Usuario",
@@ -89,8 +89,22 @@ export default {
                 roles: [1]
             },
             {
+                text: "perfil empresa",
+                path: "/perfil_empresa",
+                icon: mdiClipboardListOutline,
+                roles: [3],
+               
+            },
+            {
+                text: "Registrar Empresa",
+                path: "/registro_empresa",
+                icon: mdiAccountPlus,
+                roles: [1],
+               
+            },
+            {
                 text: "Ofertas",
-                path: "/oferas_laborales",
+                path: "/ofertas_laborales",
                 icon: mdiAccountGroup,
                 roles: [2]
             },
@@ -106,7 +120,14 @@ export default {
                 icon: mdiClipboardListOutline,
                 roles: [1],
                
-            }
+            },
+            {
+                text: "Usuarios",
+                path: "/usuarios",
+                icon: mdiAccountGroup,
+                roles: [1],
+               
+            },
         ],
         user: App.user,
         show: false

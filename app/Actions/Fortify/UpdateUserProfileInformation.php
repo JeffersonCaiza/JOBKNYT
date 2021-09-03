@@ -25,6 +25,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'DIRECCION' => ['max:255'],
             'TELEFONO' => ['max:255'],
             'CELULAR' => ['max:255'],
+            'ESTADO' => ['max:255'],
             'CODROL' => ['required'],
             'email' => [
                 'required',
@@ -47,6 +48,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'DIRECCION' => $input['DIRECCION'],
                 'TELEFONO' => $input['TELEFONO'],
                 'CELULAR' => $input['CELULAR'],
+                'ESTADO' => $input['ESTADO'],
                 'CODROL' => $input['CODROL'],
                 'email' => $input['email'],
             ])->save();
@@ -68,7 +70,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'DIRECCION' => $input['DIRECCION'],
             'TELEFONO' => $input['TELEFONO'],
             'CELULAR' => $input['CELULAR'],
-            'ESTADO' => 1,
+            'ESTADO' => $input['ESTADO'],
             'CODROL' => $input['CODROL'],
             'email' => $input['email'],
             'email_verified_at' => null,

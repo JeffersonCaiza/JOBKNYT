@@ -12,7 +12,7 @@
                                     <label
                                         for="NOMBRE"
                                         class="col-md-4 col-form-label text-md-right"
-                                        >NombreS</label
+                                        >Nombre Estudiante</label
                                     >
 
                                     <div class="col-md-6">
@@ -41,7 +41,7 @@
                                     <label
                                         for="APELLIDO"
                                         class="col-md-4 col-form-label text-md-right"
-                                        >Cedula/Ruc Empresa</label
+                                        >Cedula</label
                                     >
 
                                     <div class="col-md-6">
@@ -140,6 +140,32 @@
                                             class="text-danger"
                                         >
                                             {{ error.CELULAR }}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class=" row">
+                                    <label
+                                        for="ESTADO"
+                                        class="col-md-4 col-form-label text-md-right"
+                                        >Instruccion</label
+                                    >
+
+                                    <div class="col-md-6">
+                                        <input
+                                            id="ESTADO"
+                                            type="text"
+                                            class="form-control"
+                                            name="ESTADO"
+                                            v-model="user.ESTADO"
+                                            autocomplete="ESTADO"
+                                        />
+
+                                        <span
+                                            v-for="error in errors"
+                                            class="text-danger"
+                                        >
+                                            {{ error.ESTADO }}
                                         </span>
                                     </div>
                                 </div>

@@ -44,12 +44,17 @@ Route::post('estudiantes', [App\Http\Controllers\ControllerEstudiante::class, 's
 Route::put('estudiantes/{id}', [App\Http\Controllers\ControllerEstudiante::class, 'update'])->name('estudiantes')->middleware('auth');
 
 Route::get('ofertas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
-Route::get('oferas_laborales', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('ofertas_laborales', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('/lista_noveles', [App\Http\Controllers\ControllerUsuario::class, 'index'])->name('noveles')->middleware('auth');
+Route::get('usuarios', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('administrador', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('registro_empresa', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('perfil_empresa', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('lista_ofertas', [App\Http\Controllers\ControllerOferta::class, 'index'])->name('ofertas')->middleware('auth');
 Route::post('ofertas', [App\Http\Controllers\ControllerOferta::class, 'store'])->name('ofertas')->middleware('auth');
 Route::put('ofertas/{id}', [App\Http\Controllers\ControllerOferta::class, 'update'])->name('ofertas')->middleware('auth');
 Route::delete('ofertas/{id}', [App\Http\Controllers\ControllerOferta::class, 'destroy'])->name('ofertas')->middleware('auth');
+Route::delete('usuarios/{id}', [App\Http\Controllers\ControllerUsuario::class, 'destroy'])->name('usuarios')->middleware('auth');
 
 
 

@@ -202,7 +202,7 @@ export default {
         { text: "Nombre Empresa", value: "NombreEmpresa" },
         { text: "Titulo Oferta", value: "TituloOferta" },
         { text: "Descripcion Corta de Oferta", value: "DescripcionOferta" },
-        { text: "Link test", value: "LinkTest" },
+        //{ text: "Link test", value: "LinkTest" },
         { text: "Opciones", value: "actions" },
       ],
 
