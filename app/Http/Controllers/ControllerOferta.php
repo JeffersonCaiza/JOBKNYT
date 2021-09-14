@@ -8,6 +8,8 @@ use App\Models\Oferta;
 use App\Http\Resources\Oferta as OfertaResource;
 use App\Http\Resources\OfertaCollection;
 
+
+
 class ControllerOferta extends Controller
 {
     public function index()
@@ -20,8 +22,12 @@ class ControllerOferta extends Controller
     {
         $oferta = new Oferta;
         $oferta->create($request->all());
+
+
     }
 
+   
+   
     public function update(OfertaRequest $request, Oferta $id)
     {
         $id->update($request->all());

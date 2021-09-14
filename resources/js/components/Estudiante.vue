@@ -23,28 +23,169 @@
                                             aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div>
-                                        
+                  <div>
+                    <div class="row">
+                      <label
+                        for="Nombre Empresa"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Empresa</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.NombreEmpresa"
+                          type="text"
+                          class="form-control"
+                          id="Nombre Empresa"
+                          placeholder="Nombre Empresa"
+                        />
+                        <span
+                          class="text-danger"
+                          v-if="errores.NombreEmpresa"
+                          >{{ errores.NombreEmpresa[0] }}</span
+                        >
+                      </div>
+                    </div>
 
-                                        <div class="row">
-                                            <label for="Link Test"
-                                                   class="col-md-4 col-form-label text-md-right">Link Test</label>
-                                            <div class="col-md-6">
-                                                <input v-model="estudiante.LinkTest" type="text" class="form-control"
-                                                       id="Link Test" placeholder="Link Test">
-                                                       <span class="text-danger"
-                                                      v-if="errores.LinkTest">{{ errores.LinkTest[0] }}</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="row">
+                      <label
+                        for="Titulo Oferta"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Titulo</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.TituloOferta"
+                          type="text"
+                          class="form-control"
+                          id="Titulo Oferta"
+                          placeholder="Titulo Oferta"
+                        />
+                        <span class="text-danger" v-if="errores.TituloOferta">{{
+                          errores.TituloOferta[0]
+                        }}</span>
+                      </div>
+                    </div>
 
-                                </div>
-                                <div class="modal-footer">
-                                    <button @click="closeModal();" type="button" class="btn btn-secondary"
+                    
+
+                    <div class="row">
+                      <label
+                        for="Disponibilidad"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Disponibilidad</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.Disponibilidad"
+                          type="text"
+                          class="form-control"
+                          id="Disponibilidad"
+                          placeholder="Disponibilidad"
+                        />
+                        <span
+                          class="text-danger"
+                          v-if="errores.Disponibilidad"
+                          >{{ errores.Disponibilidad[0] }}</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
+                        for="EducacionMinima"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Educacion</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.EducacionMinima"
+                          type="text"
+                          class="form-control"
+                          id="EducacionMinima"
+                          placeholder="Educacion Minima"
+                        />
+                        <span
+                          class="text-danger"
+                          v-if="errores.EducacionMinima"
+                          >{{ errores.EducacionMinima[0] }}</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
+                        for="Edad"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Edad</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.Edad"
+                          type="text"
+                          class="form-control"
+                          id="	Edad"
+                          placeholder="Edad"
+                        />
+                        <span class="text-danger" v-if="errores.Edad">{{
+                          errores.Edad[0]
+                        }}</span>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
+                        for="FechaPubicacion"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Fecha</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.FechaPubicacion"
+                          type="text"
+                          class="form-control"
+                          id="FechaPubicacion"
+                          placeholder="dd/mm/aa"
+                        />
+                        <span
+                          class="text-danger"
+                          v-if="errores.FechaPubicacion"
+                          >{{ errores.FechaPubicacion[0] }}</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
+                        for="Link Test"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Link Test</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.LinkTest"
+                          type="text"
+                          class="form-control"
+                          id="Link Test"
+                          placeholder="Link Test"
+                        />
+                        <span class="text-danger" v-if="errores.LinkTest">{{
+                          errores.LinkTest[0]
+                        }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button @click="closeModal();" type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">
                                         Cerrar
                                     </button>
-                                </div>
+                     
+
+                                
+
+                                    
+                </div>
                             </div>
                         </div>
                     </div>
@@ -91,6 +232,7 @@
                 </template>
             </v-data-table>
         </v-card>
+        
         <div class="text-center pt-2">
             <v-pagination
                 v-model="page"
@@ -99,12 +241,17 @@
                 @input="handlePage"
             ></v-pagination>
         </div>
+
+        <Postulacion></Postulacion>
     </div>
+    
 </template>
 
 
 <script>
+import Postulacion from './Postulacion.vue';
 export default {
+  components: { Postulacion },
     data() {
         return {
             page: 1,
@@ -115,18 +262,22 @@ export default {
                 {text: 'Codigo', value: 'IdOferta',},
                 {text: 'Nombre Empresa', value: 'NombreEmpresa'},
                 {text: 'Titulo Oferta', value: 'TituloOferta'},
-                {text: 'Descripcion Corta de Oferta', value: 'DescripcionOferta'},
-                {text: 'Postulate', value: 'actions'},
+                {text: 'Descripcion Oferta', value: 'DescripcionOferta'},
+                {text: 'Detalles', value: 'actions'},
                
             ],
 
 
             estudiante: {
-                NombreEmpresa: '',
-                TituloOferta: '',
-                DescripcionOferta: '',
-                LinkTest: ''
-            },
+                NombreEmpresa: "",
+                TituloOferta: "",
+                DescripcionOferta: "",
+                Disponibilidad:'',
+                EducacionMinima:'',
+                Edad:'',
+                FechaPubicacion:'',
+                LinkTest: "",
+                },
             id: 0,
             update: true,
             modal: 0,
@@ -178,10 +329,13 @@ export default {
             this.modal = 1;
             if (this.update) {
                 this.id = data.IdOferta,
-                this.titleModal = "Para postularte ingresa al Link";
+                this.titleModal = "Detalles de la oferta";
                 this.estudiante.NombreEmpresa = data.NombreEmpresa;
                 this.estudiante.TituloOferta = data.TituloOferta;
-                this.estudiante.DescripcionOferta = data.DescripcionOferta;
+                this.estudiante.Disponibilidad = data.Disponibilidad;
+                this.estudiante.EducacionMinima = data.EducacionMinima;
+                this.estudiante.Edad = data.Edad;
+                this.estudiante.FechaPubicacion = data.FechaPubicacion;
                 this.estudiante.LinkTest = data.LinkTest;
                 
             } else {

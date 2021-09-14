@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>JOBKNY</title>
+        <title>JOBJC</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="#page-top">JOBKNY</a>
+                <a class="navbar-brand" href="#page-top">JOBJC</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
@@ -32,7 +32,7 @@
         <header class="masthead text-center text-white">
             <div class="masthead-content">
                 <div class="container px-5">
-                    <h1 class="masthead-heading mb-0">JOBKNY</h1>
+                    <h1 class="masthead-heading mb-0">JOBJC</h1>
                     <h2 class="masthead-subheading mb-0">ENCUENTRA TU PRIMER TRABAJO</h2>
                     <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
                 </div>
@@ -51,8 +51,8 @@
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <h2 class="display-4">JOBKNY</h2>
-                            <p>JOBKNY es un sistema destinado a ayudar a bachilleres y profesionales que recien culminan sus estudios 
+                            <h2 class="display-4">JOBJC</h2>
+                            <p>JOBJC es un sistema destinado a ayudar a bachilleres y profesionales que recien culminan sus estudios 
                                 para que puedan por primera vez ingresar al campo laboral buscando entre varias ofertas laborales que no 
                                 requieran experiencia  
                             </p>
@@ -62,6 +62,7 @@
             </div>
         </section>
         <!-- Content section 2-->
+       
         <section>
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
@@ -71,13 +72,21 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                             <h2 class="display-4">BACHILLERES Y PROFESIONALES</h2>
-                            <p>Llena el formulario para que el administrador del sistema cree tu usuario y puedas ingresar al sistema para ver las ofertas laborales</p>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUJt9uGY_fEaUq8Aer7FtxLVnrEuuylux7LFJVPXKuTRLkzw/viewform?usp=sf_link" class="button">Registrate</a>
+                            <p>Registrate como Bachiller o Profesional para acceder a varias ofertas laborales que
+                                no requieren experiencia laboral
+                            </p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div id="app">
+            <h1 align="center">Registrate Como Bachiller o Profesional</h1>
+            <br>
+            <br>
+            <registera></registera>
+        
         <!-- Content section 3-->
         <section>
             <div class="container px-5">
@@ -88,13 +97,29 @@
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
                             <h2 class="display-4">EMPRESAS</h2>
-                            <p>Llena el formulario para que el administrador del sistema cree tu usuario y puedas ingresar al sistema para que puedas publicar tus ofertas laborales</p>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdI91xRtldvSEqwiO9mpqhGarNkrUaY0JR4RfbMpdfIJCP_rA/viewform?usp=sf_link" class="button">Registrate</a>
+                            <p>Registrate como Empresa y publica tus ofertas laborales ayudando a estudiantes bachilleres o profesionales 
+                                a incursionar por primera vez en el campo laboral
+                            </p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <h1 align="center">Registrate Como Empresa</h1>
+        <br>
+        <br>
+        <registero></registero>
+            
+        </div>
+        <script src="{{asset('js/app.js')}}"></script>
+       
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; JOBKNY 2021</p></div>

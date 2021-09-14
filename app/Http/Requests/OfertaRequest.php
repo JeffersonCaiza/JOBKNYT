@@ -27,7 +27,11 @@ class OfertaRequest extends FormRequest
             'NombreEmpresa'=>'required',
             'TituloOferta'=>'required',
             'DescripcionOferta'=>'required',
-            'LinkTest'=>'required'
+            'LinkTest'=>'required',
+            'Disponibilidad'=>'required',
+            'EducacionMinima'=>'required',
+            'Edad'=>'required',
+            'FechaPubicacion'=>'required',
         ];
 
        
@@ -39,7 +43,11 @@ class OfertaRequest extends FormRequest
             'NombreEmpresa.required'=>'Campo Obligatorio',
             'TituloOferta.required'=>'Campo Obligatorio',
             'DescripcionOferta.required'=>'Campo Obligatorio',
-            'LinkTest.required'=>'Campo Obligatorio'
+            'LinkTest.required'=>'Campo Obligatorio',
+            'Disponibilidad'=>'Campo Obligatorio',
+            'EducacionMinima'=>'Campo Obligatorio',
+            'Edad'=>'Campo Obligatorio',
+            'FechaPubicacion'=>'Campo Obligatorio',
         ];
 
        

@@ -88,6 +88,7 @@ export default {
                 icon: mdiAccountPlus,
                 roles: [1]
             },
+            
             {
                 text: "perfil empresa",
                 path: "/perfil_empresa",
@@ -95,13 +96,14 @@ export default {
                 roles: [3],
                
             },
-            {
+              {
                 text: "Registrar Empresa",
                 path: "/registro_empresa",
                 icon: mdiAccountPlus,
                 roles: [1],
                
             },
+            
             {
                 text: "Ofertas",
                 path: "/ofertas_laborales",
@@ -128,6 +130,8 @@ export default {
                 roles: [1],
                
             },
+            
+
         ],
         user: App.user,
         show: false

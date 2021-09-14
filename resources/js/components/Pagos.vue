@@ -72,6 +72,55 @@
                                         </div>
 
                                         <div class="row">
+                                            <label for="Disponibilidad"
+                                                   class="col-md-4 col-form-label text-md-right">Disponibilidad</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.Disponibilidad" type="text" class="form-control"
+                                                       id="Disponibilidad" placeholder="Disponibilidad">
+                                                       <span class="text-danger"
+                                                      v-if="errores.Disponibilidad">{{ errores.Disponibilidad[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="EducacionMinima"
+                                                   class="col-md-4 col-form-label text-md-right">Educacion</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.EducacionMinima" type="text" class="form-control"
+                                                       id="EducacionMinima" placeholder="Educacion Minima">
+                                                       <span class="text-danger"
+                                                      v-if="errores.EducacionMinima">{{ errores.EducacionMinima[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="Edad"
+                                                   class="col-md-4 col-form-label text-md-right">Edad</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.Edad" type="text" class="form-control"
+                                                       id="	Edad" placeholder="Edad">
+                                                       <span class="text-danger"
+                                                      v-if="errores.Edad">{{ errores.Edad[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="FechaPubicacion"
+                                                   class="col-md-4 col-form-label text-md-right">Fecha </label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FechaPubicacion" type="text" class="form-control"
+                                                       id="FechaPubicacion" placeholder="dd/mm/aa">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FechaPubicacion">{{ errores.FechaPubicacion[0] }}</span>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                        <div class="row">
                                             <label for="Link Test"
                                                    class="col-md-4 col-form-label text-md-right">Link Test</label>
                                             <div class="col-md-6">
@@ -81,6 +130,10 @@
                                                       v-if="errores.LinkTest">{{ errores.LinkTest[0] }}</span>
                                             </div>
                                         </div>
+
+                                       
+
+                                        
                                     </div>
 
                                 </div>
@@ -148,6 +201,7 @@
                 @input="handlePage"
             ></v-pagination>
         </div>
+        <Postulaciones></Postulaciones>
     </div>
 </template>
 
@@ -175,7 +229,11 @@ export default {
                 NombreEmpresa: '',
                 TituloOferta: '',
                 DescripcionOferta: '',
-                LinkTest: ''
+                LinkTest: '',
+                Disponibilidad:'',
+                EducacionMinima:'',
+                Edad:'',
+                FechaPubicacion:'',
             },
             id: 0,
             update: true,
@@ -238,8 +296,13 @@ export default {
                 this.titleModal = "Crear Nueva Oferta";
                 this.estudiante.NombreEmpresa = '';
                 this.estudiante.TituloOferta = '';
+                this.estudiante.Disponibilidad = '';
+                this.estudiante.EducacionMinima = '';
+                this.estudiante.Edad = '';
+                this.estudiante.FechaPubicacion = '';
                 this.estudiante.DescripcionOferta = '';
                 this.estudiante.LinkTest = '';
+                
             }
         },
 

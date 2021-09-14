@@ -36,6 +36,10 @@
  import Estudiante from "./components/Estudiante";
  import Articulo from "./components/Articulo";
  import Noveles from "./components/Noveles";
+ import Postulacion from "./components/Postulacion";
+ import PostulacionEmpresa from "./components/PostulacionEmpresa";
+ import RegisterEmpresa from "./components/RegisterEmpresa";
+ import RegisterEstudiante from "./components/RegisterEstudiante";
  
  const router = new vueRouter({
      mode: 'history',
@@ -46,10 +50,11 @@
              component: Perfil
          },
          {
-             path: '/registro',
-             name: 'registro',
-             component: RegisterForm
-         },
+            path : '/registro' ,
+            name : 'registro' ,
+            component : RegisterEstudiante
+        } ,
+        
          {
              path: '/ofertas',
              name: 'ofertas',
@@ -66,10 +71,11 @@
              component: Articulo
          },
          {
-             path: '/registro_empresa',
-             name: 'registro_empresa',
-             component: RegisterFormEmpresa
-         },
+            path : '/registro_empresa' ,
+            name : 'registro_empresa' ,
+            component : RegisterEmpresa
+        } ,
+        
          {
              path: '/perfil_empresa',
              name: 'perfil_empresa',
@@ -80,11 +86,16 @@
              name: 'usuarios',
              component: Noveles
          },
+        
      ]
  })
  
  Vue.component('menu-component', require('./components/MenuComponent.vue').default);
  Vue.component('UpdatePassword', require('./components/UpdatePassword.vue').default);
+ Vue.component('registera', require('./components/RegisterForm.vue').default);
+ Vue.component('registero', require('./components/RegisterFormEmpresa.vue').default);
+ Vue.component('Postulacion', require('./components/Postulacion.vue').default);
+ Vue.component('Postulaciones', require('./components/PostulacionEmpresa.vue').default);
  
  /**
   * Next, we will create a fresh Vue application instance and attach it to

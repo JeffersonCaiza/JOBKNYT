@@ -26,6 +26,7 @@
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
                                 <!--Apellido-->
                                 <div class="row">
@@ -42,6 +43,7 @@
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
                                 <!--Direccion-->
                                 <div class="row">
@@ -59,6 +61,7 @@
 
                                     </div>
                                 </div>
+                                <br>
 
                                 <!--Telefono-->
                                 <div class="row">
@@ -75,6 +78,7 @@
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
                                 <!--Celular-->
                                 <div class=" row">
@@ -91,43 +95,43 @@
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
-                                  <div class=" row">
+                                <div class=" row">
                                     <label for="ESTADO"
-                                           class="col-md-4 col-form-label text-md-right">Instrucccion Empresa</label>
+                                           class="col-md-4 col-form-label text-md-right">Instrucccion</label>
 
                                     <div class="col-md-6">
-                                        <input id="ESTADO" type="text"
-                                               class="form-control" name="ESTADO" v-model="fields.ESTADO"
-                                               autocomplete="ESTADO">
+                                        <input type="radio" id="uno" value="Empresa" v-model="fields.ESTADO">
+                                        <label for="uno">Empresa</label>
+                                        <br>
+                                        
+                                     
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.ESTADO }}
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
-                                 
-
-                                <!--rol-->
-                                <div class="row">
-                                    <label for="CODROL"
+                                  <div class=" row">
+                                    <label for="ROL"
                                            class="col-md-4 col-form-label text-md-right">Rol</label>
+
                                     <div class="col-md-6">
-                                        <select required aria-required="true"
-                                                class="form-control"
-                                                name="CODROL" id="CODROL"
-                                                v-model="fields.CODROL"
-                                        >
-                                            <option value="" disabled selected> seleccione un rol...</option>
-                                            <option v-for="rol in roles" :value="rol.CODROL">{{ rol.NOMBRE }}</option>
-                                        </select>
+                                        <input type="radio" id="uno" value="3" v-model="fields.CODROL">
+                                        <label for="uno">Empresa</label>
+                                        <br>
+                                        
+                                        
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.CODROL }}
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
                                 <!--email-->
                                 <div class="row">
@@ -147,6 +151,7 @@
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
                                 <!--password-->
                                 <div class="row">
@@ -163,6 +168,7 @@
                                     </span>
                                     </div>
                                 </div>
+                                <br>
 
                                 <div class="row">
                                     <label for="password-confirm"
@@ -174,21 +180,19 @@
                                                required autocomplete="new-password">
                                     </div>
                                 </div>
+                                <br>
 
                                 <div class="row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary form-control">
-                                            Registrar Usuario
+                                            Registrar Empresa
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>
-            </div>
-            <!--       Modal Success-->
-            <div>
+                    <div>
                 <v-alert v-if="success===true"
                          id="alertSuccess"
                          name="alertSuccess"
@@ -200,6 +204,10 @@
                     Usuario registrado con exito
                 </v-alert>
             </div>
+                </div>
+            </div>
+            <!--       Modal Success-->
+            
         </div>
     </div>
 </template>

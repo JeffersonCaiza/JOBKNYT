@@ -93,6 +93,92 @@
 
                     <div class="row">
                       <label
+                        for="Disponibilidad"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Disponibilidad</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.Disponibilidad"
+                          type="text"
+                          class="form-control"
+                          id="Disponibilidad"
+                          placeholder="Disponibilidad"
+                        />
+                        <span
+                          class="text-danger"
+                          v-if="errores.Disponibilidad"
+                          >{{ errores.Disponibilidad[0] }}</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
+                        for="EducacionMinima"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Educacion</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.EducacionMinima"
+                          type="text"
+                          class="form-control"
+                          id="EducacionMinima"
+                          placeholder="Educacion Minima"
+                        />
+                        <span
+                          class="text-danger"
+                          v-if="errores.EducacionMinima"
+                          >{{ errores.EducacionMinima[0] }}</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
+                        for="Edad"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Edad</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.Edad"
+                          type="text"
+                          class="form-control"
+                          id="	Edad"
+                          placeholder="Edad"
+                        />
+                        <span class="text-danger" v-if="errores.Edad">{{
+                          errores.Edad[0]
+                        }}</span>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
+                        for="FechaPublicacion"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Fecha</label
+                      >
+                      <div class="col-md-6">
+                        <input
+                          v-model="estudiante.FechaPubicacion"
+                          type="text"
+                          class="form-control"
+                          id="FechaPubicacion"
+                          placeholder="dd/mm/aa"
+                        />
+                        <span
+                          class="text-danger"
+                          v-if="errores.FechaPubicacion"
+                          >{{ errores.FechaPubicacion[0] }}</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label
                         for="Link Test"
                         class="col-md-4 col-form-label text-md-right"
                         >Link Test</label
@@ -144,7 +230,6 @@
           </div>
         </div>
 
-
         <v-spacer></v-spacer>
         <v-text-field
           v-model="search"
@@ -165,13 +250,25 @@
         loading
         loading-text="Cargando... Por favor espere"
         no-results-text="No se encontraron resultados"
-        
       >
         <template v-slot:item.actions="{ item }">
-          <v-icon small class="mr-2" @click="update = true; openModal(item);">
+          <v-icon
+            small
+            class="mr-2"
+            @click="
+              update = true;
+              openModal(item);
+            "
+          >
             mdi-pencil
           </v-icon>
-         <v-icon small  @click="borrar = true; openModal(item);">
+          <v-icon
+            small
+            @click="
+              borrar = true;
+              openModal(item);
+            "
+          >
             mdi-delete
           </v-icon>
         </template>
@@ -203,6 +300,7 @@ export default {
         { text: "Titulo Oferta", value: "TituloOferta" },
         { text: "Descripcion Corta de Oferta", value: "DescripcionOferta" },
         //{ text: "Link test", value: "LinkTest" },
+        { text: "Fecha Publicacion", value: "FechaPubicacion" },
         { text: "Opciones", value: "actions" },
       ],
 
@@ -210,7 +308,12 @@ export default {
         NombreEmpresa: "",
         TituloOferta: "",
         DescripcionOferta: "",
+        Disponibilidad:'',
+        EducacionMinima:'',
+        Edad:'',
+        FechaPubicacion:'',
         LinkTest: "",
+        
       },
       id: 0,
       update: true,
@@ -254,11 +357,11 @@ export default {
     },
 
     async eliminar() {
-        if (this.borrar) {
-          const res = await axios.delete("ofertas/" + this.id, this.estudiante);
-        }
-        this.closeModal();
-        this.list();
+      if (this.borrar) {
+        const res = await axios.delete("ofertas/" + this.id, this.estudiante);
+      }
+      this.closeModal();
+      this.list();
     },
 
     openModal(data = {}) {
@@ -266,10 +369,14 @@ export default {
       this.modal = 1;
       if (this.update) {
         (this.id = data.IdOferta),
-        (this.titleModal = "Edita o elimina la oferta laboral");
+          (this.titleModal = "Edita o elimina la oferta laboral");
         this.estudiante.NombreEmpresa = data.NombreEmpresa;
         this.estudiante.TituloOferta = data.TituloOferta;
         this.estudiante.DescripcionOferta = data.DescripcionOferta;
+        this.estudiante.Disponibilidad = data.Disponibilidad;
+        this.estudiante.EducacionMinima = data.EducacionMinima;
+        this.estudiante.Edad = data.Edad;
+        this.estudiante.FechaPubicacion = data.FechaPubicacion;
         this.estudiante.LinkTest = data.LinkTest;
       } else {
         this.titleModal = "Crear Estudiante";
