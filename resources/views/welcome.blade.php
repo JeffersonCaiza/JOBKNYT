@@ -82,10 +82,26 @@
             </div>
         </section>
         <div id="app">
-            <h1 align="center">Registrate Como Bachiller o Profesional</h1>
+            
             <br>
             <br>
-            <registera></registera>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h1 align="center">REGISTRATE COMO BACHILLER O PROFESIONAL</h1>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <registera></registera>
+                    </div>
+                  </div>
+                </div>
+               
+                
+              </div>
+           
         
         <!-- Content section 3-->
         <section>
@@ -106,10 +122,25 @@
                 </div>
             </div>
         </section>
-        <h1 align="center">Registrate Como Empresa</h1>
-        <br>
-        <br>
-        <registero></registero>
+       
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <h1 align="center">REGISTRATE COMO EMPRESA</h1>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <registero></registero>
+                </div>
+              </div>
+            </div>
+           
+            
+          </div>
+        
             
         </div>
         <script src="{{asset('js/app.js')}}"></script>

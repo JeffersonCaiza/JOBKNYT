@@ -28,6 +28,13 @@ class PostulacionRequest extends FormRequest
             'TITULOOFERTA'=>'required',
             'NOMBRES'=>'required',
             'EMAIL'=>'required',
+            'EDAD'=>'required',
+            'DOMICILIO'=>'required',
+            'TELEFONOS'=>'required',
+            'COLEGIO'=>'required',
+            'TITULOCOLEGIO'=>'required',
+
+
            
         ];
 
@@ -41,6 +48,11 @@ class PostulacionRequest extends FormRequest
             'TITULOOFERTA.required'=>'Campo Obligatorio',
             'NOMBRES.required'=>'Campo Obligatorio',
             'EMAIL.required'=>'Campo Obligatorio',
+            'EDAD.required'=>'Campo Obligatorio',
+            'DOMICILIO.required'=>'Campo Obligatorio',
+            'TELEFONOS.required'=>'Campo Obligatorio',
+            'COLEGIO.required'=>'Campo Obligatorio',
+            'TITULOCOLEGIO.required'=>'Campo Obligatorio',
             
         ];
 

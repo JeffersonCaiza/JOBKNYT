@@ -122,10 +122,10 @@
 
                                         <div class="row">
                                             <label for="Link Test"
-                                                   class="col-md-4 col-form-label text-md-right">Link Test</label>
+                                                   class="col-md-4 col-form-label text-md-right">Correo para envio de curriculum</label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.LinkTest" type="text" class="form-control"
-                                                       id="Link Test" placeholder="Link Test">
+                                                       id="Link Test" placeholder="Correo para envio de curriculum">
                                                        <span class="text-danger"
                                                       v-if="errores.LinkTest">{{ errores.LinkTest[0] }}</span>
                                             </div>
@@ -430,6 +430,10 @@ export default {
         align-items: stretch;
     }
 
+}
+
+.modal-content{
+    width:135%;
 }
 
 .fade-enter-active,

@@ -387,6 +387,10 @@ export default {
   }
 }
 
+.modal-content{
+    width:120%;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;

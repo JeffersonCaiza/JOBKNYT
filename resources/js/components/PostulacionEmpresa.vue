@@ -5,7 +5,7 @@
         <h1 class="text-center">Lista de Postulaciones</h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
-               
+                
                 
             </div>
         </div>
@@ -29,30 +29,11 @@
                                 </div>
                                 <div class="modal-body">
                                     <div>
-                                        <div class="row">
-                                            <label for="NOMBREEMPRESA"
-                                                   class="col-md-4 col-form-label text-md-right">Empresa</label>
-                                            <div class="col-md-6">
-                                                <input v-model="estudiante.NOMBREEMPRESA" type="text" class="form-control"
-                                                       id="NOMBREEMPRESA"
-                                                       placeholder="Nombre Empresa">
-                                                       <span class="text-danger"
-                                                      v-if="errores.NOMBREEMPRESA">{{ errores.NOMBREEMPRESA[0] }}</span>
-                                            </div>
-                                        </div>
+                                        
 
-                                        <div class="row">
-                                            <label for="TITULOOFERTA"
-                                                   class="col-md-4 col-form-label text-md-right">Oferta</label>
-                                            <div class="col-md-6">
-                                                <input v-model="estudiante.TITULOOFERTA" type="text" class="form-control"
-                                                       id="TITULOOFERTA"
-                                                       placeholder="Titulo Oferta">
-                                                       <span class="text-danger"
-                                                      v-if="errores.TITULOOFERTA">{{ errores.TITULOOFERTA[0] }}</span>
-                                               
-                                            </div>
-                                        </div>
+
+                                        <h1 align="left" >Informacion Personal</h1>
+                                         <br>
 
                                         <div class="row">
                                             <label for="NOMBRES"
@@ -68,6 +49,19 @@
                                         </div>
 
                                         <div class="row">
+                                            <label for="EDAD"
+                                                   class="col-md-4 col-form-label text-md-right">Edad</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.EDAD" type="text" class="form-control"
+                                                       id="EDAD"
+                                                       placeholder="Edad">
+                                                       <span class="text-danger"
+                                                      v-if="errores.EDAD">{{ errores.EDAD[0] }}</span>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
                                             <label for="CEDULA"
                                                    class="col-md-4 col-form-label text-md-right">Cedula</label>
                                             <div class="col-md-6">
@@ -75,6 +69,30 @@
                                                        id="CEDULA" placeholder="Cedula">
                                                        <span class="text-danger"
                                                       v-if="errores.CEDULA">{{ errores.CEDULA[0] }}</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <label for="DOMICILIO"
+                                                   class="col-md-4 col-form-label text-md-right">Domicilio</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.DOMICILIO" type="text" class="form-control"
+                                                       id="DOMICILIO" placeholder="Domicilio">
+                                                       <span class="text-danger"
+                                                      v-if="errores.DOMICILIO">{{ errores.DOMICILIO[0] }}</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <label for="TELEFONOS"
+                                                   class="col-md-4 col-form-label text-md-right">Telefonos</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.TELEFONOS" type="text" class="form-control"
+                                                       id="	TELEFONOS" placeholder="Telefonos">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TELEFONOS">{{ errores.TELEFONOS[0] }}</span>
                                             </div>
                                         </div>
 
@@ -88,6 +106,11 @@
                                                       v-if="errores.EMAIL">{{ errores.EMAIL[0] }}</span>
                                             </div>
                                         </div>
+                                        <br>
+                                        <h1 align="left">Formacion Academica</h1>
+                                        <br>
+
+                                        
 
                                         <div class="row">
                                             <label for="COLEGIO"
@@ -118,7 +141,7 @@
 
                                         <div class="row">
                                             <label for="UNIVERSIDAD"
-                                                   class="col-md-4 col-form-label text-md-right">Superior</label>
+                                                   class="col-md-4 col-form-label text-md-right">Universidad</label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.UNIVERSIDAD" type="text" class="form-control"
                                                        id="UNIVERSIDAD" placeholder="Nombre Universidad">
@@ -138,6 +161,327 @@
                                                       v-if="errores.TITULOUNIVERSIDAD">{{ errores.TITULOUNIVERSIDAD[0] }}</span>
                                             </div>
                                         </div>
+                                                      <br>
+
+                                        <h1 align="left">Idiomas</h1>
+                                        <br>
+
+                                                              
+
+                                        <h3 align="left">Idioma A</h3>
+                                        <br>
+
+
+                                        <div class="row">
+                                            <label for="CURSOA"
+                                                   class="col-md-4 col-form-label text-md-right">Idioma</label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.CURSOA">
+                                                <option disabled value="">Seleccione un Idioma</option>
+                                                <option>Ingles</option>
+                                                <option>Frances</option>
+                                                <option>Ruso</option>
+                                                <option>koreano</option>
+                                                <option>Japones</option>
+                                                <option>Chino</option>
+
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.CURSOA">{{ errores.CURSOA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="NIVELA"
+                                                   class="col-md-4 col-form-label text-md-right">Nivel</label>
+                                            <div class="col-md-6">
+
+                                                <select v-model="estudiante.NIVELA">
+                                                <option disabled value="">Seleccione el nivel</option>
+                                                <option>Basico</option>
+                                                <option>Intermedio</option>
+                                                <option>Avanzado</option>
+                                                </select>
+                                                <span class="text-danger"
+                                                      v-if="errores.NIVELA">{{ errores.NIVELA[0] }}</span>
+
+
+
+
+
+                                                
+                                            </div>
+                                        </div>
+
+                                         <h3 align="left">Idioma B</h3>
+                                        <br>
+
+
+                                          <div class="row">
+                                            <label for="CURSOB"
+                                                   class="col-md-4 col-form-label text-md-right">Idioma </label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.CURSOB">
+                                                <option disabled value="">Seleccione un Idioma</option>
+                                                <option>Ingles</option>
+                                                <option>Frances</option>
+                                                <option>Ruso</option>
+                                                <option>koreano</option>
+                                                <option>Japones</option>
+                                                <option>Chino</option>
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.CURSOB">{{ errores.CURSOB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="NIVELB"
+                                                   class="col-md-4 col-form-label text-md-right">Nivel</label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.NIVELB">
+                                                <option disabled value="">Seleccione el nivel</option>
+                                                <option>Basico</option>
+                                                <option>Intermedio</option>
+                                                <option>Avanzado</option>
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.NIVELB">{{ errores.NIVELB[0] }}</span>
+                                            </div>
+                                        </div>
+                                         <br>
+
+
+                                        <h1 align="left">Experiencia laboral</h1>
+                                        <br>
+
+                                         <h3 align="left">Empresa A</h3>
+                                        <br>
+
+
+
+
+
+
+                                         <div class="row">
+                                            <label for="EMPRESAA"
+                                                   class="col-md-4 col-form-label text-md-right">Nombre Empresa</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.EMPRESAA" type="text" class="form-control"
+                                                       id="EMPRESAA" placeholder="Nombre Empresa">
+                                                       <span class="text-danger"
+                                                      v-if="errores.EMPRESAA">{{ errores.EMPRESAA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="FUNCIONA"
+                                                   class="col-md-4 col-form-label text-md-right">Cargo</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FUNCIONA" type="text" class="form-control"
+                                                       id="FUNCIONA" placeholder="Cargo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FUNCIONA">{{ errores.FUNCIONA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="AREAA"
+                                                   class="col-md-4 col-form-label text-md-right">Area de Trabajo</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.AREAA" type="text" class="form-control"
+                                                       id="AREAA" placeholder="Area de Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.AREAA">{{ errores.AREAA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="FECHAA"
+                                                   class="col-md-4 col-form-label text-md-right">Tiempo que Trabajó</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FECHAA" type="text" class="form-control"
+                                                       id="FECHAA" placeholder="Tiempo que Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FECHAA">{{ errores.FECHAA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="TELEFONOA"
+                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.TELEFONOA" type="text" class="form-control"
+                                                       id="	TELEFONOA" placeholder="Telefono">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TELEFONOA">{{ errores.TELEFONOA[0] }}</span>
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                         <h3 align="left">Empresa B</h3>
+                                        <br>
+
+
+
+
+
+                                         <div class="row">
+                                            <label for="EMPRESAB"
+                                                   class="col-md-4 col-form-label text-md-right">Nombre Empresa</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.EMPRESAB" type="text" class="form-control"
+                                                       id="EMPRESAB" placeholder="Nombre Empresa">
+                                                       <span class="text-danger"
+                                                      v-if="errores.EMPRESAB">{{ errores.EMPRESAB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="FUNCIONB"
+                                                   class="col-md-4 col-form-label text-md-right">Cargo</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FUNCIONB" type="text" class="form-control"
+                                                       id="FUNCIONB" placeholder="Cargo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FUNCIONB">{{ errores.FUNCIONB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="AREAB"
+                                                   class="col-md-4 col-form-label text-md-right">Area de Trabajo</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.AREAB" type="text" class="form-control"
+                                                       id="AREAB" placeholder="Area de Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.AREAB">{{ errores.AREAB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="FECHAB"
+                                                   class="col-md-4 col-form-label text-md-right">Tiempo que Trabajó</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FECHAB" type="text" class="form-control"
+                                                       id="FECHAB" placeholder="Tiempo que Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FECHAB">{{ errores.FECHAB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="TELEFONOB"
+                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.TELEFONOB" type="text" class="form-control"
+                                                       id="	TELEFONOB" placeholder="Telefono">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TELEFONOB">{{ errores.TELEFONOB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <br>
+
+                                        <h1 align="left">Referencias Personales</h1>
+                                        <br>
+
+                                        
+
+                                         <h3 align="left">Referencia A</h3>
+                                        <br>
+
+
+
+
+
+
+                                         <div class="row">
+                                            <label for="NOMBREA"
+                                                   class="col-md-4 col-form-label text-md-right">Nombres</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.NOMBREA" type="text" class="form-control"
+                                                       id="	NOMBREA" placeholder="Nombres">
+                                                       <span class="text-danger"
+                                                      v-if="errores.NOMBREA">{{ errores.NOMBREA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="TELEFONORA"
+                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.TELEFONORA" type="text" class="form-control"
+                                                       id="	TELEFONORA" placeholder="Telefono">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TELEFONORA">{{ errores.TELEFONORA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="OCUPACIONA"
+                                                   class="col-md-4 col-form-label text-md-right">Que funcion Realiza</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.OCUPACIONA" type="text" class="form-control"
+                                                       id="OCUPACIONA" placeholder="Que funcion Realiza">
+                                                       <span class="text-danger"
+                                                      v-if="errores.OCUPACIONA">{{ errores.	OCUPACIONA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <br>
+
+                                        
+
+                                         <h3 align="left">Referencia B</h3>
+                                        <br>
+
+
+
+
+
+                                         <div class="row">
+                                            <label for="NOMBREB"
+                                                   class="col-md-4 col-form-label text-md-right">Nombres</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.NOMBREB" type="text" class="form-control"
+                                                       id="	NOMBREB" placeholder="Nombres">
+                                                       <span class="text-danger"
+                                                      v-if="errores.NOMBREB">{{ errores.NOMBREB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="TELEFONORB"
+                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.TELEFONORB" type="text" class="form-control"
+                                                       id="	TELEFONORB" placeholder="Telefono">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TELEFONORB">{{ errores.TELEFONORB[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="OCUPACIONB"
+                                                   class="col-md-4 col-form-label text-md-right">Que funcion Realiza</label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.OCUPACIONB" type="text" class="form-control"
+                                                       id="OCUPACIONB" placeholder="Que funcion Realiza">
+                                                       <span class="text-danger"
+                                                      v-if="errores.OCUPACIONB">{{ errores.	OCUPACIONB[0] }}</span>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
 
                                         
 
@@ -151,7 +495,7 @@
                                         Cerrar
                                     </button>
                                     
-                                   
+                                    
                                 </div>
                             </div>
                         </div>
@@ -252,6 +596,30 @@ export default {
                 TITULOCOLEGIO:'',
                 UNIVERSIDAD:'',
                 TITULOUNIVERSIDAD:'',
+                TELEFONOS:'',
+                EDAD:'',
+                DOMICILIO:'',
+                CURSOA:'',
+                NIVELA:'',
+                CURSOB:'',
+                NIVELB:'',
+                EMPRESAA:'',
+                FUNCIONA:'',
+                AREAA:'',
+                FECHAA:'',
+                TELEFONOA:'',
+                EMPRESAB:'',
+                FUNCIONB:'',
+                AREAB:'',
+                FECHAB:'',
+                TELEFONOB:'',
+                NOMBREA:'',
+                TELEFONORA:'',
+                OCUPACIONA:'',
+                NOMBREB:'',
+                TELEFONORB:'',
+                OCUPACIONB:'',
+
             },
             id: 0,
             update: true,
@@ -316,6 +684,35 @@ export default {
                 this.estudiante.TITULOCOLEGIO = data.TITULOCOLEGIO;
                 this.estudiante.UNIVERSIDAD = data.UNIVERSIDAD;
                 this.estudiante.TITULOUNIVERSIDAD = data.TITULOUNIVERSIDAD;
+                this.estudiante.TELEFONOS = data.TELEFONOS;
+                this.estudiante.EDAD = data.EDAD;
+                this.estudiante.DOMICILIO = data.DOMICILIO;
+                this.estudiante.CURSOA = data.CURSOA;
+                this.estudiante.NIVELA = data.NIVELA;
+                this.estudiante.CURSOB = data.CURSOB;
+                this.estudiante.NIVELB = data.NIVELB;
+                this.estudiante.EMPRESAA = data.EMPRESAA;
+                this.estudiante.FUNCIONA = data.FUNCIONA;
+                this.estudiante.AREAA = data.AREAA;
+                this.estudiante.FECHAA = data.FECHAA;
+                this.estudiante.TELEFONOA = data.TELEFONOA;
+                this.estudiante.EMPRESAB = data.EMPRESAB;
+                this.estudiante.FUNCIONB = data.FUNCIONB;
+                this.estudiante.AREAB = data.AREAB;
+                this.estudiante.FECHAB = data.FECHAB;
+                this.estudiante.TELEFONOB = data.TELEFONOB;
+                this.estudiante.NOMBREA = data.NOMBREA;
+                this.estudiante.TELEFONORA = data.TELEFONORA;
+                this.estudiante.OCUPACIONA = data.OCUPACIONA;
+                this.estudiante.NOMBREB = data.NOMBREB;
+                this.estudiante.TELEFONORB = data.TELEFONORB;
+                this.estudiante.OCUPACIONB = data.OCUPACIONB;
+
+
+
+                
+
+                
                 
             } else {
                
@@ -329,6 +726,29 @@ export default {
                 this.estudiante.TITULOCOLEGIO = '';
                 this.estudiante.UNIVERSIDAD = '';
                 this.estudiante.TITULOUNIVERSIDAD = '';
+                this.estudiante.TELEFONOS = '';
+                this.estudiante.EDAD = '';
+                this.estudiante.DOMICILIO = '';
+                this.estudiante.CURSOA = '';
+                this.estudiante.NIVELA = '';
+                this.estudiante.CURSOB = '';
+                this.estudiante.NIVELB = '';
+                this.estudiante.EMPRESAA = '';
+                this.estudiante.FUNCIONA = '';
+                this.estudiante.AREAA = '';
+                this.estudiante.FECHAA = '';
+                this.estudiante.TELEFONOA = '';
+                this.estudiante.EMPRESAB = '';
+                this.estudiante.FUNCIONB = '';
+                this.estudiante.AREAB = '';
+                this.estudiante.FECHAB = '';
+                this.estudiante.TELEFONOB = '';
+                this.estudiante.NOMBREA = '';
+                this.estudiante.TELEFONORA = '';
+                this.estudiante.OCUPACIONA = '';
+                this.estudiante.NOMBREB = '';
+                this.estudiante.TELEFONORB = '';
+                this.estudiante.OCUPACIONB = '';
 
                 
                 
@@ -462,7 +882,7 @@ export default {
 }
 
 .modal-content{
-    width:110%;
+    width:140%;
 }
 
 
@@ -491,4 +911,7 @@ export default {
     background-color: #e3342f !important;
     border-color: #6c757d;
 }
+
+
+
 </style>
