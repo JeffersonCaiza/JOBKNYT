@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="text-center">Lista de ofertas</h1>
+        <h1 class="text-center"><strong>Lista de ofertas</strong></h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
                
@@ -28,7 +28,7 @@
                       <label
                         for="Nombre Empresa"
                         class="col-md-4 col-form-label text-md-right"
-                        >Empresa</label
+                        ><strong>Empresa</strong></label
                       >
                       <div class="col-md-6">
                         <input
@@ -50,7 +50,7 @@
                       <label
                         for="Titulo Oferta"
                         class="col-md-4 col-form-label text-md-right"
-                        >Titulo</label
+                        ><strong>Titulo</strong></label
                       >
                       <div class="col-md-6">
                         <input
@@ -72,7 +72,7 @@
                       <label
                         for="Disponibilidad"
                         class="col-md-4 col-form-label text-md-right"
-                        >Disponibilidad</label
+                        ><strong>Disponibilidad</strong></label
                       >
                       <div class="col-md-6">
                         <input
@@ -94,7 +94,7 @@
                       <label
                         for="EducacionMinima"
                         class="col-md-4 col-form-label text-md-right"
-                        >Educacion</label
+                        ><strong>Educacion</strong></label
                       >
                       <div class="col-md-6">
                         <input
@@ -116,7 +116,7 @@
                       <label
                         for="Edad"
                         class="col-md-4 col-form-label text-md-right"
-                        >Edad</label
+                        ><strong>Edad</strong></label
                       >
                       <div class="col-md-6">
                         <input
@@ -136,7 +136,7 @@
                       <label
                         for="FechaPubicacion"
                         class="col-md-4 col-form-label text-md-right"
-                        >Fecha</label
+                        ><strong>Fecha</strong></label
                       >
                       <div class="col-md-6">
                         <input
@@ -158,7 +158,7 @@
                       <label
                         for="Link Test"
                         class="col-md-4 col-form-label text-md-right"
-                        >Envia tu curriculum y postulate </label
+                        ><strong>Envia tu curriculum y postulate</strong> </label
                       >
                       <div class="col-md-6">
                         <input
@@ -475,6 +475,7 @@ export default {
 
 .modal-content{
     width:135%;
+    background: darkred;
 }
 
 .fade-enter-active,

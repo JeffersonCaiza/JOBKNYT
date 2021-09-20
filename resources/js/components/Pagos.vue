@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <h1 class="text-center">Lista de Ofertas</h1>
+        <h1 class="text-center"><strong>Lista de Ofertas</strong></h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
                 <v-btn @click="update=false; openModal();" class="btn-blue">
@@ -35,7 +35,7 @@
                                     <div>
                                         <div class="row">
                                             <label for="Nombre Empresa"
-                                                   class="col-md-4 col-form-label text-md-right">Empresa</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.NombreEmpresa" type="text" class="form-control"
                                                        id="Nombre Empresa"
@@ -47,7 +47,7 @@
 
                                         <div class="row">
                                             <label for="Titulo Oferta"
-                                                   class="col-md-4 col-form-label text-md-right">Titulo</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Titulo</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TituloOferta" type="text" class="form-control"
                                                        id="Titulo Oferta"
@@ -58,22 +58,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
-                                            <label for="Descripcion Oferta"
-                                                   class="col-md-4 col-form-label text-md-right">Descripcion</label>
-                                            <div class="col-md-6">
-                                                <input v-model="estudiante.DescripcionOferta" type="text" class="form-control"
-                                                       id="Descripcion Oferta"
-                                                       placeholder="Descripcion Oferta">
-                                                       <span class="text-danger"
-                                                      v-if="errores.DescripcionOferta">{{ errores.DescripcionOferta[0] }}</span>
-                                                
-                                            </div>
-                                        </div>
+                                      
 
                                         <div class="row">
                                             <label for="Disponibilidad"
-                                                   class="col-md-4 col-form-label text-md-right">Disponibilidad</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Disponibilidad</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.Disponibilidad" type="text" class="form-control"
                                                        id="Disponibilidad" placeholder="Disponibilidad">
@@ -84,7 +73,7 @@
 
                                          <div class="row">
                                             <label for="EducacionMinima"
-                                                   class="col-md-4 col-form-label text-md-right">Educacion</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Educacion</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.EducacionMinima" type="text" class="form-control"
                                                        id="EducacionMinima" placeholder="Educacion Minima">
@@ -95,7 +84,7 @@
 
                                         <div class="row">
                                             <label for="Edad"
-                                                   class="col-md-4 col-form-label text-md-right">Edad</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Edad</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.Edad" type="text" class="form-control"
                                                        id="	Edad" placeholder="Edad">
@@ -104,9 +93,30 @@
                                             </div>
                                         </div>
 
+                                          <div class="row">
+                                            <label for="Descripcion Oferta"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Descripcion</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+                                                      
+                                                      <v-textarea
+                                                      v-model="estudiante.DescripcionOferta" type="text" 
+                                                      clearable
+                                                      clear-icon="mdi-close-circle"
+                                                      label="Descripcion"
+                                                      value="This is clearable text."
+                                                     ></v-textarea>
+                                                    
+                                                       <span class="text-danger"
+                                                      v-if="errores.DescripcionOferta">{{ errores.DescripcionOferta[0] }}</span>
+                                                    
+                                            </div>
+                                        </div>
+
                                         <div class="row">
                                             <label for="FechaPubicacion"
-                                                   class="col-md-4 col-form-label text-md-right">Fecha </label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Fecha de publicacion</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.FechaPubicacion" type="text" class="form-control"
                                                        id="FechaPubicacion" placeholder="dd/mm/aa">
@@ -122,7 +132,7 @@
 
                                         <div class="row">
                                             <label for="Link Test"
-                                                   class="col-md-4 col-form-label text-md-right">Correo para envio de curriculum</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Correo para envio de curriculum</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.LinkTest" type="text" class="form-control"
                                                        id="Link Test" placeholder="Correo para envio de curriculum">
@@ -432,9 +442,14 @@ export default {
 
 }
 
+
+
 .modal-content{
     width:135%;
+    background: darkred;
 }
+
+
 
 .fade-enter-active,
 .fade-leave-active {

@@ -2,7 +2,7 @@
 
 
     <div>
-        <h1 class="text-center">Lista de Postulaciones</h1>
+        <h1 class="text-center"><strong>Lista de Postulaciones</strong></h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
                 
@@ -30,14 +30,41 @@
                                 <div class="modal-body">
                                     <div>
                                         
+                                        <h1 align="left"><strong>Informacion de Oferta</strong></h1>
+                                        <br>
+                                        <div class="row">
+                                            <label for="NOMBREEMPRESA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.NOMBREEMPRESA" type="text" class="form-control"
+                                                       id="NOMBREEMPRESA"
+                                                       placeholder="Nombre Empresa">
+                                                       <span class="text-danger"
+                                                      v-if="errores.NOMBREEMPRESA">{{ errores.NOMBREEMPRESA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="TITULOOFERTA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Oferta</strong></label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.TITULOOFERTA" type="text" class="form-control"
+                                                       id="TITULOOFERTA"
+                                                       placeholder="Titulo Oferta">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TITULOOFERTA">{{ errores.TITULOOFERTA[0] }}</span>
+                                               
+                                            </div>
+                                        </div>
+                                         <br>
 
 
-                                        <h1 align="left" >Informacion Personal</h1>
+                                        <h1 align="left" ><strong>Informacion Personal</strong></h1>
                                          <br>
 
                                         <div class="row">
                                             <label for="NOMBRES"
-                                                   class="col-md-4 col-form-label text-md-right">Nombres</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombres</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.NOMBRES" type="text" class="form-control"
                                                        id="NOMBRES"
@@ -50,7 +77,7 @@
 
                                         <div class="row">
                                             <label for="EDAD"
-                                                   class="col-md-4 col-form-label text-md-right">Edad</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Edad</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.EDAD" type="text" class="form-control"
                                                        id="EDAD"
@@ -63,7 +90,7 @@
 
                                         <div class="row">
                                             <label for="CEDULA"
-                                                   class="col-md-4 col-form-label text-md-right">Cedula</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Cedula</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.CEDULA" type="text" class="form-control"
                                                        id="CEDULA" placeholder="Cedula">
@@ -75,7 +102,7 @@
 
                                         <div class="row">
                                             <label for="DOMICILIO"
-                                                   class="col-md-4 col-form-label text-md-right">Domicilio</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Domicilio</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.DOMICILIO" type="text" class="form-control"
                                                        id="DOMICILIO" placeholder="Domicilio">
@@ -87,7 +114,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONOS"
-                                                   class="col-md-4 col-form-label text-md-right">Telefonos</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefonos</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOS" type="text" class="form-control"
                                                        id="	TELEFONOS" placeholder="Telefonos">
@@ -98,7 +125,7 @@
 
                                          <div class="row">
                                             <label for="EMAIL"
-                                                   class="col-md-4 col-form-label text-md-right">Email</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Email</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.EMAIL" type="text" class="form-control"
                                                        id="EMAIL" placeholder="Email">
@@ -107,14 +134,14 @@
                                             </div>
                                         </div>
                                         <br>
-                                        <h1 align="left">Formacion Academica</h1>
+                                        <h1 align="left"><strong>Formacion Academica</strong></h1>
                                         <br>
 
                                         
 
                                         <div class="row">
                                             <label for="COLEGIO"
-                                                   class="col-md-4 col-form-label text-md-right">Colegio</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Colegio</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.COLEGIO" type="text" class="form-control"
                                                        id="COLEGIO" placeholder="Nombre Colegio">
@@ -125,7 +152,7 @@
 
                                         <div class="row">
                                             <label for="TITULOCOLEGIO"
-                                                   class="col-md-4 col-form-label text-md-right">Titulo</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Titulo</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TITULOCOLEGIO" type="text" class="form-control"
                                                        id="TITULOCOLEGIO" placeholder="Titulo Colegio">
@@ -141,7 +168,7 @@
 
                                         <div class="row">
                                             <label for="UNIVERSIDAD"
-                                                   class="col-md-4 col-form-label text-md-right">Universidad</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Universidad</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.UNIVERSIDAD" type="text" class="form-control"
                                                        id="UNIVERSIDAD" placeholder="Nombre Universidad">
@@ -153,7 +180,7 @@
 
                                          <div class="row">
                                             <label for="TITULOUNIVERSIDAD"
-                                                   class="col-md-4 col-form-label text-md-right">Titulo</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Titulo</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TITULOUNIVERSIDAD" type="text" class="form-control"
                                                        id="TITULOUNIVERSIDAD" placeholder="Titulo Universidad">
@@ -163,18 +190,18 @@
                                         </div>
                                                       <br>
 
-                                        <h1 align="left">Idiomas</h1>
+                                        <h1 align="left"><strong>Idiomas</strong></h1>
                                         <br>
 
                                                               
 
-                                        <h3 align="left">Idioma A</h3>
+                                        <h3 align="left"><strong>Idioma A</strong></h3>
                                         <br>
 
 
                                         <div class="row">
                                             <label for="CURSOA"
-                                                   class="col-md-4 col-form-label text-md-right">Idioma</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Idioma</strong></label>
                                             <div class="col-md-6">
                                                 <select v-model="estudiante.CURSOA">
                                                 <option disabled value="">Seleccione un Idioma</option>
@@ -193,7 +220,7 @@
 
                                         <div class="row">
                                             <label for="NIVELA"
-                                                   class="col-md-4 col-form-label text-md-right">Nivel</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nivel</strong></label>
                                             <div class="col-md-6">
 
                                                 <select v-model="estudiante.NIVELA">
@@ -213,13 +240,13 @@
                                             </div>
                                         </div>
 
-                                         <h3 align="left">Idioma B</h3>
+                                         <h3 align="left"><strong>Idioma B</strong></h3>
                                         <br>
 
 
                                           <div class="row">
                                             <label for="CURSOB"
-                                                   class="col-md-4 col-form-label text-md-right">Idioma </label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Idioma</strong> </label>
                                             <div class="col-md-6">
                                                 <select v-model="estudiante.CURSOB">
                                                 <option disabled value="">Seleccione un Idioma</option>
@@ -237,7 +264,7 @@
 
                                         <div class="row">
                                             <label for="NIVELB"
-                                                   class="col-md-4 col-form-label text-md-right">Nivel</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nivel</strong></label>
                                             <div class="col-md-6">
                                                 <select v-model="estudiante.NIVELB">
                                                 <option disabled value="">Seleccione el nivel</option>
@@ -252,10 +279,10 @@
                                          <br>
 
 
-                                        <h1 align="left">Experiencia laboral</h1>
+                                        <h1 align="left"><strong>Experiencia laboral</strong></h1>
                                         <br>
 
-                                         <h3 align="left">Empresa A</h3>
+                                         <h3 align="left"><strong>Empresa A</strong></h3>
                                         <br>
 
 
@@ -265,7 +292,7 @@
 
                                          <div class="row">
                                             <label for="EMPRESAA"
-                                                   class="col-md-4 col-form-label text-md-right">Nombre Empresa</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre Empresa</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.EMPRESAA" type="text" class="form-control"
                                                        id="EMPRESAA" placeholder="Nombre Empresa">
@@ -276,7 +303,7 @@
 
                                          <div class="row">
                                             <label for="FUNCIONA"
-                                                   class="col-md-4 col-form-label text-md-right">Cargo</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Cargo</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.FUNCIONA" type="text" class="form-control"
                                                        id="FUNCIONA" placeholder="Cargo">
@@ -287,7 +314,7 @@
 
                                          <div class="row">
                                             <label for="AREAA"
-                                                   class="col-md-4 col-form-label text-md-right">Area de Trabajo</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Area de Trabajo</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.AREAA" type="text" class="form-control"
                                                        id="AREAA" placeholder="Area de Trabajo">
@@ -298,7 +325,7 @@
 
                                         <div class="row">
                                             <label for="FECHAA"
-                                                   class="col-md-4 col-form-label text-md-right">Tiempo que Trabajó</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Tiempo que Trabajó</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.FECHAA" type="text" class="form-control"
                                                        id="FECHAA" placeholder="Tiempo que Trabajo">
@@ -309,7 +336,7 @@
 
                                          <div class="row">
                                             <label for="TELEFONOA"
-                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOA" type="text" class="form-control"
                                                        id="	TELEFONOA" placeholder="Telefono">
@@ -319,7 +346,7 @@
                                         </div>
                                         <br>
 
-                                         <h3 align="left">Empresa B</h3>
+                                         <h3 align="left"><strong>Empresa B</strong></h3>
                                         <br>
 
 
@@ -328,7 +355,7 @@
 
                                          <div class="row">
                                             <label for="EMPRESAB"
-                                                   class="col-md-4 col-form-label text-md-right">Nombre Empresa</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre Empresa</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.EMPRESAB" type="text" class="form-control"
                                                        id="EMPRESAB" placeholder="Nombre Empresa">
@@ -339,7 +366,7 @@
 
                                          <div class="row">
                                             <label for="FUNCIONB"
-                                                   class="col-md-4 col-form-label text-md-right">Cargo</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Cargo</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.FUNCIONB" type="text" class="form-control"
                                                        id="FUNCIONB" placeholder="Cargo">
@@ -350,7 +377,7 @@
 
                                          <div class="row">
                                             <label for="AREAB"
-                                                   class="col-md-4 col-form-label text-md-right">Area de Trabajo</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Area de Trabajo</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.AREAB" type="text" class="form-control"
                                                        id="AREAB" placeholder="Area de Trabajo">
@@ -361,7 +388,7 @@
 
                                         <div class="row">
                                             <label for="FECHAB"
-                                                   class="col-md-4 col-form-label text-md-right">Tiempo que Trabajó</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Tiempo que Trabajó</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.FECHAB" type="text" class="form-control"
                                                        id="FECHAB" placeholder="Tiempo que Trabajo">
@@ -372,7 +399,7 @@
 
                                          <div class="row">
                                             <label for="TELEFONOB"
-                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOB" type="text" class="form-control"
                                                        id="	TELEFONOB" placeholder="Telefono">
@@ -383,12 +410,12 @@
 
                                          <br>
 
-                                        <h1 align="left">Referencias Personales</h1>
+                                        <h1 align="left"><strong>Referencias Personales</strong></h1>
                                         <br>
 
                                         
 
-                                         <h3 align="left">Referencia A</h3>
+                                         <h3 align="left"><strong>Referencia A</strong></h3>
                                         <br>
 
 
@@ -398,7 +425,7 @@
 
                                          <div class="row">
                                             <label for="NOMBREA"
-                                                   class="col-md-4 col-form-label text-md-right">Nombres</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombres</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.NOMBREA" type="text" class="form-control"
                                                        id="	NOMBREA" placeholder="Nombres">
@@ -409,7 +436,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONORA"
-                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORA" type="text" class="form-control"
                                                        id="	TELEFONORA" placeholder="Telefono">
@@ -420,7 +447,7 @@
 
                                         <div class="row">
                                             <label for="OCUPACIONA"
-                                                   class="col-md-4 col-form-label text-md-right">Que funcion Realiza</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Que funcion Realiza</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.OCUPACIONA" type="text" class="form-control"
                                                        id="OCUPACIONA" placeholder="Que funcion Realiza">
@@ -433,7 +460,7 @@
 
                                         
 
-                                         <h3 align="left">Referencia B</h3>
+                                         <h3 align="left"><strong>Referencia B</strong></h3>
                                         <br>
 
 
@@ -442,7 +469,7 @@
 
                                          <div class="row">
                                             <label for="NOMBREB"
-                                                   class="col-md-4 col-form-label text-md-right">Nombres</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombres</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.NOMBREB" type="text" class="form-control"
                                                        id="	NOMBREB" placeholder="Nombres">
@@ -453,7 +480,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONORB"
-                                                   class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORB" type="text" class="form-control"
                                                        id="	TELEFONORB" placeholder="Telefono">
@@ -464,7 +491,7 @@
 
                                         <div class="row">
                                             <label for="OCUPACIONB"
-                                                   class="col-md-4 col-form-label text-md-right">Que funcion Realiza</label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Que funcion Realiza</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.OCUPACIONB" type="text" class="form-control"
                                                        id="OCUPACIONB" placeholder="Que funcion Realiza">
@@ -883,6 +910,8 @@ export default {
 
 .modal-content{
     width:140%;
+    background: darkred;
+   
 }
 
 
@@ -912,6 +941,11 @@ export default {
     border-color: #6c757d;
 }
 
-
+select {
+  word-wrap: normal;
+  background: crimson;
+  border-radius: 6px;
+  -webkit-appearance: revert;
+}
 
 </style>
