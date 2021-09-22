@@ -32,10 +32,14 @@
  import PerfilEmpresa from './components/PerfilEmpresa.vue'
  import RegisterForm from "./components/RegisterForm";
  import RegisterFormEmpresa from "./components/RegisterFormEmpresa.vue";
- import Pagos from "./components/Pagos";
- import Estudiante from "./components/Estudiante";
- import Articulo from "./components/Articulo";
+ 
  import Noveles from "./components/Noveles";
+ 
+ import Administrador from "./components/Administrador";
+ import Bachilleres from "./components/Bachilleres";
+ import Empresa from "./components/Empresa";
+
+
  import Postulacion from "./components/Postulacion";
  import PostulacionEmpresa from "./components/PostulacionEmpresa";
  import RegisterEmpresa from "./components/RegisterEmpresa";
@@ -58,17 +62,17 @@
          {
              path: '/ofertas',
              name: 'ofertas',
-             component: Pagos
+             component: Empresa
          },
          {
              path: '/ofertas_laborales',
-             name: 'estudiante',
-             component: Estudiante
+             name: 'bachilleres',
+             component: Bachilleres
          },
          {
              path: '/administrador',
-             name: 'articulo',
-             component: Articulo
+             name: 'administrador',
+             component: Administrador
          },
          {
             path : '/registro_empresa' ,
