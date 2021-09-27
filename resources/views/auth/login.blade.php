@@ -56,6 +56,19 @@
           </div>
         </div>
       </form>
+      <div class="row">
+        <div class="col-6">
+            @if (Route::has('password.request'))
+                <a href="{{ route('password.request') }}" class="">
+                    <strong>{{ __('Olvidaste tu contraseña?') }}</strong>
+                </a>
+            @endif
+        </div>
+        <div class="col-6 text-right">
+            <a href="{{ route('register') }}" class="">
+                <strong>{{ __('Crea una nueva cuenta') }}</strong>
+            </a>
+        </div>
     
     </div>
   </div>

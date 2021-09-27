@@ -90,6 +90,16 @@
              name: 'usuarios',
              component: Noveles
          },
+         {
+            path: '/Registrar_Novel',
+            name: 'registrar_novel',
+            component: RegisterForm
+        },
+        {
+            path: '/Registrar_Empresa',
+            name: 'registrar_empresa',
+            component: RegisterFormEmpresa
+        },
         
      ]
  })

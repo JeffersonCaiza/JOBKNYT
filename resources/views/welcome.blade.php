@@ -24,7 +24,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Registrate</a></li>
+                        
                     </ul>
+                    
                 </div>
             </div>
         </nav>
@@ -34,7 +37,7 @@
                 <div class="container px-5">
                     <h1 class="masthead-heading mb-0">JOBJC</h1>
                     <h2 class="masthead-subheading mb-0">ENCUENTRA TU PRIMER TRABAJO</h2>
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Aprende mas</a>
                 </div>
             </div>
             <div class="bg-circle-1 bg-circle"></div>
@@ -81,26 +84,11 @@
                 </div>
             </div>
         </section>
-        <div id="app">
+       
             
             <br>
             <br>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <h1 align="center">REGISTRATE COMO BACHILLER O PROFESIONAL</h1>
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <registera></registera>
-                    </div>
-                  </div>
-                </div>
-               
-                
-              </div>
+            
            
         
         <!-- Content section 3-->
@@ -124,26 +112,11 @@
         </section>
        
 
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <h1 align="center">REGISTRATE COMO EMPRESA</h1>
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <registero></registero>
-                </div>
-              </div>
-            </div>
-           
-            
-          </div>
+        
         
             
-        </div>
-        <script src="{{asset('js/app.js')}}"></script>
+       
+        
        
         
         <br>

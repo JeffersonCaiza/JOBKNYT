@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Registro de Empresa</div>
+                    <div class="card-header"><strong>Registro de Empresa</strong></div>
 
                     <div class="card-body">
 
@@ -14,7 +14,7 @@
                                 <!--Nombre-->
                                 <div class="row">
                                     <label for="NOMBRE"
-                                           class="col-md-4 col-form-label text-md-right">Nombre de la empresa</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Nombre de la empresa</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="NOMBRE" type="text"
@@ -26,10 +26,10 @@
                                     </span>
                                     </div>
                                 </div>
-                                <br>
+                                
 
                                 <!--Apellido-->
-                                <div class="row">
+                                <!--<div class="row">
                                     <label for="APELLIDO"
                                            class="col-md-4 col-form-label text-md-right">Ruc Empresa</label>
 
@@ -42,18 +42,18 @@
                                         {{ error.APELLIDO }}
                                     </span>
                                     </div>
-                                </div>
+                                </div>-->
                                 <br>
 
                                 <!--Direccion-->
                                 <div class="row">
                                     <label for="DIRECCION"
-                                           class="col-md-4 col-form-label text-md-right">Dirección</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Dirección</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="DIRECCION" type="text"
                                                class="form-control" name="DIRECCION" v-model="fields.DIRECCION"
-                                               autocomplete="DIRECCION">
+                                               required autocomplete="DIRECCION" autofocus>
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.DIRECCION }}
@@ -66,12 +66,12 @@
                                 <!--Telefono-->
                                 <div class="row">
                                     <label for="TELEFONO"
-                                           class="col-md-4 col-form-label text-md-right">Teléfono</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Teléfono</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="TELEFONO" type="text"
                                                class="form-control" name="TELEFONO" v-model="fields.TELEFONO"
-                                               autocomplete="TELEFONO">
+                                               required autocomplete="TELEFONO" autofocus >
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.TELEFONO }}
@@ -83,12 +83,12 @@
                                 <!--Celular-->
                                 <div class=" row">
                                     <label for="CELULAR"
-                                           class="col-md-4 col-form-label text-md-right">Celular</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="CELULAR" type="text"
                                                class="form-control" name="CELULAR" v-model="fields.CELULAR"
-                                               autocomplete="CELULAR">
+                                               required autocomplete="CELULAR" autofocus>
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.CELULAR }}
@@ -97,7 +97,7 @@
                                 </div>
                                 <br>
 
-                                <div class=" row">
+                                <!--<div class=" row">
                                     <label for="ESTADO"
                                            class="col-md-4 col-form-label text-md-right">Instrucccion</label>
 
@@ -112,16 +112,16 @@
                                         {{ error.ESTADO }}
                                     </span>
                                     </div>
-                                </div>
-                                <br>
+                                </div>-->
+                                
 
                                   <div class=" row">
                                     <label for="ROL"
-                                           class="col-md-4 col-form-label text-md-right">Rol</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Rol</strong></label>
 
                                     <div class="col-md-6">
                                         <input type="radio" id="uno" value="3" v-model="fields.CODROL">
-                                        <label for="uno">Empresa</label>
+                                        <label for="uno"><strong>Empresa</strong></label>
                                         <br>
                                         
                                         
@@ -137,7 +137,7 @@
                                 <div class="row">
                                     <label for="email"
                                            class="col-md-4 col-form-label text-md-right">
-                                        Correo
+                                        <strong>Correo</strong>
                                     </label>
 
                                     <div class="col-md-6">
@@ -156,7 +156,7 @@
                                 <!--password-->
                                 <div class="row">
                                     <label for="password"
-                                           class="col-md-4 col-form-label text-md-right">Contraseña</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Contraseña</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="password" type="password"
@@ -172,7 +172,7 @@
 
                                 <div class="row">
                                     <label for="password-confirm"
-                                           class="col-md-4 col-form-label text-md-right">Confirmar Contraseña</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Confirmar Contraseña</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="password-confirm" type="password" class="form-control"
@@ -260,5 +260,13 @@ export default {
     position: absolute;
     bottom: 0%;
     right: 0%;
+}
+
+.container{
+    width: 106%;
+}
+
+.card{
+    background: steelblue;
 }
 </style>

@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Registro de Bachiller o Profesional</div>
+                    <div class="card-header"><strong>Registro de Bachiller o Profesional</strong></div>
 
                     <div class="card-body">
 
@@ -14,7 +14,7 @@
                                 <!--Nombre-->
                                 <div class="row">
                                     <label for="NOMBRE"
-                                           class="col-md-4 col-form-label text-md-right">Nombre Estudiante</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Nombre Estudiante</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="NOMBRE" type="text"
@@ -29,31 +29,31 @@
                                 <br>
 
                                 <!--Apellido-->
-                                <div class="row">
+                                <!--<div class="row">
                                     <label for="APELLIDO"
                                            class="col-md-4 col-form-label text-md-right">Cedula</label>
 
                                     <div class="col-md-6">
-                                        <input id="APELLIDO" type="text"
+                                        <input id="APELLIDO" type="number" maxlength="12"
                                                class="form-control" name="APELLIDO" v-model="fields.APELLIDO"
-                                               autocomplete="APELLIDO">
+                                               required autocomplete="APELLIDO" autofocus>
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.APELLIDO }}
                                     </span>
                                     </div>
-                                </div>
-                                 <br>
+                                </div>-->
+                                 
 
                                 <!--Direccion-->
                                 <div class="row">
                                     <label for="DIRECCION"
-                                           class="col-md-4 col-form-label text-md-right">Dirección</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Dirección</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="DIRECCION" type="text"
                                                class="form-control" name="DIRECCION" v-model="fields.DIRECCION"
-                                               autocomplete="DIRECCION">
+                                               required autocomplete="DIRECCION" autofocus>
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.DIRECCION }}
@@ -66,12 +66,12 @@
                                 <!--Telefono-->
                                 <div class="row">
                                     <label for="TELEFONO"
-                                           class="col-md-4 col-form-label text-md-right">Teléfono</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Teléfono</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="TELEFONO" type="text"
                                                class="form-control" name="TELEFONO" v-model="fields.TELEFONO"
-                                               autocomplete="TELEFONO">
+                                               required autocomplete="TELEFONO" autofocus>
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.TELEFONO }}
@@ -83,21 +83,21 @@
                                 <!--Celular-->
                                 <div class=" row">
                                     <label for="CELULAR"
-                                           class="col-md-4 col-form-label text-md-right">Celular</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="CELULAR" type="text"
                                                class="form-control" name="CELULAR" v-model="fields.CELULAR"
-                                               autocomplete="CELULAR">
+                                               required autocomplete="CELULAR" autofocus>
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error.CELULAR }}
                                     </span>
                                     </div>
                                 </div>
-                                 <br>
+                                 
 
-                                 <div class=" row">
+                                 <!--<div class=" row">
                                     <label for="ESTADO"
                                            class="col-md-4 col-form-label text-md-right">Instrucccion</label>
 
@@ -114,17 +114,18 @@
                                         {{ error.ESTADO }}
                                     </span>
                                     </div>
-                                </div>
+                                </div>-->
+                                 
                                  <br>
 
                                   <div class=" row">
                                     <label for="ROL"
-                                           class="col-md-4 col-form-label text-md-right">Rol</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Rol</strong></label>
 
                                     <div class="col-md-6">
                                         
                                         <input type="radio" id="Dos" value="2" v-model="fields.CODROL">
-                                        <label for="Dos">Bachiller o Profesional</label>
+                                        <label for="Dos"><strong>Bachiller/Profesional</strong></label>
                                         <br>
                                         
 
@@ -149,7 +150,7 @@
                                 <div class="row">
                                     <label for="email"
                                            class="col-md-4 col-form-label text-md-right">
-                                        Correo
+                                        <strong>Correo</strong>
                                     </label>
 
                                     <div class="col-md-6">
@@ -168,7 +169,7 @@
                                 <!--password-->
                                 <div class="row">
                                     <label for="password"
-                                           class="col-md-4 col-form-label text-md-right">Contraseña</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Contraseña</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="password" type="password"
@@ -184,7 +185,7 @@
 
                                 <div class="row">
                                     <label for="password-confirm"
-                                           class="col-md-4 col-form-label text-md-right">Confirmar Contraseña</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Confirmar Contraseña</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="password-confirm" type="password" class="form-control"
@@ -274,5 +275,13 @@ export default {
     position: absolute;
     bottom: 0%;
     right: 0%;
+}
+
+.container{
+    width: 106%;
+}
+
+.card{
+    background: darkred;
 }
 </style>

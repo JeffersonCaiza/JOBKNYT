@@ -122,7 +122,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONOS"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefonos</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOS" type="text" class="form-control"
                                                        id="	TELEFONOS" placeholder="Telefonos">
@@ -344,7 +344,7 @@
 
                                          <div class="row">
                                             <label for="TELEFONOA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOA" type="text" class="form-control"
                                                        id="	TELEFONOA" placeholder="Telefono">
@@ -407,7 +407,7 @@
 
                                          <div class="row">
                                             <label for="TELEFONOB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOB" type="text" class="form-control"
                                                        id="	TELEFONOB" placeholder="Telefono">
@@ -444,7 +444,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONORA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORA" type="text" class="form-control"
                                                        id="	TELEFONORA" placeholder="Telefono">
@@ -488,7 +488,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONORB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono o Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORB" type="text" class="form-control"
                                                        id="	TELEFONORB" placeholder="Telefono">
@@ -668,6 +668,10 @@ export default {
             perPage: 0,
             errores: {},
             show: false,
+            
+            errors: {},
+            success: false,
+            loaded: true,
         }
 
     },

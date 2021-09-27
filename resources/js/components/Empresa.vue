@@ -118,7 +118,7 @@
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha de publicacion</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.FechaPubicacion" type="text" class="form-control"
+                                                <input v-model="estudiante.FechaPubicacion" type="date" class="form-control"
                                                        id="FechaPubicacion" placeholder="dd/mm/aa">
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPubicacion">{{ errores.FechaPubicacion[0] }}</span>

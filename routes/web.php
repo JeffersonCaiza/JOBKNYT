@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('Registrar_Novel',function(){return view('auth.register');});
+Route::get('Registrar_Empresa',function(){return view('auth.register');});
 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
@@ -27,21 +29,7 @@ Route::get('roles', [App\Http\Controllers\ControllerRol::class, 'index'])->name(
 
 Route::get('perfil', [App\Http\Controllers\HomeController::class, 'index'])->name('perfil')->middleware('auth');
 
-Route::get('pagos', [App\Http\Controllers\HomeController::class, 'index'])->name('pagos')->middleware('auth');
-Route::post('pagos', [App\Http\Controllers\PagoController::class, 'store'])->name('pagos')->middleware('auth');
 
-Route::get('detalle_pagos', [App\Http\Controllers\DetallePagoController::class, 'index'])->name('detalle_pagos')->middleware('auth');
-Route::get('detalle_pagos/{CODBANCO}', [App\Http\Controllers\PagoController::class, 'show'])->name('detalle_pagos')->middleware('auth');
-Route::post('detalle_pagos', [App\Http\Controllers\DetallePagoController::class, 'store'])->name('detalle_pagos')->middleware('auth');
-
-Route::get('catalogo_pagos', [App\Http\Controllers\ControllerCatalogoPagos::class, 'index'])->name('pagos')->middleware('auth');
-
-Route::get('estudiantes', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
-Route::get('lista_estudiantes', [App\Http\Controllers\ControllerEstudiante::class, 'index'])->name('estudiantes')->middleware('auth');
-Route::get('estudiantes/{estudiante}', [App\Http\Controllers\ControllerEstudiante::class, 'show'])->name('estudiantes')->middleware('auth');
-Route::delete('estudiantes', [App\Http\Controllers\ControllerEstudiante::class, 'destroy'])->name('estudiantes')->middleware('auth');
-Route::post('estudiantes', [App\Http\Controllers\ControllerEstudiante::class, 'store'])->name('estudiantes')->middleware('auth');
-Route::put('estudiantes/{id}', [App\Http\Controllers\ControllerEstudiante::class, 'update'])->name('estudiantes')->middleware('auth');
 
 Route::get('ofertas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('ofertas_laborales', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');

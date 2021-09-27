@@ -15,8 +15,8 @@ class RegisterController extends Controller
             'NOMBRE' => ['required', 'string', 'max:255'],
             'APELLIDO' => ['max:255'],
             'DIRECCION' => ['max:255'],
-            'TELEFONO' => ['max:255'],
-            'CELULAR' => ['max:255'],
+            'TELEFONO' => ['digits:7','numeric'],
+            'CELULAR' => ['digits:10','numeric'],
             'ESTADO' => ['max:255'],
             'email' => [
                 'required',
