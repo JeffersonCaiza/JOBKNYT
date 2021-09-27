@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <nav class="navbar navbar-dark bg-dark" style="right: 194px; bottom: 27px; width: 549px;">
+    <nav class="navbar navbar-dark bg-dark" style="right: 120px; bottom: 27px; width: 548px;">
        <div class="container">
            <div class="justify-content-center">
                <ul class="nav nav-tabs" style="
@@ -20,13 +20,11 @@
        </div>
    </nav>
 
+   <registera></registera>
+   <registero></registero>
    
-
-   
- 
    <main class="py-4">
        <div class="container">
-           
            <router-view></router-view>
        </div>
    </main>
