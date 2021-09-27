@@ -20,8 +20,6 @@
        </div>
    </nav>
 
-   <registera></registera>
-   <registero></registero>
    
    <main class="py-4">
        <div class="container">
