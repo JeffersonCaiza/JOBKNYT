@@ -9,7 +9,7 @@
                border-bottom-width: 0px;">
                    
                    <li class="nav-item">
-                       <router-link to="/Registrar_Novel" class="nav-link">Registrarte como Bachiller o Profesional</router-link>
+                       <router-link to="/Registrar_Novel" class="nav-link">Registrate como Bachiller o Profesional</router-link>
                    </li>   
                    <li class="nav-item">
                      <router-link to="/Registrar_Empresa" class="nav-link">Registrate como empresa</router-link>
