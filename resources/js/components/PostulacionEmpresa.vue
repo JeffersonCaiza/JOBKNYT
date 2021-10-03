@@ -30,33 +30,47 @@
                                 <div class="modal-body">
                                     <div>
                                         
-                                        <h1 align="left"><strong>Informacion de Oferta</strong></h1>
+                                        <!--<h1 align="left"><strong>Informacion de Oferta</strong></h1>
                                         <br>
-                                        <div class="row">
-                                            <label for="NOMBREEMPRESA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
-                                            <div class="col-md-6">
-                                                <input v-model="estudiante.NOMBREEMPRESA" type="text" class="form-control"
-                                                       id="NOMBREEMPRESA"
-                                                       placeholder="Nombre Empresa">
-                                                       <span class="text-danger"
-                                                      v-if="errores.NOMBREEMPRESA">{{ errores.NOMBREEMPRESA[0] }}</span>
-                                            </div>
-                                        </div>
 
+                                        
                                         <div class="row">
-                                            <label for="TITULOOFERTA"
+                                            <label for="IdOferta"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Oferta</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TITULOOFERTA" type="text" class="form-control"
-                                                       id="TITULOOFERTA"
-                                                       placeholder="Titulo Oferta">
-                                                       <span class="text-danger"
-                                                      v-if="errores.TITULOOFERTA">{{ errores.TITULOOFERTA[0] }}</span>
+                                                
+
+
+                                                <select required aria-required="true"
+                                                class="form-control"
+                                                name="IdOferta" id="IdOferta"
+                                                v-model="estudiante.IdOferta"
+                                        >
+                                            <option
+                                                disabled
+                                                v-if="
+                                                    estudiante.IdOferta === ofertas.IdOferta
+                                                "
+                                                v-for="ofertas in ofertasos"
+                                                :value="ofertas.IdOferta"
+                                            >
+                                                {{ ofertas.TituloOferta }}
+                                            </option>
+                                        </select>
+                                        <span class="text-danger"
+                                                      v-if="errores.IdOferta">{{ errores.IdOferta[0] }}</span>
+
+                                                       
+
+
+                                                    
                                                
                                             </div>
-                                        </div>
-                                         <br>
+                                        </div>-->
+                                        
+
+                                       
+                                         
 
 
                                         <h1 align="left" ><strong>Informacion Personal</strong></h1>
@@ -537,7 +551,7 @@
                 <v-text-field
                     v-model="search"
                     append-icon="mdi-magnify"
-                    label="Buscar en Tabla"
+                    label="Para ver los postulantes ingrese el codigo de la oferta"
                     single-line
                     hide-details
                 ></v-text-field>
@@ -602,11 +616,12 @@ export default {
             cod: '',
             codBanco: '',
             headers: [
-                {text: 'Codigo', value: 'IDPOSTULACION',},
-                {text: 'Nombre Empresa', value: 'NOMBREEMPRESA'},
-                {text: 'Titulo Oferta', value: 'TITULOOFERTA'},
+                {text: 'Codigo Oferta', value:'IdOferta.IdOferta'},
+                {text: 'Empresa y Titulo de Oferta', value:'IdOferta.TituloOferta'},
+                {text: 'Descripcion Oferta', value:'IdOferta.DescripcionOferta'},
                 {text: 'Postulante', value: 'NOMBRES'},
                 {text: 'Detalles', value: 'actions'},
+                
                
                 
                
@@ -614,8 +629,7 @@ export default {
 
 
             estudiante: {
-                NOMBREEMPRESA: '',
-                TITULOOFERTA: '',
+               
                 NOMBRES: '',
                 CEDULA: '',
                 EMAIL:'',
@@ -646,6 +660,7 @@ export default {
                 NOMBREB:'',
                 TELEFONORB:'',
                 OCUPACIONB:'',
+                IdOferta:'',
 
             },
             id: 0,
@@ -657,12 +672,20 @@ export default {
             perPage: 0,
             errores: {},
             show: false,
+            ofertasos: [],
+           
         }
 
     },
 
+    
+
     mounted() {
-        this.list();
+        //this.list();
+
+        axios.get('ofertasos').then((response) => {
+            this.ofertasos = response.data;
+        })
     },
     methods: {
         list() {
@@ -702,8 +725,8 @@ export default {
                 
                 this.id = data.IDPOSTULACION,
                 this.titleModal = "Detalles de Postulacion";
-                this.estudiante.NOMBREEMPRESA = data.NOMBREEMPRESA;
-                this.estudiante.TITULOOFERTA = data.TITULOOFERTA;
+                
+                this.estudiante.IdOferta = data.IdOferta;
                 this.estudiante.NOMBRES = data.NOMBRES;
                 this.estudiante.CEDULA = data.CEDULA;
                 this.estudiante.EMAIL = data.EMAIL;
@@ -744,8 +767,7 @@ export default {
             } else {
                
                 this.titleModal = "Crear Nueva Postulacion";
-                this.estudiante.NOMBREEMPRESA = '';
-                this.estudiante.TITULOOFERTA = '';
+                
                 this.estudiante.NOMBRES = '';
                 this.estudiante.CEDULA = '';
                 this.estudiante.EMAIL = '';

@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <div>
-                                        <div class="row">
+                                        <!--<div class="row">
                                             <label for="Nombre Empresa"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
                                             <div class="col-md-6">
@@ -43,15 +43,15 @@
                                                        <span class="text-danger"
                                                       v-if="errores.NombreEmpresa">{{ errores.NombreEmpresa[0] }}</span>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                         <div class="row">
                                             <label for="Titulo Oferta"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Titulo</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa y Titulo de Oferta</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TituloOferta" type="text" class="form-control"
                                                        id="Titulo Oferta"
-                                                       placeholder="Titulo Oferta">
+                                                       placeholder="Empresa y Titulo de Oferta">
                                                        <span class="text-danger"
                                                       v-if="errores.TituloOferta">{{ errores.TituloOferta[0] }}</span>
                                                
@@ -132,7 +132,7 @@
 
                                         <div class="row">
                                             <label for="Link Test"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Correo para envio de curriculum</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Correo envio de curriculum</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.LinkTest" type="text" class="form-control"
                                                        id="Link Test" placeholder="Correo para envio de curriculum">
@@ -167,7 +167,7 @@
                 <v-text-field
                     v-model="search"
                     append-icon="mdi-magnify"
-                    label="Buscar en Tabla"
+                    label="Ingrese el nombre de la empresa para ver sus ofertas"
                     single-line
                     hide-details
                 ></v-text-field>
@@ -211,7 +211,7 @@
                 @input="handlePage"
             ></v-pagination>
         </div>
-        <Postulaciones></Postulaciones>
+        <!--<Postulaciones></Postulaciones>-->
     </div>
 </template>
 
@@ -225,11 +225,12 @@ export default {
             cod: '',
             codBanco: '',
             headers: [
-                {text: 'Codigo', value: 'IdOferta',},
-                {text: 'Nombre Empresa', value: 'NombreEmpresa'},
-                {text: 'Titulo Oferta', value: 'TituloOferta'},
+                {text: 'Codigo de Oferta', value: 'IdOferta',},
+                //{text: 'Nombre Empresa', value: 'NombreEmpresa'},
+                {text: 'Empresa y Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion', value: 'DescripcionOferta'},
-                //{text: 'Link Test', value: 'LinkTest'},
+                {text: 'Fecha Publicacion', value: 'FechaPubicacion'},
+                //{text: 'Link Test', value: 'actions'},
                 
                
             ],
@@ -445,8 +446,9 @@ export default {
 
 
 .modal-content{
-    width:135%;
+    width: 169%;
     background: darkred;
+    margin-left: -164px;
 }
 
 

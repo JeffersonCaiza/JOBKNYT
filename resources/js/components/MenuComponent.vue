@@ -130,6 +130,14 @@ export default {
                 roles: [1],
                
             },
+
+            {
+                text: "Postulaciones",
+                path: "/postulaciones",
+                icon: mdiAccountGroup,
+                roles: [3],
+               
+            },
             
 
         ],

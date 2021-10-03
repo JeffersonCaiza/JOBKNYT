@@ -24,8 +24,8 @@ class PostulacionRequest extends FormRequest
     public function rules()
     {
         return [
-            'NOMBREEMPRESA'=>'required',
-            'TITULOOFERTA'=>'required',
+           
+            'IdOferta'=>'required',
             'NOMBRES'=>'required',
             'CEDULA'=>'required|numeric|digits:10',
             'EMAIL'=>'required|email|max:255|',
@@ -45,8 +45,7 @@ class PostulacionRequest extends FormRequest
     public function messages()
     {
         return [
-            'NOMBREEMPRESA.required'=>'Campo Obligatorio',
-            'TITULOOFERTA.required'=>'Campo Obligatorio',
+            'IdOferta.required'=>'Seleccione la oferta a la cual desea postularse',
             'NOMBRES.required'=>'Campo Obligatorio',
             'CEDULA.required'=>'Campo Obligatorio',
             'CEDULA.numeric'=>'Debe ser un numero',

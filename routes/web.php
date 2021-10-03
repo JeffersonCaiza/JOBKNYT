@@ -24,15 +24,18 @@ Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name(
 
 Route::get('registro', [App\Http\Controllers\HomeController::class, 'index'])->name('registro');
 Route::post('registro', [App\Http\Controllers\RegisterController::class, 'create'])->name('registro');
+Route::get('Postulacion', [App\Http\Controllers\HomeController::class, 'index'])->name('registro');
 
 Route::get('roles', [App\Http\Controllers\ControllerRol::class, 'index'])->name('roles');
 
 Route::get('perfil', [App\Http\Controllers\HomeController::class, 'index'])->name('perfil')->middleware('auth');
 
 
-
+Route::get('ofertasos', [App\Http\Controllers\ControllerOferta::class, 'show'])->name('ofertasos')->middleware('auth');
 Route::get('ofertas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('ofertas_laborales', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+
+Route::get('ofertap', [App\Http\Controllers\ControllerOfertap::class, 'show'])->middleware('auth');
 
 Route::get('postulaciones', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('lista_postulaciones', [App\Http\Controllers\ControllerPostulacion::class, 'index'])->middleware('auth');

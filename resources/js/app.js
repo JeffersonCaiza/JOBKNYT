@@ -38,7 +38,7 @@
  import Administrador from "./components/Administrador";
  import Bachilleres from "./components/Bachilleres";
  import Empresa from "./components/Empresa";
-
+ import PostulacionForm from "./components/PostulacionForm";
 
  import Postulacion from "./components/Postulacion";
  import PostulacionEmpresa from "./components/PostulacionEmpresa";
@@ -99,6 +99,17 @@
             path: '/Registrar_Empresa',
             name: 'registrar_empresa',
             component: RegisterFormEmpresa
+        },
+        {
+            path: '/Postulacion',
+            name: 'postulacion',
+            component: PostulacionForm
+        },
+
+        {
+            path: '/Postulaciones',
+            name: 'postulaciones',
+            component: PostulacionEmpresa
         },
         
      ]

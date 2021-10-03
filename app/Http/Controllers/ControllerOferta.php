@@ -18,6 +18,12 @@ class ControllerOferta extends Controller
 
     }
 
+    public function show()
+    {
+        return Oferta::all();
+
+    }
+
     public function store(OfertaRequest $request)
     {
         $oferta = new Oferta;

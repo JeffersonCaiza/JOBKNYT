@@ -27,7 +27,7 @@
                 </div>
                 <div class="modal-body">
                   <div>
-                    <div class="row">
+                    <!--<div class="row">
                       <label
                         for="Nombre Empresa"
                         class="col-md-4 col-form-label text-md-right"
@@ -47,13 +47,13 @@
                           >{{ errores.NombreEmpresa[0] }}</span
                         >
                       </div>
-                    </div>
+                    </div>-->
 
                     <div class="row">
                       <label
                         for="Titulo Oferta"
                         class="col-md-4 col-form-label text-md-right"
-                        >Titulo</label
+                        >Empresa y Titulo de Oferta</label
                       >
                       <div class="col-md-6">
                         <input
@@ -61,7 +61,7 @@
                           type="text"
                           class="form-control"
                           id="Titulo Oferta"
-                          placeholder="Titulo Oferta"
+                          placeholder="Empresa y Titulo de Oferta"
                         />
                         <span class="text-danger" v-if="errores.TituloOferta">{{
                           errores.TituloOferta[0]
@@ -296,9 +296,9 @@ export default {
       codBanco: "",
       headers: [
         { text: "Codigo", value: "IdOferta" },
-        { text: "Nombre Empresa", value: "NombreEmpresa" },
-        { text: "Titulo Oferta", value: "TituloOferta" },
-        { text: "Descripcion Corta de Oferta", value: "DescripcionOferta" },
+        //{ text: "Nombre Empresa", value: "NombreEmpresa" },
+        { text: "Empresa y Titulo de Oferta", value: "TituloOferta" },
+        { text: "Descripcion", value: "DescripcionOferta" },
         //{ text: "Link test", value: "LinkTest" },
         { text: "Fecha Publicacion", value: "FechaPubicacion" },
         { text: "Opciones", value: "actions" },
@@ -504,6 +504,13 @@ export default {
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+.modal-content {
+    
+    width: 168%;
+    
+    margin-left: -138px;
 }
 
 

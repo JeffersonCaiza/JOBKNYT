@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostulacionRequest;
 use App\Models\Postulacion;
+use App\Models\Oferta;
 use App\Http\Resources\Postulacion as PostulacionResource;
 use App\Http\Resources\PostulacionCollection;
 

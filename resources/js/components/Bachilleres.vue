@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="modal-body">
                   <div>
-                    <div class="row">
+                    <!--<div class="row">
                       <label
                         for="Nombre Empresa"
                         class="col-md-4 col-form-label text-md-right"
@@ -44,13 +44,14 @@
                           >{{ errores.NombreEmpresa[0] }}</span
                         >
                       </div>
-                    </div>
+                    </div>-->
+
 
                     <div class="row">
                       <label
                         for="Titulo Oferta"
                         class="col-md-4 col-form-label text-md-right"
-                        ><strong>Titulo</strong></label
+                        ><strong>Empresa y Titulo de Oferta</strong></label
                       >
                       <div class="col-md-6">
                         <input
@@ -58,7 +59,7 @@
                           type="text"
                           class="form-control"
                           id="Titulo Oferta"
-                          placeholder="Titulo Oferta"
+                          placeholder="Empresa y Titulo de Oferta"
                         />
                         <span class="text-danger" v-if="errores.TituloOferta">{{
                           errores.TituloOferta[0]
@@ -180,6 +181,12 @@
                                             data-bs-dismiss="modal">
                                         Cerrar
                                     </button>
+
+                    <div class="row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <router-link to="/Postulacion" class="nav-link">Postulate</router-link>
+                                    </div>
+                                </div>
                      
 
                                 
@@ -242,7 +249,7 @@
             ></v-pagination>
         </div>
 
-        <Postulacion></Postulacion>
+        <!--<Postulacion></Postulacion>-->
     </div>
     
 </template>
@@ -260,8 +267,8 @@ export default {
             codBanco: '',
             headers: [
                 {text: 'Codigo', value: 'IdOferta',},
-                {text: 'Nombre Empresa', value: 'NombreEmpresa'},
-                {text: 'Titulo Oferta', value: 'TituloOferta'},
+                //{text: 'Nombre Empresa', value: 'NombreEmpresa'},
+                {text: 'Empresa y Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion Oferta', value: 'DescripcionOferta'},
                 {text: 'Detalles', value: 'actions'},
                
@@ -474,8 +481,9 @@ export default {
 }
 
 .modal-content{
-    width:135%;
+    width: 190%;
     background: darkred;
+    margin-left: -200px;
 }
 
 .fade-enter-active,
@@ -500,5 +508,14 @@ export default {
     color: #fff;
     background-color: #e3342f !important;
     border-color: #6c757d;
+}
+
+a {
+    color: #3490dc;
+    text-decoration: none;
+    margin-left: -288px;
+    margin-right: 559px;
+    background: black;
+    border-radius: 47px;
 }
 </style>
