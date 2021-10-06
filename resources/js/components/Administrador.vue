@@ -333,7 +333,7 @@ export default {
   },
   methods: {
     list() {
-      axios.get(`lista_ofertas?page=${this.page}`).then((res) => {
+      axios.get(`lista_ofertasd?page=${this.page}`).then((res) => {
         this.est = res.data;
         this.estudiantes = this.est.data;
         this.totalPages = this.est.meta.last_page;

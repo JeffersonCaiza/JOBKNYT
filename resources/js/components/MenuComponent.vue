@@ -135,6 +135,14 @@ export default {
                 text: "Postulaciones",
                 path: "/postulaciones",
                 icon: mdiAccountGroup,
+                roles: [2],
+               
+            },
+
+            {
+                text: "Postulaciones",
+                path: "/Postulaciones_Empresa",
+                icon: mdiAccountGroup,
                 roles: [3],
                
             },

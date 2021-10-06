@@ -30,7 +30,7 @@
                                 <div class="modal-body">
                                     <div>
                                         
-                                        <!--<h1 align="left"><strong>Informacion de Oferta</strong></h1>
+                                        <h1 align="left"><strong>Informacion de Oferta</strong></h1>
                                         <br>
 
                                         
@@ -66,7 +66,7 @@
                                                     
                                                
                                             </div>
-                                        </div>-->
+                                        </div>
                                         
 
                                        
@@ -563,7 +563,7 @@
                 :headers="headers"
                 :items="estudiantes"
                 :search="search"
-                :items-per-page="perPage"
+               
                 hide-default-footer
                 class="elevation-1"
                 loading
@@ -587,14 +587,14 @@
                 </template>
             </v-data-table>
         </v-card>
-        <div class="text-center pt-2">
+        <!--<div class="text-center pt-2">
             <v-pagination
                 v-model="page"
                 :length="totalPages"
                 total-visible="7"
                 @input="handlePage"
             ></v-pagination>
-        </div>
+        </div>-->
 
 
 
@@ -616,9 +616,9 @@ export default {
             cod: '',
             codBanco: '',
             headers: [
-                {text: 'Codigo Oferta', value:'IdOferta.IdOferta'},
-                {text: 'Empresa y Titulo de Oferta', value:'IdOferta.TituloOferta'},
-                {text: 'Descripcion Oferta', value:'IdOferta.DescripcionOferta'},
+                {text: 'Codigo Oferta', value:'IdOferta'},
+                {text: 'Email', value:'EMAIL'},
+                //{text: 'Descripcion Oferta', value:'IdOferta.DescripcionOferta'},
                 {text: 'Postulante', value: 'NOMBRES'},
                 {text: 'Detalles', value: 'actions'},
                 
@@ -668,8 +668,8 @@ export default {
             modal: 0,
             titleModal: ' ',
             estudiantes: [],
-            totalPages: 0,
-            perPage: 0,
+            //totalPages: 0,
+            //perPage: 0,
             errores: {},
             show: false,
             ofertasos: [],
@@ -688,16 +688,30 @@ export default {
         })
     },
     methods: {
-        list() {
-            axios.get(`lista_postulaciones?page=${this.page}`).then(res => {
-                this.est = res.data;
-                this.estudiantes = this.est.data;
-                this.totalPages = this.est.meta.last_page;
-                this.perPage = this.est.meta.per_page;
-            });
+        //list() {
+          //  axios.get(`lista_postulaciones?page=${this.page}`).then(res => {
+          //      this.est = res.data;
+          //      this.estudiantes = this.est.data;
+          //      this.totalPages = this.est.meta.last_page;
+          //      this.perPage = this.est.meta.per_page;
+          //  });
+
+            async list() {
+
+       const res = await axios.get("/lista_postulacionese");
+            this.estudiantes = res.data;
+            //axios.get("lista").then((res) => {
+        //this.est = res.data;
+        //this.estudiantes = this.est.data;
+        //this.totalPages = this.est.meta.last_page;
+        //this.perPage = this.est.meta.per_page;
+      //});
+    },
+
+    
 
 
-        },
+        
         async save() {
             try {
                 if (this.update) {
@@ -931,8 +945,9 @@ export default {
 }
 
 .modal-content{
-    width:140%;
+    width: 230%;
     background: darkred;
+    margin-left: -310px;
    
 }
 
@@ -971,3 +986,4 @@ select {
 }
 
 </style>
+

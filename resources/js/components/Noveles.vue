@@ -47,7 +47,7 @@
 
                     
 
-                    <div class="row">
+                    <!--<div class="row">
                       <label
                         for="DIRECCION"
                         class="col-md-4 col-form-label text-md-right"
@@ -97,7 +97,7 @@
                           placeholder="INSTRUCCION"
                         />
                       </div>
-                    </div>
+                    </div>-->
 
                     <div class="row">
                       <label
@@ -158,6 +158,7 @@
         :items="estudiantes"
         :search="search"
         :items-per-page="perPage"
+      
         hide-default-footer
         class="elevation-1"
         loading
@@ -197,9 +198,9 @@ export default {
       codBanco: "",
       headers: [
         { text: "Nombre", value: "NOMBRE" },
-        { text: "Direccion", value: "DIRECCION" },
-        { text: "Telefono", value: "TELEFONO" },
-        { text: "Instruccion", value: "ESTADO" },
+        //{ text: "Direccion", value: "DIRECCION" },
+        //{ text: "Telefono", value: "TELEFONO" },
+        //{ text: "Instruccion", value: "ESTADO" },
         { text: "Email", value: "email" },
         { text: "Opciones", value: "actions" },
       ],
@@ -229,7 +230,7 @@ export default {
     this.list();
   },
   methods: {
-    list() {
+     list() {
       axios.get(`lista_noveles?page=${this.page}`).then((res) => {
         this.est = res.data;
         this.estudiantes = this.est.data;

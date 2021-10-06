@@ -19,12 +19,20 @@ class ControllerUsuario extends Controller
         //$noveles = DB::table('usuario')->whereCODROL('2')->first();
         //return $noveles;
         
-        //$noveles = DB::table('usuario')->where('CODROL', '=', '3')->all();
+        //$noveles = DB::table('usuario')->where('CODROL', '=', '3')->get();
         //return $noveles;
 
         //return User::all();
 
         
+    }
+
+    public function show()
+    {
+        //return User::all();
+        $noveles = DB::table('usuario')->where('CODROL', '=', '3')->get();
+        return $noveles;
+
     }
 
     

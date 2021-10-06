@@ -28,7 +28,7 @@
                                 </div>
                                 
 
-                                <!--Apellido-->
+                             
                                 <!--<div class="row">
                                     <label for="APELLIDO"
                                            class="col-md-4 col-form-label text-md-right">Ruc Empresa</label>
@@ -42,10 +42,10 @@
                                         {{ error.APELLIDO }}
                                     </span>
                                     </div>
-                                </div>-->
+                                </div>
                                 <br>
 
-                                <!--Direccion-->
+                                
                                 <div class="row">
                                     <label for="DIRECCION"
                                            class="col-md-4 col-form-label text-md-right"><strong>Dirección</strong></label>
@@ -63,7 +63,7 @@
                                 </div>
                                 <br>
 
-                                <!--Telefono-->
+                                
                                 <div class="row">
                                     <label for="TELEFONO"
                                            class="col-md-4 col-form-label text-md-right"><strong>Teléfono</strong></label>
@@ -80,7 +80,7 @@
                                 </div>
                                 <br>
 
-                                <!--Celular-->
+                              
                                 <div class=" row">
                                     <label for="CELULAR"
                                            class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
@@ -97,7 +97,7 @@
                                 </div>
                                 <br>
 
-                                <!--<div class=" row">
+                                <div class=" row">
                                     <label for="ESTADO"
                                            class="col-md-4 col-form-label text-md-right">Instrucccion</label>
 
@@ -114,6 +114,7 @@
                                     </div>
                                 </div>-->
                                 
+                                <br>
 
                                   <div class=" row">
                                     <label for="ROL"

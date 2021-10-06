@@ -39,6 +39,7 @@
  import Bachilleres from "./components/Bachilleres";
  import Empresa from "./components/Empresa";
  import PostulacionForm from "./components/PostulacionForm";
+ import Oferta from "./components/Oferta";
 
  import Postulacion from "./components/Postulacion";
  import PostulacionEmpresa from "./components/PostulacionEmpresa";
@@ -108,6 +109,12 @@
 
         {
             path: '/Postulaciones',
+            name: 'postulaciones',
+            component: Postulacion
+        },
+
+        {
+            path: '/Postulaciones_Empresa',
             name: 'postulaciones',
             component: PostulacionEmpresa
         },

@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\OfertapRequest;
-use App\Models\Oferta;
-use App\Models\User;
-use App\Http\Resources\Ofertap as OfertapResource;
-use App\Http\Resources\OfertapCollection;
+
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\DB;
+
+use App\Http\Requests\OfertaRequest;
+use App\Models\Oferta;
+use App\Http\Resources\Oferta as OfertaResource;
+use App\Http\Resources\OfertaCollection;
+
 
 
 
@@ -17,22 +20,49 @@ class ControllerOfertap extends Controller
 {
     public function index()
     {
-       
+        //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $ofertaso;
+
+
+        return new OfertaCollection(Oferta::paginate(25));
+
+        //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', '12')->get();
+        //return $ofertaso;
+
+        //return Oferta::all();
 
     }
 
-    public function show($CODUSUARIO)
+    public function show()
     {
-        $usuarios = User::findOrFail($CODUSUARIO);
+        return Oferta::all();
+        //return new OfertaCollection(Oferta::paginate(25));
 
-        $records['ofertas'] = DB::table('usuario')
-                         ->join('ofertas', 'ofertas.CODUSUARIO', '=', 'usuario.CODUSUARIO')
-                         ->where('usuario.CODUSUARIO', $usuarios->CODUSUARIO);
+        
+        //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $ofertaso;
 
-                        
     }
 
-    
+    public function store(OfertaRequest $request)
+    {
+        $oferta = new Oferta;
+        $oferta->create($request->all());
+
+
+    }
+
+   
+   
+    public function update(OfertaRequest $request, Oferta $id)
+    {
+        $id->update($request->all());
+    }
+
+    public function destroy(Oferta $id)
+    {
+        $id->delete();
+    }
 
     
     

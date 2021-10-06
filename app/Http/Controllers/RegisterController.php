@@ -13,11 +13,11 @@ class RegisterController extends Controller
     {
         $this->validate($request, [
             'NOMBRE' => ['required', 'string', 'max:255'],
-            'APELLIDO' => ['max:255'],
-            'DIRECCION' => ['max:255'],
-            'TELEFONO' => ['digits:7','numeric'],
-            'CELULAR' => ['digits:10','numeric'],
-            'ESTADO' => ['max:255'],
+            //'APELLIDO' => ['digits:10','numeric'],
+            //'DIRECCION' => ['max:255'],
+            //'TELEFONO' => ['digits:7','numeric'],
+            //'CELULAR' => ['digits:10','numeric'],
+            //'ESTADO' => ['max:255'],
             'email' => [
                 'required',
                 'string',
@@ -31,11 +31,11 @@ class RegisterController extends Controller
         ]);
         User::create([
             'NOMBRE' => $request['NOMBRE'],
-            'APELLIDO' => $request['APELLIDO'],
-            'DIRECCION' => $request['DIRECCION'],
-            'TELEFONO' => $request['TELEFONO'],
-            'CELULAR' => $request['CELULAR'],
-            'ESTADO' => $request['ESTADO'],
+            //'APELLIDO' => $request['APELLIDO'],
+            //'DIRECCION' => $request['DIRECCION'],
+            //'TELEFONO' => $request['TELEFONO'],
+            //'CELULAR' => $request['CELULAR'],
+            //'ESTADO' => $request['ESTADO'],
             'email' => $request['email'],
             'CODROL' => $request['CODROL'],
             'password' => Hash::make($request['password']),

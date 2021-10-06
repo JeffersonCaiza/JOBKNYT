@@ -5,15 +5,7 @@
         <h1 class="text-center"><strong>Lista de Postulaciones</strong></h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
-                <v-btn @click="update=false; openModal();" class="btn-blue">
-                    <v-icon
-                        small
-                        style="margin-right: 3px"
-                    >
-                        mdi-plus-box
-                    </v-icon>
-                    Nuevo
-                </v-btn>
+                
                 
             </div>
         </div>
@@ -40,31 +32,45 @@
                                         
                                         <h1 align="left"><strong>Informacion de Oferta</strong></h1>
                                         <br>
-                                        <div class="row">
-                                            <label for="NOMBREEMPRESA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
-                                            <div class="col-md-6">
-                                                <input v-model="estudiante.NOMBREEMPRESA" type="text" class="form-control"
-                                                       id="NOMBREEMPRESA"
-                                                       placeholder="Nombre Empresa">
-                                                       <span class="text-danger"
-                                                      v-if="errores.NOMBREEMPRESA">{{ errores.NOMBREEMPRESA[0] }}</span>
-                                            </div>
-                                        </div>
 
+                                        
                                         <div class="row">
-                                            <label for="TITULOOFERTA"
+                                            <label for="IdOferta"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Oferta</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TITULOOFERTA" type="text" class="form-control"
-                                                       id="TITULOOFERTA"
-                                                       placeholder="Titulo Oferta">
-                                                       <span class="text-danger"
-                                                      v-if="errores.TITULOOFERTA">{{ errores.TITULOOFERTA[0] }}</span>
+                                                
+
+
+                                                <select required aria-required="true"
+                                                class="form-control"
+                                                name="IdOferta" id="IdOferta"
+                                                v-model="estudiante.IdOferta"
+                                        >
+                                            <option
+                                                disabled
+                                                v-if="
+                                                    estudiante.IdOferta === ofertas.IdOferta
+                                                "
+                                                v-for="ofertas in ofertasos"
+                                                :value="ofertas.IdOferta"
+                                            >
+                                                {{ ofertas.TituloOferta }}
+                                            </option>
+                                        </select>
+                                        <span class="text-danger"
+                                                      v-if="errores.IdOferta">{{ errores.IdOferta[0] }}</span>
+
+                                                       
+
+
+                                                    
                                                
                                             </div>
                                         </div>
-                                         <br>
+                                        
+
+                                       
+                                         
 
 
                                         <h1 align="left" ><strong>Informacion Personal</strong></h1>
@@ -122,7 +128,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONOS"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefonos</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOS" type="text" class="form-control"
                                                        id="	TELEFONOS" placeholder="Telefonos">
@@ -344,7 +350,7 @@
 
                                          <div class="row">
                                             <label for="TELEFONOA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOA" type="text" class="form-control"
                                                        id="	TELEFONOA" placeholder="Telefono">
@@ -407,7 +413,7 @@
 
                                          <div class="row">
                                             <label for="TELEFONOB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOB" type="text" class="form-control"
                                                        id="	TELEFONOB" placeholder="Telefono">
@@ -444,7 +450,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONORA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORA" type="text" class="form-control"
                                                        id="	TELEFONORA" placeholder="Telefono">
@@ -488,7 +494,7 @@
 
                                         <div class="row">
                                             <label for="TELEFONORB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono o Celular</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORB" type="text" class="form-control"
                                                        id="	TELEFONORB" placeholder="Telefono">
@@ -529,11 +535,26 @@
                                             data-bs-dismiss="modal">
                                         Cerrar
                                     </button>
+
+                                      <button
+                    @click="save()"
+                    type="button"
+                    class="btn btn-success btn-blue"
+                    data-bs-dismiss="modal"
+                  >
+                    Guardar
+                  </button>
+
+                  <button
+                    @click="eliminar()"
+                    type="button"
+                    class="btn btn-success btn-blue"
+                    data-bs-dismiss="modal"
+                  >
+                    Eliminar
+                  </button>
                                     
-                                    <button @click="save();" type="button"   class="btn btn-success btn-blue"
-                                            data-bs-dismiss="modal" >
-                                        Guardar
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -548,7 +569,7 @@
                 <v-text-field
                     v-model="search"
                     append-icon="mdi-magnify"
-                    label="Buscar en Tabla"
+                    label="Buscar"
                     single-line
                     hide-details
                 ></v-text-field>
@@ -560,8 +581,9 @@
                 :headers="headers"
                 :items="estudiantes"
                 :search="search"
-                :items-per-page="perPage"
+               
                 hide-default-footer
+               
                 class="elevation-1"
                 loading
                 loading-text="Cargando... Por favor espere"
@@ -581,17 +603,19 @@
                             mdi-pencil
                         </v-icon>
                     </v-btn>
+
+                    
                 </template>
             </v-data-table>
         </v-card>
-        <div class="text-center pt-2">
+        <!--<div class="text-center pt-2">
             <v-pagination
                 v-model="page"
                 :length="totalPages"
                 total-visible="7"
                 @input="handlePage"
             ></v-pagination>
-        </div>
+        </div>-->
 
 
 
@@ -613,11 +637,13 @@ export default {
             cod: '',
             codBanco: '',
             headers: [
-                {text: 'Codigo', value: 'IDPOSTULACION',},
-                {text: 'Nombre Empresa', value: 'NOMBREEMPRESA'},
-                {text: 'Titulo Oferta', value: 'TITULOOFERTA'},
+                {text: 'Codigo Oferta', value:'IdOferta'},
+                //{text: 'Empresa y Titulo de Oferta', value:'ofertasos.TituloOferta'},
+                {text: 'Email', value:'EMAIL'},
                 {text: 'Postulante', value: 'NOMBRES'},
-                //{text: 'Detalles', value: 'actions'},
+                {text: 'Opciones', value: 'actions'},
+                
+                
                
                 
                
@@ -625,8 +651,7 @@ export default {
 
 
             estudiante: {
-                NOMBREEMPRESA: '',
-                TITULOOFERTA: '',
+               
                 NOMBRES: '',
                 CEDULA: '',
                 EMAIL:'',
@@ -657,6 +682,7 @@ export default {
                 NOMBREB:'',
                 TELEFONORB:'',
                 OCUPACIONB:'',
+                IdOferta:'',
 
             },
             id: 0,
@@ -664,32 +690,50 @@ export default {
             modal: 0,
             titleModal: ' ',
             estudiantes: [],
-            totalPages: 0,
-            perPage: 0,
+            //totalPages: 0,
+            //perPage: 0,
             errores: {},
             show: false,
-            
-            errors: {},
-            success: false,
-            loaded: true,
+            ofertasos: [],
+           
         }
 
     },
 
+    
+
     mounted() {
         this.list();
+
+        axios.get('ofertasos').then((response) => {
+            this.ofertasos = response.data;
+        })
     },
     methods: {
-        list() {
-            axios.get(`lista_postulaciones?page=${this.page}`).then(res => {
-                this.est = res.data;
-                this.estudiantes = this.est.data;
-                this.totalPages = this.est.meta.last_page;
-                this.perPage = this.est.meta.per_page;
-            });
+        //list() {
+          //  axios.get(`lista_postulaciones?page=${this.page}`).then(res => {
+          //      this.est = res.data;
+          //      this.estudiantes = this.est.data;
+          //      this.totalPages = this.est.meta.last_page;
+          //      this.perPage = this.est.meta.per_page;
+          //  });
+
+            async list() {
+
+       const res = await axios.get("/lista_postulaciones");
+            this.estudiantes = res.data;
+            //axios.get("lista").then((res) => {
+        //this.est = res.data;
+        //this.estudiantes = this.est.data;
+        //this.totalPages = this.est.meta.last_page;
+        //this.perPage = this.est.meta.per_page;
+      //});
+    },
+
+    
 
 
-        },
+        
         async save() {
             try {
                 if (this.update) {
@@ -707,6 +751,14 @@ export default {
             }
         },
 
+         async eliminar() {
+      if (this.borrar) {
+        const res = await axios.delete("postulaciones/" + this.id, this.estudiante);
+      }
+      this.closeModal();
+      this.list();
+    },
+
        
 
         openModal(data = {}) {
@@ -716,9 +768,9 @@ export default {
             if (this.update) {
                 
                 this.id = data.IDPOSTULACION,
-                this.titleModal = "Detalles de Postulacion";
-                this.estudiante.NOMBREEMPRESA = data.NOMBREEMPRESA;
-                this.estudiante.TITULOOFERTA = data.TITULOOFERTA;
+                this.titleModal = "Editar Postulacion";
+                
+                this.estudiante.IdOferta = data.IdOferta;
                 this.estudiante.NOMBRES = data.NOMBRES;
                 this.estudiante.CEDULA = data.CEDULA;
                 this.estudiante.EMAIL = data.EMAIL;
@@ -759,8 +811,7 @@ export default {
             } else {
                
                 this.titleModal = "Crear Nueva Postulacion";
-                this.estudiante.NOMBREEMPRESA = '';
-                this.estudiante.TITULOOFERTA = '';
+                
                 this.estudiante.NOMBRES = '';
                 this.estudiante.CEDULA = '';
                 this.estudiante.EMAIL = '';
@@ -924,10 +975,11 @@ export default {
 }
 
 .modal-content{
-    width:140%;
+    width: 230%;
     background: darkred;
-    margin-left: 75px;
+    margin-left: -310px;
 }
+
 
 
 
@@ -962,7 +1014,5 @@ select {
   border-radius: 6px;
   -webkit-appearance: revert;
 }
-
-
 
 </style>

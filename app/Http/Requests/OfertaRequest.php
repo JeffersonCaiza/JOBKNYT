@@ -24,7 +24,7 @@ class OfertaRequest extends FormRequest
     public function rules()
     {
         return [
-            'NombreEmpresa'=>'required',
+          
             'TituloOferta'=>'required',
             'DescripcionOferta'=>'required',
             'LinkTest'=>'required',
@@ -40,7 +40,7 @@ class OfertaRequest extends FormRequest
     public function messages()
     {
         return [
-            'NombreEmpresa.required'=>'Campo Obligatorio',
+            
             'TituloOferta.required'=>'Campo Obligatorio',
             'DescripcionOferta.required'=>'Campo Obligatorio',
             'LinkTest.required'=>'Campo Obligatorio',

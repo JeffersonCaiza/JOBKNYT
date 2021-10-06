@@ -167,7 +167,7 @@
                 <v-text-field
                     v-model="search"
                     append-icon="mdi-magnify"
-                    label="Ingrese el nombre de la empresa para ver sus ofertas"
+                    label="Buscar"
                     single-line
                     hide-details
                 ></v-text-field>
@@ -203,14 +203,14 @@
                 </template>
             </v-data-table>
         </v-card>
-        <div class="text-center pt-2">
+        <!--<div class="text-center pt-2">
             <v-pagination
                 v-model="page"
                 :length="totalPages"
                 total-visible="7"
                 @input="handlePage"
             ></v-pagination>
-        </div>
+        </div>-->
         <!--<Postulaciones></Postulaciones>-->
     </div>
 </template>
@@ -230,7 +230,7 @@ export default {
                 {text: 'Empresa y Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion', value: 'DescripcionOferta'},
                 {text: 'Fecha Publicacion', value: 'FechaPubicacion'},
-                //{text: 'Link Test', value: 'actions'},
+                {text: 'Opciones', value: 'actions'},
                 
                
             ],
@@ -251,8 +251,8 @@ export default {
             modal: 0,
             titleModal: ' ',
             estudiantes: [],
-            totalPages: 0,
-            perPage: 0,
+            //totalPages: 0,
+           // perPage: 0,
             errores: {},
             show: false,
         }
@@ -263,16 +263,31 @@ export default {
         this.list();
     },
     methods: {
-        list() {
-            axios.get(`lista_ofertas?page=${this.page}`).then(res => {
-                this.est = res.data;
-                this.estudiantes = this.est.data;
-                this.totalPages = this.est.meta.last_page;
-                this.perPage = this.est.meta.per_page;
-            });
+        //list() {
+        //    axios.get(`lista_ofertas?page=${this.page}`).then(res => {
+        //       this.est = res.data;
+        //        this.estudiantes = this.est.data;
+        //        this.totalPages = this.est.meta.last_page;
+         //       this.perPage = this.est.meta.per_page;
+        //    });
 
 
-        },
+        //},
+
+         async list() {
+
+       const res = await axios.get("/ofertasr");
+            this.estudiantes = res.data;
+            //axios.get("lista").then((res) => {
+        //this.est = res.data;
+        //this.estudiantes = this.est.data;
+        //this.totalPages = this.est.meta.last_page;
+        //this.perPage = this.est.meta.per_page;
+      //});
+    },
+
+
+
         async save() {
             try {
                 if (this.update) {
@@ -290,6 +305,8 @@ export default {
             }
         },
 
+         
+
        
 
         openModal(data = {}) {
@@ -297,15 +314,19 @@ export default {
             this.modal = 1;
             if (this.update) {
                 this.id = data.IdOferta,
-                this.titleModal = "Postulate ingresa al link";
-                this.estudiante.NombreEmpresa = data.NombreEmpresa;
+                this.titleModal = "Editar Oferta";
+                //this.estudiante.NombreEmpresa = data.NombreEmpresa;
                 this.estudiante.TituloOferta = data.TituloOferta;
+                this.estudiante.Disponibilidad = data.Disponibilidad;
+                 this.estudiante.EducacionMinima = data.EducacionMinima;
+                 this.estudiante.Edad = data.Edad;
+                 this.estudiante.FechaPubicacion = data.FechaPubicacion;
                 this.estudiante.DescripcionOferta = data.DescripcionOferta;
                 this.estudiante.LinkTest = data.LinkTest;
                 
             } else {
                 this.titleModal = "Crear Nueva Oferta";
-                this.estudiante.NombreEmpresa = '';
+                //this.estudiante.NombreEmpresa = '';
                 this.estudiante.TituloOferta = '';
                 this.estudiante.Disponibilidad = '';
                 this.estudiante.EducacionMinima = '';

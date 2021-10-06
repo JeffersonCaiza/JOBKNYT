@@ -23,11 +23,11 @@ class CreateNewUser implements CreatesNewUsers
     {
         Validator::make($input, [
             'NOMBRE' => ['required', 'string', 'max:255'],
-            'APELLIDO' => ['max:255'],
-            'DIRECCION' => ['max:255'],
-            'TELEFONO' => ['digits:7','numeric'],
-            'CELULAR' => ['digits:10','numeric'],
-            'ESTADO' => ['max:255'],
+            //'APELLIDO' => ['digits:10','numeric'],
+            //'DIRECCION' => ['max:255'],
+            //'TELEFONO' => ['digits:7','numeric'],
+            //'CELULAR' => ['digits:10','numeric'],
+            //'ESTADO' => ['max:255'],
             'email' => [
                 'required',
                 'string',
@@ -42,11 +42,11 @@ class CreateNewUser implements CreatesNewUsers
 
         return User::create([
             'NOMBRE' => $input['NOMBRE'],
-            'APELLIDO' => $input['APELLIDO'],
-            'DIRECCION' => $input['DIRECCION'],
-            'TELEFONO' => $input['TELEFONO'],
-            'CELULAR' => $input['CELULAR'],
-            'ESTADO' => $input['ESTADO'],
+            //'APELLIDO' => $input['APELLIDO'],
+            //'DIRECCION' => $input['DIRECCION'],
+            //'TELEFONO' => $input['TELEFONO'],
+            //'CELULAR' => $input['CELULAR'],
+            //'ESTADO' => $input['ESTADO'],
             'email' => $input['email'],
             'CODROL' => $input['CODROL'],
             'password' => Hash::make($input['password']),

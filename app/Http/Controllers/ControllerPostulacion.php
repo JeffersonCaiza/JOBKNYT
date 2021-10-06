@@ -1,21 +1,36 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostulacionRequest;
 use App\Models\Postulacion;
 use App\Models\Oferta;
-use App\Http\Resources\Postulacion as PostulacionResource;
-use App\Http\Resources\PostulacionCollection;
+
+//use App\Http\Resources\Postulacion as PostulacionResource;
+//use App\Http\Resources\PostulacionCollection;
 
 class ControllerPostulacion extends Controller
 {
     public function index()
     {
-        return new PostulacionCollection(Postulacion::paginate(25));
+        //return new PostulacionCollection(Postulacion::paginate(25));
+
+        $postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
+        return $postulacion;
 
     }
+
+    //public function show()
+    //{
+        //return new PostulacionCollection(Postulacion::paginate(25));
+
+       // $postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $postulacion;
+
+    //}
 
     public function store(PostulacionRequest $request)
     {

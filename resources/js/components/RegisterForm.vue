@@ -14,7 +14,7 @@
                                 <!--Nombre-->
                                 <div class="row">
                                     <label for="NOMBRE"
-                                           class="col-md-4 col-form-label text-md-right"><strong>Nombre Estudiante</strong></label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Nombres Completos</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="NOMBRE" type="text"
@@ -26,15 +26,15 @@
                                     </span>
                                     </div>
                                 </div>
-                                <br>
+                              
 
                                 <!--Apellido-->
                                 <!--<div class="row">
                                     <label for="APELLIDO"
-                                           class="col-md-4 col-form-label text-md-right">Cedula</label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Cedula</strong></label>
 
                                     <div class="col-md-6">
-                                        <input id="APELLIDO" type="number" maxlength="12"
+                                        <input id="APELLIDO" type="number" maxlength="10"
                                                class="form-control" name="APELLIDO" v-model="fields.APELLIDO"
                                                required autocomplete="APELLIDO" autofocus>
 
@@ -46,7 +46,7 @@
                                  
 
                                 <!--Direccion-->
-                                <div class="row">
+                                <!--<div class="row">
                                     <label for="DIRECCION"
                                            class="col-md-4 col-form-label text-md-right"><strong>Dirección</strong></label>
 
@@ -61,10 +61,10 @@
 
                                     </div>
                                 </div>
-                                 <br>
+                                 <br>-->
 
                                 <!--Telefono-->
-                                <div class="row">
+                                <!--<div class="row">
                                     <label for="TELEFONO"
                                            class="col-md-4 col-form-label text-md-right"><strong>Teléfono</strong></label>
 
@@ -80,7 +80,7 @@
                                 </div>
                                  <br>
 
-                                <!--Celular-->
+                               
                                 <div class=" row">
                                     <label for="CELULAR"
                                            class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
@@ -97,7 +97,7 @@
                                 </div>
                                  
 
-                                 <!--<div class=" row">
+                                 <div class=" row">
                                     <label for="ESTADO"
                                            class="col-md-4 col-form-label text-md-right">Instrucccion</label>
 

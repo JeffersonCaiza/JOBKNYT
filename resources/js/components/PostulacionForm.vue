@@ -578,6 +578,8 @@ export default {
 
 .card{
     background: darkred;
+    width: 796px;
+    margin-left: -110px;
 }
 
 select {

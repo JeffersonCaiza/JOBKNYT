@@ -36,8 +36,8 @@
                                     </div>
                                 </div>
 
-                                <!--Apellido-->
-                                <div class="row">
+                              
+                                <!--<div class="row">
                                     <label
                                         for="APELLIDO"
                                         class="col-md-4 col-form-label text-md-right"
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
 
-                                <!--Direccion-->
+                                
                                 <div class="row">
                                     <label
                                         for="DIRECCION"
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
 
-                                <!--Telefono-->
+                                
                                 <div class="row">
                                     <label
                                         for="TELEFONO"
@@ -117,7 +117,7 @@
                                     </div>
                                 </div>
 
-                                <!--Celular-->
+                              
                                 <div class=" row">
                                     <label
                                         for="CELULAR"
@@ -142,7 +142,7 @@
                                             {{ error.CELULAR }}
                                         </span>
                                     </div>
-                                </div>
+                                </div>-->
 
                                
 

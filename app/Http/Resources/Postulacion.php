@@ -53,6 +53,7 @@ class Postulacion extends JsonResource
             'OCUPACIONB'=> $this->OCUPACIONB,
             'TELEFONOS'=> $this->TELEFONOS,
             'IdOferta'=> Oferta::find($this->IdOferta),
+            'CODUSUARIO'=> $this->CODUSUARIO,
             
         ];
     }

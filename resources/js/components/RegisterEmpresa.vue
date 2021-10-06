@@ -27,8 +27,8 @@
                                     </div>
                                 </div>
 
-                                <!--Apellido-->
-                                <div class="row">
+                                
+                                <!--<div class="row">
                                     <label for="APELLIDO"
                                            class="col-md-4 col-form-label text-md-right">Ruc Empresa</label>
 
@@ -43,7 +43,7 @@
                                     </div>
                                 </div>
 
-                                <!--Direccion-->
+                               
                                 <div class="row">
                                     <label for="DIRECCION"
                                            class="col-md-4 col-form-label text-md-right">Dirección</label>
@@ -60,7 +60,7 @@
                                     </div>
                                 </div>
 
-                                <!--Telefono-->
+                                
                                 <div class="row">
                                     <label for="TELEFONO"
                                            class="col-md-4 col-form-label text-md-right">Teléfono</label>
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
 
-                                <!--Celular-->
+                                
                                 <div class=" row">
                                     <label for="CELULAR"
                                            class="col-md-4 col-form-label text-md-right">Celular</label>
@@ -105,11 +105,11 @@
                                         {{ error.ESTADO }}
                                     </span>
                                     </div>
-                                </div>
+                                </div>-->
 
                                  
 
-                                <!--rol-->
+                               
                                 <div class="row">
                                     <label for="CODROL"
                                            class="col-md-4 col-form-label text-md-right">Rol</label>
