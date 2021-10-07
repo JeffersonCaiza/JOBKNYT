@@ -695,6 +695,7 @@ export default {
             errores: {},
             show: false,
             ofertasos: [],
+            borrar: true,
            
         }
 

@@ -34,8 +34,15 @@ class ControllerPostulacion extends Controller
 
     public function store(PostulacionRequest $request)
     {
+        
+        
+        
         $Postulacion = new Postulacion;
         $Postulacion->create($request->all());
+
+        
+        
+        
     }
 
     public function update(PostulacionRequest $request, Postulacion $id)

@@ -115,7 +115,7 @@
 
         {
             path: '/Postulaciones_Empresa',
-            name: 'postulaciones',
+            name: 'postulaciones_empresa',
             component: PostulacionEmpresa
         },
         

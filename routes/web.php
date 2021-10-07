@@ -43,9 +43,12 @@ Route::get('postulaciones', [App\Http\Controllers\HomeController::class, 'index'
 Route::get('lista_postulaciones', [App\Http\Controllers\ControllerPostulacion::class, 'index'])->middleware('auth');
 Route::post('postulaciones', [App\Http\Controllers\ControllerPostulacion::class, 'store'])->name('postulaciones')->middleware('auth');
 Route::put('postulaciones/{id}', [App\Http\Controllers\ControllerPostulacion::class, 'update'])->name('postulaciones')->middleware('auth');
+Route::delete('postulaciones/{id}', [App\Http\Controllers\ControllerPostulacion::class, 'destroy'])->name('postulaciones')->middleware('auth');
+
 
 Route::get('lista_postulacionese', [App\Http\Controllers\ControllerPostulacionP::class, 'index'])->middleware('auth');
 Route::get('Postulaciones_Empresa', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+
 
 
 Route::get('/lista_noveles', [App\Http\Controllers\ControllerUsuario::class, 'index'])->name('noveles')->middleware('auth');
