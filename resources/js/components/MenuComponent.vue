@@ -132,9 +132,29 @@ export default {
             },
 
             {
+                text: "Crear Hoja",
+                path: "/Crear_Hoja",
+                icon: mdiClipboardListOutline,
+                roles: [2],
+               
+            },
+
+
+
+             {
+                text: "Hoja de Vida",
+                path: "/Hoja_de_vida",
+                icon: mdiClipboardListOutline,
+                roles: [2],
+               
+            },
+
+
+
+            {
                 text: "Postulaciones",
                 path: "/postulaciones",
-                icon: mdiAccountGroup,
+                icon: mdiClipboardTextOutline,
                 roles: [2],
                
             },
@@ -142,7 +162,7 @@ export default {
             {
                 text: "Postulaciones",
                 path: "/Postulaciones_Empresa",
-                icon: mdiAccountGroup,
+                icon: mdiClipboardTextOutline,
                 roles: [3],
                
             },
@@ -162,5 +182,6 @@ export default {
 
 .btnMenu {
     display: -webkit-box;
+    background: #456a70;
 }
 </style>

@@ -12,13 +12,13 @@
 
                             <div class="form-group">
 
-                                <h1 align="left"><strong>Informacion de Oferta</strong></h1>
+                                <h1 align="left"><strong>Detalles de Postulacion</strong></h1>
                                         <br>
                                         
 
                                         <div class="row">
                                             <label for="IdOferta"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Oferta</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Seleccione la Oferta</strong></label>
                                             <div class="col-md-6">
                                                 
 
@@ -41,10 +41,42 @@
                                                
                                             </div>
                                         </div>
+
+
+
+
+
+                                          <div class="row">
+                                            <label for="IDHOJA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Seleccione su Nombre</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+
+                                                <select required aria-required="true"
+                                                class="form-control"
+                                                name="IDHOJA" id="IDHOJA"
+                                                v-model="estudiante.IDHOJA"
+                                        >
+                                            <option value="" disabled selected> seleccione su nombre...</option>
+                                            <option v-for="hojavida in vida" :value="hojavida.IDHOJA">{{ hojavida.NOMBRESC }}</option>
+                                        </select>
+                                        <span class="text-danger"
+                                                      v-if="errores.IDHOJA">{{ errores.IDHOJA[0] }}</span>
+
+                                                       
+
+
+                                                    
+                                               
+                                            </div>
+                                        </div>
+
+
                                          <br>
 
 
-                                        <h1 align="left" ><strong>Informacion Personal</strong></h1>
+                                        <!--<h1 align="left" ><strong>Informacion Personal</strong></h1>
                                          <br>
 
                                         <div class="row">
@@ -483,7 +515,7 @@
                                                        <span class="text-danger"
                                                       v-if="errores.OCUPACIONB">{{ errores.OCUPACIONB[0] }}</span>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                
                                 <div class="row mb-0">
@@ -531,6 +563,7 @@ export default {
             loaded: true,
             errors: {},
             ofertasos:[],
+            vida:[],
 
         }
     },
@@ -538,6 +571,10 @@ export default {
       mounted() {
         axios.get('ofertasos').then((response) => {
             this.ofertasos = response.data;
+        })
+
+        axios.get('hojas').then((response) => {
+            this.vida = response.data;
         })
     },
     

@@ -25,15 +25,15 @@ class PostulacionRequest extends FormRequest
     {
         return [
            
-            'IdOferta'=>'required',
-            'NOMBRES'=>'required',
-            'CEDULA'=>'required|numeric|digits:10',
-            'EMAIL'=>'required|email|max:255|',
-            'EDAD'=>'required|numeric|digits:2',
-            'DOMICILIO'=>'required',
-            'TELEFONOS'=>'required|numeric|digits:10',
-            'COLEGIO'=>'required',
-            'TITULOCOLEGIO'=>'required',
+            //'IdOferta'=>'required',
+            //'NOMBRES'=>'required',
+            //'CEDULA'=>'required|numeric|digits:10',
+            //'EMAIL'=>'required|email|max:255|',
+            //'EDAD'=>'required|numeric|digits:2',
+            //'DOMICILIO'=>'required',
+            //'TELEFONOS'=>'required|numeric|digits:10',
+            //'COLEGIO'=>'required',
+            //'TITULOCOLEGIO'=>'required',
 
 
            
@@ -45,22 +45,22 @@ class PostulacionRequest extends FormRequest
     public function messages()
     {
         return [
-            'IdOferta.required'=>'Seleccione la oferta a la cual desea postularse',
-            'NOMBRES.required'=>'Campo Obligatorio',
-            'CEDULA.required'=>'Campo Obligatorio',
-            'CEDULA.numeric'=>'Debe ser un numero',
-            'CEDULA.digits'=>'Debe tener 10 digitos',
-            'EMAIL.required'=>'Campo Obligatorio',
-            'EMAIL.email'=>'El email debe tener @',
-            'EDAD.required'=>'Campo Obligatorio',
-            'EDAD.numeric'=>'Debe ser un numero',
-            'EDAD.digits'=>'Debe tener 2 digitos y ser mayor que 16',
-            'DOMICILIO.required'=>'Campo Obligatorio',
-            'TELEFONOS.required'=>'Campo Obligatorio',
-            'TELEFONOS.numeric'=>'Debe ser un numero',
-            'TELEFONOS.digits'=>'Debe tener 10 digitos',
-            'COLEGIO.required'=>'Campo Obligatorio',
-            'TITULOCOLEGIO.required'=>'Campo Obligatorio',
+            //'IdOferta.required'=>'Seleccione la oferta a la cual desea postularse',
+            //'NOMBRES.required'=>'Campo Obligatorio',
+            //'CEDULA.required'=>'Campo Obligatorio',
+            //'CEDULA.numeric'=>'Debe ser un numero',
+            //'CEDULA.digits'=>'Debe tener 10 digitos',
+            //'EMAIL.required'=>'Campo Obligatorio',
+            //'EMAIL.email'=>'El email debe tener @',
+            //'EDAD.required'=>'Campo Obligatorio',
+            //'EDAD.numeric'=>'Debe ser un numero',
+            //'EDAD.digits'=>'Debe tener 2 digitos y ser mayor que 16',
+            //'DOMICILIO.required'=>'Campo Obligatorio',
+            //'TELEFONOS.required'=>'Campo Obligatorio',
+            //'TELEFONOS.numeric'=>'Debe ser un numero',
+            //'TELEFONOS.digits'=>'Debe tener 10 digitos',
+            //'COLEGIO.required'=>'Campo Obligatorio',
+            //'TITULOCOLEGIO.required'=>'Campo Obligatorio',
             
         ];
 

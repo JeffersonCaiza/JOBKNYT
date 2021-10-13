@@ -10,7 +10,7 @@ class Postulacion extends Model
     protected $fillable =['IDPOSTULACION','NOMBREEMPRESA','TITULOOFERTA','NOMBRES','CEDULA','EMAIL','COLEGIO','TITULOCOLEGIO','UNIVERSIDAD','TITULOUNIVERSIDAD','EDAD',
 'DOMICILIO','CURSOA','NIVELA','CURSOB','NIVELB','EMPRESAA','FUNCIONA','AREAA','FECHAA','TELEFONOA'
 ,'EMPRESAB','FUNCIONB','AREAB','FECHAB','TELEFONOB','NOMBREA','TELEFONORA','OCUPACIONA','NOMBREB',
-'TELEFONORB','OCUPACIONB','TELEFONOS','IdOferta','CODUSUARIO'];
+'TELEFONORB','OCUPACIONB','TELEFONOS','IdOferta','CODUSUARIO','IDHOJA'];
     public $timestamps = false;
     protected $primaryKey ='IDPOSTULACION';
     protected $table = 'postulacion';
@@ -23,4 +23,16 @@ class Postulacion extends Model
         $postulacion->CODUSUARIO = Auth::id();
         });
     }
+
+   
+
+ 
+        public function oferta()
+        {
+            return $this->belongsTo('App\Models\Oferta');
+        }
+        
+    
+
+
 }

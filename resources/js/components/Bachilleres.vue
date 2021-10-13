@@ -3,9 +3,14 @@
         <h1 class="text-center"><strong>Lista de ofertas</strong></h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
-               
-            </div>
         </div>
+
+         <div class="row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <router-link to="/Postulacion" class="nav-link">Crea tu Postulacion</router-link>
+                                    </div>
+                                </div>
+            </div>
 
         <v-card>
             <v-card-title>
@@ -24,6 +29,11 @@
                                 </div>
                                 <div class="modal-body">
                   <div>
+
+
+
+
+                    
                     <!--<div class="row">
                       <label
                         for="Nombre Empresa"
@@ -47,113 +57,219 @@
                     </div>-->
 
 
-                    <div class="row">
-                      <label
-                        for="Titulo Oferta"
-                        class="col-md-4 col-form-label text-md-right"
-                        ><strong>Empresa y Titulo de Oferta</strong></label
-                      >
-                      <div class="col-md-6">
-                        <input
-                          v-model="estudiante.TituloOferta"
-                          type="text"
-                          class="form-control"
-                          id="Titulo Oferta"
-                          placeholder="Empresa y Titulo de Oferta"
-                        />
-                        <span class="text-danger" v-if="errores.TituloOferta">{{
-                          errores.TituloOferta[0]
-                        }}</span>
-                      </div>
-                    </div>
+                     <div class="row">
+                                            <label for="Titulo Oferta"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Titulo de Oferta</strong></label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.TituloOferta" type="text" class="form-control"
+                                                       id="Titulo Oferta"
+                                                       placeholder="Empresa y Titulo de Oferta">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TituloOferta">{{ errores.TituloOferta[0] }}</span>
+                                               
+                                            </div>
+                                        </div>
 
-                    
+                                    
 
-                    <div class="row">
-                      <label
-                        for="Disponibilidad"
-                        class="col-md-4 col-form-label text-md-right"
-                        ><strong>Disponibilidad</strong></label
-                      >
-                      <div class="col-md-6">
-                        <input
-                          v-model="estudiante.Disponibilidad"
-                          type="text"
-                          class="form-control"
-                          id="Disponibilidad"
-                          placeholder="Disponibilidad"
-                        />
-                        <span
-                          class="text-danger"
-                          v-if="errores.Disponibilidad"
-                          >{{ errores.Disponibilidad[0] }}</span
-                        >
-                      </div>
-                    </div>
+                                           <div class="row">
+                                            <label for="Disponibilidad"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Disponibilidad</strong></label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.Disponibilidad">
+                                                <option disabled value="">Seleccione disponibilidad</option>
+                                                <option>Tiempo Completo</option>
+                                                <option>Tiempo Parcial</option>
+                                                <option>Por Horas</option>
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.Disponibilidad">{{ errores.Disponibilidad[0] }}</span>
+                                            </div>
+                                        </div>
 
-                    <div class="row">
-                      <label
-                        for="EducacionMinima"
-                        class="col-md-4 col-form-label text-md-right"
-                        ><strong>Educacion</strong></label
-                      >
-                      <div class="col-md-6">
-                        <input
-                          v-model="estudiante.EducacionMinima"
-                          type="text"
-                          class="form-control"
-                          id="EducacionMinima"
-                          placeholder="Educacion Minima"
-                        />
-                        <span
-                          class="text-danger"
-                          v-if="errores.EducacionMinima"
-                          >{{ errores.EducacionMinima[0] }}</span
-                        >
-                      </div>
-                    </div>
 
-                    <div class="row">
-                      <label
-                        for="Edad"
-                        class="col-md-4 col-form-label text-md-right"
-                        ><strong>Edad</strong></label
-                      >
-                      <div class="col-md-6">
-                        <input
-                          v-model="estudiante.Edad"
-                          type="text"
-                          class="form-control"
-                          id="	Edad"
-                          placeholder="Edad"
-                        />
-                        <span class="text-danger" v-if="errores.Edad">{{
-                          errores.Edad[0]
-                        }}</span>
-                      </div>
-                    </div>
 
-                    <div class="row">
-                      <label
-                        for="FechaPubicacion"
-                        class="col-md-4 col-form-label text-md-right"
-                        ><strong>Fecha</strong></label
-                      >
-                      <div class="col-md-6">
-                        <input
-                          v-model="estudiante.FechaPubicacion"
-                          type="text"
-                          class="form-control"
-                          id="FechaPubicacion"
-                          placeholder="dd/mm/aa"
-                        />
-                        <span
-                          class="text-danger"
-                          v-if="errores.FechaPubicacion"
-                          >{{ errores.FechaPubicacion[0] }}</span
-                        >
-                      </div>
-                    </div>
+
+
+
+
+
+
+                                         
+
+                                        <div class="row">
+                                            <label for="EducacionMinima"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Educacion</strong></label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.EducacionMinima">
+                                                <option disabled value="">Seleccione nivel de educacion</option>
+                                                <option>Bachillerato</option>
+                                                <option>Tecnico Superior</option>
+                                                <option>Tercer Nivel (grado)</option>
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.EducacionMinima">{{ errores.EducacionMinima[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                       
+                                        
+
+
+
+
+                                        
+
+                                        <div class="row">
+                                            <label for="Edad"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Edad</strong></label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.Edad">
+                                                <option disabled value="">Seleccione el rango de edad</option>
+                                                <option>18-25</option>
+                                                <option>26-30</option>
+                                                <option>31-35</option>
+                                                <option>36-40</option>
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.Edad">{{ errores.Edad[0] }}</span>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                          <div class="row">
+                                            <label for="Descripcion Oferta"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Descripcion</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+                                                    <div class="descripcion">
+                                                      <v-textarea
+                                                      v-model="estudiante.DescripcionOferta" type="text" 
+                                                      clearable
+                                                      clear-icon="mdi-close-circle"
+                                                      label="Descripcion"
+                                                      value="This is clearable text."
+                                                     ></v-textarea>
+                                                    </div>
+                                                    
+                                                       <span class="text-danger"
+                                                      v-if="errores.DescripcionOferta">{{ errores.DescripcionOferta[0] }}</span>
+                                                    
+                                            </div>
+                                        </div>
+
+                                           <div class="row">
+                                            <label for="Requisitos Oferta"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Requisitos</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+                                                    <div class="descripcion">
+                                                      <v-textarea
+                                                      v-model="estudiante.Requisitos" type="text" 
+                                                      clearable
+                                                      clear-icon="mdi-close-circle"
+                                                      label="Requisitos"
+                                                      value="This is clearable text."
+                                                     ></v-textarea>
+                                                    </div>
+                                                    
+                                                       <span class="text-danger"
+                                                      v-if="errores.Requisitos">{{ errores.Requisitos[0] }}</span>
+                                                    
+                                            </div>
+                                        </div>
+
+
+
+                                           <div class="row">
+                                            <label for="Beneficios"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Beneficios</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+                                                    <div class="descripcion">
+                                                      <v-textarea
+                                                      v-model="estudiante.Beneficios" type="text" 
+                                                      clearable
+                                                      clear-icon="mdi-close-circle"
+                                                      label="Beneficios"
+                                                      value="This is clearable text."
+                                                     ></v-textarea>
+                                                    </div>
+                                                    
+                                                       <span class="text-danger"
+                                                      v-if="errores.Beneficios">{{ errores.Beneficios[0] }}</span>
+                                                    
+                                            </div>
+                                        </div>
+
+
+                                           <div class="row">
+                                            <label for="Cualidades"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Cualidades</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+                                                    <div class="descripcion">
+                                                      <v-textarea
+                                                      v-model="estudiante.Cualidades" type="text" 
+                                                      clearable
+                                                      clear-icon="mdi-close-circle"
+                                                      label="Cualidades"
+                                                      value="This is clearable text."
+                                                     ></v-textarea>
+                                                    </div>
+                                                    
+                                                       <span class="text-danger"
+                                                      v-if="errores.Cualidades">{{ errores.Cualidades[0] }}</span>
+                                                    
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                        <div class="row">
+                                            <label for="FechaPubicacion"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Fecha Inicio de publicacion</strong></label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FechaPubicacion" type="date" class="form-control"
+                                                       id="FechaPubicacion" placeholder="Inicio de publicacion">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FechaPubicacion">{{ errores.FechaPubicacion[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="FechaPubicacion"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Fecha Fin de publicacion</strong></label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FechaPublicacionFin	" type="date" class="form-control"
+                                                       id="FechaPublicacionFin	" placeholder="Fin de publicacion">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FechaPublicacionFin	">{{ errores.FechaPublicacionFin	[0] }}</span>
+                                            </div>
+                                        </div>
+
+
+
 
                     <div class="row">
                       <label
@@ -182,11 +298,7 @@
                                         Cerrar
                                     </button>
 
-                    <div class="row">
-                                    <div class="col-md-6 offset-md-4">
-                                        <router-link to="/Postulacion" class="nav-link">Postulate</router-link>
-                                    </div>
-                                </div>
+                   
                      
 
                                 
@@ -268,7 +380,7 @@ export default {
             headers: [
                 {text: 'Codigo', value: 'IdOferta',},
                 //{text: 'Nombre Empresa', value: 'NombreEmpresa'},
-                {text: 'Empresa y Titulo de Oferta', value: 'TituloOferta'},
+                {text: 'Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion Oferta', value: 'DescripcionOferta'},
                 {text: 'Detalles', value: 'actions'},
                
@@ -284,6 +396,10 @@ export default {
                 Edad:'',
                 FechaPubicacion:'',
                 LinkTest: "",
+                FechaPublicacionFin:'',
+                Requisitos:'',
+                Beneficios:'',
+                Cualidades:'',
                 },
             id: 0,
             update: true,
@@ -344,6 +460,11 @@ export default {
                 this.estudiante.Edad = data.Edad;
                 this.estudiante.FechaPubicacion = data.FechaPubicacion;
                 this.estudiante.LinkTest = data.LinkTest;
+                this.estudiante.FechaPublicacionFin = data.FechaPublicacionFin;
+                this.estudiante.DescripcionOferta = data.DescripcionOferta;
+                this.estudiante.Requisitos = data.Requisitos;
+                this.estudiante.Beneficios = data.Beneficios;
+                this.estudiante.Cualidades = data.Cualidades;
                 
             } else {
                 this.titleModal = "Crear Estudiante";
@@ -510,12 +631,38 @@ export default {
     border-color: #6c757d;
 }
 
+.descripcion {
+    
+    background: white;
+     border-radius: 11px;
+     width: 569px;
+    height: 168px;
+   
+}
+
 a {
     color: #3490dc;
     text-decoration: none;
-    margin-left: -288px;
-    margin-right: 559px;
+    margin-left: -346px;
+    margin-right: 675px;
     background: black;
     border-radius: 47px;
+}
+
+select {
+  word-wrap: normal;
+  background: crimson;
+  border-radius: 6px;
+  -webkit-appearance: revert;
+}
+
+.theme--light.v-card {
+    color: rgba(0,0,0,.87);
+    background: #FFAE00;
+}
+
+.theme--light.v-data-table {
+    background-color:#00455E;
+    color: rgb(0 0 6 / 104%);
 }
 </style>

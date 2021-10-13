@@ -10,8 +10,8 @@ use App\Models\Postulacion;
 
 use App\Models\Oferta;
 
-//use App\Http\Resources\Postulacion as PostulacionResource;
-//use App\Http\Resources\PostulacionCollection;
+use App\Http\Resources\Postulacion as PostulacionResource;
+use App\Http\Resources\PostulacionCollection;
 
 class ControllerPostulacionP extends Controller
 {
@@ -20,20 +20,25 @@ class ControllerPostulacionP extends Controller
         $postulaciones=DB::table('postulacion')
         ->join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
         ->where('ofertas.CODUSUARIO' ,'=',Auth::id())->get();
-        return $postulaciones;
+        return $postulacion;
+   
       
        
 
     }
 
-    //public function show()
-    //{
-        //return new PostulacionCollection(Postulacion::paginate(25));
+    public function show()
+    {
+        $postulaciones=Postulacion::join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
+        ->where('ofertas.CODUSUARIO' ,'=',Auth::id())->get();
+        
 
-       // $postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
+        return new PostulacionCollection($postulaciones);
+
+       //$postulacion = Postulacion::where('CODUSUARIO', '=', Auth::id() )->get();
         //return $postulacion;
 
-    //}
+    }
 
     public function store(PostulacionRequest $request)
     {

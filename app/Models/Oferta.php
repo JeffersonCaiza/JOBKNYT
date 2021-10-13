@@ -9,7 +9,8 @@ use App\Models\User;
 
 class Oferta extends Model
 {
-    protected $fillable =['NombreEmpresa','TituloOferta','DescripcionOferta','LinkTest','Disponibilidad','EducacionMinima','Edad','FechaPubicacion','CODUSUARIO'];
+    protected $fillable =['NombreEmpresa','TituloOferta','DescripcionOferta','LinkTest','Disponibilidad','EducacionMinima','Edad','FechaPubicacion','CODUSUARIO',
+    'FechaPublicacionFin','Requisitos','Beneficios','Cualidades'];
     public $timestamps = false;
     protected $primaryKey ='IdOferta';
     protected $table = 'ofertas';
@@ -22,6 +23,10 @@ class Oferta extends Model
         $ofertas->CODUSUARIO = Auth::id();
         });
     }
+
+
+
+    
 }
 
 

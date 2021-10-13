@@ -9,8 +9,8 @@ use App\Http\Requests\PostulacionRequest;
 use App\Models\Postulacion;
 use App\Models\Oferta;
 
-//use App\Http\Resources\Postulacion as PostulacionResource;
-//use App\Http\Resources\PostulacionCollection;
+use App\Http\Resources\Postulacion as PostulacionResource;
+use App\Http\Resources\PostulacionCollection;
 
 class ControllerPostulacion extends Controller
 {
@@ -18,27 +18,48 @@ class ControllerPostulacion extends Controller
     {
         //return new PostulacionCollection(Postulacion::paginate(25));
 
-        $postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
-        return $postulacion;
+        //$postulacion = Postulacion::where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $postulacion;
+
+        //return new PostulacionCollection(Postulacion::where('CODUSUARIO', '=', Auth::id())->get());
+        //return $postulacion;
+
+        // $postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $postulacion;
 
     }
 
-    //public function show()
-    //{
-        //return new PostulacionCollection(Postulacion::paginate(25));
+    public function show()
+    {
+        $postulacion = Postulacion::where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $postulacion;
+        
+        return new PostulacionCollection($postulacion);
 
-       // $postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
+       //$postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
         //return $postulacion;
 
-    //}
+    }
 
     public function store(PostulacionRequest $request)
     {
-        
-        
-        
+        $postulaciones=DB::table('postulacion')
+        ->join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
+        ->where('ofertas.IdOferta' ,'=','postulacion.IdOferta')->first();
+
+
+        if( $postulaciones===null){
         $Postulacion = new Postulacion;
         $Postulacion->create($request->all());
+
+        }else{
+            return('aaaaa');
+        }
+
+        
+        
+        //$Postulacion = new Postulacion;
+       //$Postulacion->create($request->all());
 
         
         

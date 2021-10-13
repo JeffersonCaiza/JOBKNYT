@@ -29,7 +29,7 @@ class ControllerUsuario extends Controller
 
     public function show()
     {
-        //return User::all();
+        
         $noveles = DB::table('usuario')->where('CODROL', '=', '3')->get();
         return $noveles;
 

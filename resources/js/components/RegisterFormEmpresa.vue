@@ -114,7 +114,7 @@
                                     </div>
                                 </div>-->
                                 
-                                <br>
+                                <!--<br>
 
                                   <div class=" row">
                                     <label for="ROL"
@@ -132,7 +132,7 @@
                                     </span>
                                     </div>
                                 </div>
-                                <br>
+                                <br>-->
 
                                 <!--email-->
                                 <div class="row">
@@ -238,7 +238,7 @@ export default {
                 this.loaded = false;
                 this.success = false;
                 this.errors = {};
-                axios.post('registro', this.fields).then(response => {
+                axios.post('registro_empresa', this.fields).then(response => {
                     this.fields = {}; //Clear input fields.
                     this.loaded = true;
                     this.success = true;

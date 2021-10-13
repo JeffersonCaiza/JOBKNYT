@@ -4,7 +4,10 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
+
 use App\Models\Oferta;
+use App\Models\User;
+use App\Models\Hoja;
 class Postulacion extends JsonResource
 {
     /**
@@ -15,10 +18,11 @@ class Postulacion extends JsonResource
      */
     public function toArray($request)
     {
+
+       
+
         return [
-           
-
-
+            
             'IDPOSTULACION'=> $this->IDPOSTULACION,
             'NOMBREEMPRESA'=> $this->NOMBREEMPRESA,
             'TITULOOFERTA'=> $this->TITULOOFERTA,
@@ -53,8 +57,9 @@ class Postulacion extends JsonResource
             'OCUPACIONB'=> $this->OCUPACIONB,
             'TELEFONOS'=> $this->TELEFONOS,
             'IdOferta'=> Oferta::find($this->IdOferta),
-            'CODUSUARIO'=> $this->CODUSUARIO,
-            
+            'CODUSUARIO'=> User::find($this->CODUSUARIO),
+            'IDHOJA'=> Hoja::find($this->IDHOJA), 
+            'CODUSUARIOH' => Hoja::find($this->CODUSUARIOH), 
         ];
     }
 }

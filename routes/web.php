@@ -24,6 +24,10 @@ Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name(
 
 Route::get('registro', [App\Http\Controllers\HomeController::class, 'index'])->name('registro');
 Route::post('registro', [App\Http\Controllers\RegisterController::class, 'create'])->name('registro');
+
+Route::get('registro_empresa', [App\Http\Controllers\HomeController::class, 'index'])->name('registro');
+Route::post('registro_empresa', [App\Http\Controllers\RegisterEmpresaController::class, 'create'])->name('registro');
+
 Route::get('Postulacion', [App\Http\Controllers\HomeController::class, 'index'])->name('registro');
 
 Route::get('roles', [App\Http\Controllers\ControllerRol::class, 'index'])->name('roles');
@@ -40,18 +44,23 @@ Route::get('ofertas_laborales', [App\Http\Controllers\HomeController::class, 'in
 Route::get('ofertasr', [App\Http\Controllers\ControllerOferta::class, 'index'])->middleware('auth');
 
 Route::get('postulaciones', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
-Route::get('lista_postulaciones', [App\Http\Controllers\ControllerPostulacion::class, 'index'])->middleware('auth');
+Route::get('lista_postulaciones', [App\Http\Controllers\ControllerPostulacion::class, 'show'])->middleware('auth');
 Route::post('postulaciones', [App\Http\Controllers\ControllerPostulacion::class, 'store'])->name('postulaciones')->middleware('auth');
 Route::put('postulaciones/{id}', [App\Http\Controllers\ControllerPostulacion::class, 'update'])->name('postulaciones')->middleware('auth');
 Route::delete('postulaciones/{id}', [App\Http\Controllers\ControllerPostulacion::class, 'destroy'])->name('postulaciones')->middleware('auth');
 
 
-Route::get('lista_postulacionese', [App\Http\Controllers\ControllerPostulacionP::class, 'index'])->middleware('auth');
+Route::get('lista_postulacionese', [App\Http\Controllers\ControllerPostulacionP::class, 'show'])->middleware('auth');
 Route::get('Postulaciones_Empresa', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
 
 
 Route::get('/lista_noveles', [App\Http\Controllers\ControllerUsuario::class, 'index'])->name('noveles')->middleware('auth');
+
+Route::get('/lista_noveleses', [App\Http\Controllers\ControllerUsuario::class, 'show'])->name('noveles')->middleware('auth');
+
+
+
 Route::get('usuarios', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('administrador', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('registro_empresa', [App\Http\Controllers\HomeController::class, 'index']);
@@ -64,3 +73,11 @@ Route::delete('usuarios/{id}', [App\Http\Controllers\ControllerUsuario::class, '
 
 
 Route::get('lista_ofertasd', [App\Http\Controllers\ControllerOfertad::class, 'index'])->name('ofertas')->middleware('auth');
+
+
+Route::get('hoja', [App\Http\Controllers\ControllerHoja::class, 'index'])->middleware('auth');
+Route::post('hojavida', [App\Http\Controllers\ControllerHoja::class, 'store'])->name('hoja')->middleware('auth');
+Route::put('hoja/{id}', [App\Http\Controllers\ControllerHoja::class, 'update'])->name('hoja')->middleware('auth');
+Route::get('Crear_Hoja', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('Hoja_de_vida', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('hojas', [App\Http\Controllers\ControllerHoja::class, 'show'])->name('hoja')->middleware('auth');

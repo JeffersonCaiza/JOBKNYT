@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Perfil</div>
+                    <div class="card-header"><strong>Perfil</strong></div>
                     <div class="card-body">
                         <form method="POST" @submit.prevent="submit">
                             <div class="form-group">
@@ -12,7 +12,7 @@
                                     <label
                                         for="NOMBRE"
                                         class="col-md-4 col-form-label text-md-right"
-                                        >Nombre Estudiante</label
+                                        ><strong>Nombre Estudiante</strong></label
                                     >
 
                                     <div class="col-md-6">
@@ -175,7 +175,7 @@
                                     <label
                                         for="CODROL"
                                         class="col-md-4 col-form-label text-md-right"
-                                        >Rol</label
+                                        ><strong>Rol</strong></label
                                     >
                                     <div class="col-md-6">
                                         <select
@@ -213,7 +213,7 @@
                                         for="email"
                                         class="col-md-4 col-form-label text-md-right"
                                     >
-                                        Correo 
+                                        <strong>Correo</strong> 
                                     </label>
 
                                     <div class="col-md-6">
@@ -329,5 +329,12 @@ export default {
     position: absolute;
     bottom: 0%;
     right: 0%;
+}
+
+.card {
+    
+    background: darkred;
+   
+    border-radius: 33px;
 }
 </style>

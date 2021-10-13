@@ -30,8 +30,9 @@ class OfertaRequest extends FormRequest
             'LinkTest'=>'required',
             'Disponibilidad'=>'required',
             'EducacionMinima'=>'required',
-            'Edad'=>'numeric|required|digits:2',
+            'Edad'=>'required',
             'FechaPubicacion'=>'required',
+            'FechaPublicacionFin'=>'required',
         ];
 
        
@@ -47,9 +48,10 @@ class OfertaRequest extends FormRequest
             'Disponibilidad.required'=>'Campo Obligatorio',
             'EducacionMinima.required'=>'Campo Obligatorio',
             'Edad.required'=>'Campo Obligatorio',
-            'Edad.numeric'=>'Solo ingresar numeros',
-            'Edad.digits'=>'Debe tener 2 digitos y ser mayor que 16',
+            //'Edad.numeric'=>'Solo ingresar numeros',
+            //'Edad.digits'=>'Debe tener 2 digitos y ser mayor que 16',
             'FechaPubicacion.required'=>'Campo Obligatorio',
+            'FechaPublicacionFin.required'=>'Campo Obligatorio',
         ];
 
        

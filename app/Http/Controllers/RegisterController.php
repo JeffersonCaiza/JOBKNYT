@@ -26,7 +26,7 @@ class RegisterController extends Controller
                 
                 Rule::unique(User::class),
             ],
-            'CODROL' => ['required'],
+            //'CODROL' => ['required'],
             'password' => ['required', 'string', 'min:8', 'max:255', 'confirmed'],
         ]);
         User::create([
@@ -37,7 +37,7 @@ class RegisterController extends Controller
             //'CELULAR' => $request['CELULAR'],
             //'ESTADO' => $request['ESTADO'],
             'email' => $request['email'],
-            'CODROL' => $request['CODROL'],
+            'CODROL' => 2,
             'password' => Hash::make($request['password']),
         ]);
     }

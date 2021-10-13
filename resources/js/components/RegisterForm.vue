@@ -116,7 +116,7 @@
                                     </div>
                                 </div>-->
                                  
-                                 <br>
+                                 <!--<br>
 
                                   <div class=" row">
                                     <label for="ROL"
@@ -134,7 +134,7 @@
                                     </span>
                                     </div>
                                 </div>
-                                 <br>
+                                 <br>-->
 
                                 
                                 

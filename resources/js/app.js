@@ -40,6 +40,8 @@
  import Empresa from "./components/Empresa";
  import PostulacionForm from "./components/PostulacionForm";
  import Oferta from "./components/Oferta";
+ import Hoja from "./components/Hoja";
+ import Formvida from "./components/Formvida";
 
  import Postulacion from "./components/Postulacion";
  import PostulacionEmpresa from "./components/PostulacionEmpresa";
@@ -118,6 +120,20 @@
             name: 'postulaciones_empresa',
             component: PostulacionEmpresa
         },
+
+        {
+            path: '/Hoja_de_vida',
+            name: 'hoja_de_vida',
+            component: Hoja
+        },
+
+        {
+            path: '/Crear_Hoja',
+            name: 'crear_hoja',
+            component: Formvida
+        },
+
+
         
      ]
  })
