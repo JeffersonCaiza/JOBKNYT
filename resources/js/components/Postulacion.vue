@@ -31,8 +31,21 @@
                                     <div>
 
                                         <h1 align="left"><strong>Informacion de Oferta</strong></h1>
-                                        <br>
+                                     
 
+                                       
+
+
+
+
+
+
+
+
+
+                                        
+                                        
+                                        
                                         <div class="row">
                                             <label for="NOMBRES"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Oferta</strong></label>
@@ -734,7 +747,7 @@ export default {
                 IdOferta:'',
                 CODUSUARIO:'',
                 IDHOJA:'',
-                CODUSUARIOH:'',
+                //CODUSUARIOH:'',
 
             },
             id: 0,
@@ -748,7 +761,7 @@ export default {
             show: false,
             ofertasos: [],
             borrar: true,
-            lista_noveles:[],
+            usuarios:[],
            
         }
 
@@ -763,9 +776,9 @@ export default {
           //  this.ofertasos = response.data;
         //})
 
-        //axios.get('lista_noveleses').then((response) => {
-          //  this.lista_noveles = response.data;
-        //})
+       // axios.get('lista_noveleses').then((response) => {
+      //      this.usuarios = response.data;
+       // })
     },
     methods: {
        list() {
@@ -857,7 +870,7 @@ export default {
                 this.estudiante.TELEFONORB = data.TELEFONORB;
                 this.estudiante.OCUPACIONB = data.OCUPACIONB;
                 this.estudiante.IDHOJA = data.IDHOJA;
-                this.estudiante.CODUSUARIOH = data.CODUSUARIOH ;
+                //this.estudiante.CODUSUARIOH = data.CODUSUARIOH ;
 
 
 

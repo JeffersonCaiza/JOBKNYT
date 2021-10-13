@@ -14,7 +14,7 @@
                                 <!--Nombre-->
                                 <div class="row">
                                     <label for="NOMBRE"
-                                           class="col-md-4 col-form-label text-md-right"><strong>Nombres Completos</strong></label>
+                                           class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
 
                                     <div class="col-md-6">
                                         <input id="NOMBRE" type="text"

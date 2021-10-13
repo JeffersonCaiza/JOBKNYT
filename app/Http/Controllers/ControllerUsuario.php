@@ -33,6 +33,8 @@ class ControllerUsuario extends Controller
         $noveles = DB::table('usuario')->where('CODROL', '=', '3')->get();
         return $noveles;
 
+        //return User::all();
+
     }
 
     

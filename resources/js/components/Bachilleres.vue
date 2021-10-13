@@ -56,6 +56,37 @@
                       </div>
                     </div>-->
 
+                     <div class="row">
+                                            <label for="CODUSUARIO"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+
+                                                <select required aria-required="true"
+                                                class="form-control"
+                                                name="CODUSUARIO" id="CODUSUARIO"
+                                                v-model="estudiante.CODUSUARIO"
+                                        >
+                                            <option
+                                                disabled
+                                                v-if="
+                                                    estudiante.CODUSUARIO === usuario.CODUSUARIO
+                                                "
+                                                v-for="usuario in usuarios"
+                                                :value="usuario.CODUSUARIO"
+                                            >
+                                                {{ usuario.NOMBRE }}
+                                            </option>
+                                        </select>
+                                        <span class="text-danger"
+                                                      v-if="errores.CODUSUARIO">{{ errores.CODUSUARIO[0] }}</span>
+
+                                            </div>
+
+                                        </div>
+                    
+
 
                      <div class="row">
                                             <label for="Titulo Oferta"
@@ -271,7 +302,7 @@
 
 
 
-                    <div class="row">
+                    <!--<div class="row">
                       <label
                         for="Link Test"
                         class="col-md-4 col-form-label text-md-right"
@@ -289,7 +320,47 @@
                           errores.LinkTest[0]
                         }}</span>
                       </div>
-                    </div>
+                    </div>-->
+
+
+                      <div class="row">
+                                            <label for="CODUSUARIO"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Envia tu curriculum y postulate</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+
+                                                <select required aria-required="true"
+                                                class="form-control"
+                                                name="CODUSUARIO" id="CODUSUARIO"
+                                                v-model="estudiante.CODUSUARIO"
+                                        >
+                                            <option
+                                                disabled
+                                                v-if="
+                                                    estudiante.CODUSUARIO === usuario.CODUSUARIO
+                                                "
+                                                v-for="usuario in usuarios"
+                                                :value="usuario.CODUSUARIO"
+                                            >
+                                                {{ usuario.email }}
+                                            </option>
+                                        </select>
+                                        <span class="text-danger"
+                                                      v-if="errores.CODUSUARIO">{{ errores.CODUSUARIO[0] }}</span>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+
+
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -400,6 +471,7 @@ export default {
                 Requisitos:'',
                 Beneficios:'',
                 Cualidades:'',
+                CODUSUARIO:'',
                 },
             id: 0,
             update: true,
@@ -410,12 +482,17 @@ export default {
             perPage: 0,
             errores: {},
             show: false,
+            usuarios: [],
         }
 
     },
 
     mounted() {
         this.list();
+
+        axios.get('lista_noveleses').then((response) => {
+            this.usuarios = response.data;
+        })
     },
     methods: {
         list() {
@@ -453,7 +530,7 @@ export default {
             if (this.update) {
                 this.id = data.IdOferta,
                 this.titleModal = "Detalles de la oferta";
-                this.estudiante.NombreEmpresa = data.NombreEmpresa;
+                this.estudiante.CODUSUARIO = data.CODUSUARIO;
                 this.estudiante.TituloOferta = data.TituloOferta;
                 this.estudiante.Disponibilidad = data.Disponibilidad;
                 this.estudiante.EducacionMinima = data.EducacionMinima;
