@@ -262,15 +262,7 @@
           >
             mdi-pencil
           </v-icon>
-          <v-icon
-            small
-            @click="
-              borrar = true;
-              openModal(item);
-            "
-          >
-            mdi-delete
-          </v-icon>
+          
         </template>
       </v-data-table>
     </v-card>

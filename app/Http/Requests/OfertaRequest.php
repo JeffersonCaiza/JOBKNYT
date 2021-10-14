@@ -27,7 +27,7 @@ class OfertaRequest extends FormRequest
           
             'TituloOferta'=>'required',
             'DescripcionOferta'=>'required',
-            'LinkTest'=>'required',
+            //'LinkTest'=>'required',
             'Disponibilidad'=>'required',
             'EducacionMinima'=>'required',
             'Edad'=>'required',
@@ -44,7 +44,7 @@ class OfertaRequest extends FormRequest
             
             'TituloOferta.required'=>'Campo Obligatorio',
             'DescripcionOferta.required'=>'Campo Obligatorio',
-            'LinkTest.required'=>'Campo Obligatorio',
+            //'LinkTest.required'=>'Campo Obligatorio',
             'Disponibilidad.required'=>'Campo Obligatorio',
             'EducacionMinima.required'=>'Campo Obligatorio',
             'Edad.required'=>'Campo Obligatorio',

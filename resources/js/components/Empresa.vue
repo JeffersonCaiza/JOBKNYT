@@ -88,7 +88,7 @@
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TituloOferta" type="text" class="form-control"
                                                        id="Titulo Oferta"
-                                                       placeholder="Empresa y Titulo de Oferta">
+                                                       placeholder="Titulo de Oferta">
                                                        <span class="text-danger"
                                                       v-if="errores.TituloOferta">{{ errores.TituloOferta[0] }}</span>
                                                
@@ -353,6 +353,9 @@
                                             data-bs-dismiss="modal">
                                         Guardar
                                     </button>
+
+                                    
+
                                 </div>
                             </div>
                         </div>
@@ -397,6 +400,10 @@
                             mdi-pencil
                         </v-icon>
                     </v-btn>
+
+                   
+
+                   
                 </template>
             </v-data-table>
         </v-card>
@@ -450,6 +457,7 @@ export default {
             },
             id: 0,
             update: true,
+            borrar: true,
             modal: 0,
             titleModal: ' ',
             estudiantes: [],
@@ -463,7 +471,7 @@ export default {
     },
 
     mounted() {
-        this.list();
+        this.list()
 
         axios.get('lista_noveleses').then((response) => {
             this.usuarios = response.data;
@@ -512,6 +520,14 @@ export default {
             }
         },
 
+        async eliminar() {
+        if (this.borrar) {
+          const res = await axios.delete("ofertas/" + this.id, this.estudiante);
+        }
+        this.closeModal();
+        this.list();
+    },
+
          
 
        
@@ -539,6 +555,7 @@ export default {
             } else {
                 this.titleModal = "Crear Nueva Oferta";
                 //this.estudiante.NombreEmpresa = '';
+                //this.estudiante.CODUSUARIO='';
                 this.estudiante.TituloOferta = '';
                 this.estudiante.Disponibilidad = '';
                 this.estudiante.EducacionMinima = '';
