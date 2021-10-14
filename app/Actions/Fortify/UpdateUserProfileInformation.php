@@ -21,12 +21,12 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     {
         Validator::make($input, [
             'NOMBRE' => ['required', 'string', 'max:255'],
-            'APELLIDO' => ['string', 'max:255'],
-            'DIRECCION' => ['max:255'],
-            'TELEFONO' => ['max:255'],
-            'CELULAR' => ['max:255'],
-            'ESTADO' => ['max:255'],
-            'CODROL' => ['required'],
+            //'APELLIDO' => ['string', 'max:255'],
+           // 'DIRECCION' => ['max:255'],
+           // 'TELEFONO' => ['max:255'],
+           // 'CELULAR' => ['max:255'],
+            //'ESTADO' => ['max:255'],
+            //'CODROL' => ['required'],
             'email' => [
                 'required',
                 'string',
@@ -44,12 +44,12 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         } else {
             $user->forceFill([
                 'NOMBRE' => $input['NOMBRE'],
-                'APELLIDO' => $input['APELLIDO'],
-                'DIRECCION' => $input['DIRECCION'],
-                'TELEFONO' => $input['TELEFONO'],
-                'CELULAR' => $input['CELULAR'],
-                'ESTADO' => $input['ESTADO'],
-                'CODROL' => $input['CODROL'],
+                //'APELLIDO' => $input['APELLIDO'],
+              //  'DIRECCION' => $input['DIRECCION'],
+               // 'TELEFONO' => $input['TELEFONO'],
+              //  'CELULAR' => $input['CELULAR'],
+              //  'ESTADO' => $input['ESTADO'],
+              //  'CODROL' => $input['CODROL'],
                 'email' => $input['email'],
             ])->save();
         }
