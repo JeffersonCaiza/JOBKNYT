@@ -53,7 +53,7 @@
                       <label
                         for="Titulo Oferta"
                         class="col-md-4 col-form-label text-md-right"
-                        >Empresa y Titulo de Oferta</label
+                        >Titulo de Oferta</label
                       >
                       <div class="col-md-6">
                         <input
@@ -207,14 +207,14 @@
                   >
                     Cerrar
                   </button>
-                  <button
+                 <!-- <button
                     @click="save()"
                     type="button"
                     class="btn btn-success btn-blue"
                     data-bs-dismiss="modal"
                   >
                     Guardar
-                  </button>
+                  </button>-->
 
                   <button
                     @click="eliminar()"
@@ -290,9 +290,9 @@ export default {
       cod: "",
       codBanco: "",
       headers: [
-        { text: "Codigo", value: "IdOferta" },
+        //{ text: "Codigo", value: "IdOferta" },
         //{ text: "Nombre Empresa", value: "NombreEmpresa" },
-        { text: "Empresa y Titulo de Oferta", value: "TituloOferta" },
+        { text: "Titulo de Oferta", value: "TituloOferta" },
         { text: "Descripcion", value: "DescripcionOferta" },
         //{ text: "Link test", value: "LinkTest" },
         { text: "Fecha Publicacion", value: "FechaPubicacion" },
