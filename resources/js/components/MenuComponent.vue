@@ -70,7 +70,10 @@ import {
     mdiAccountPlus,
     mdiCreditCardOutline,
     mdiAccountGroup,
-    mdiClipboardTextOutline
+    mdiClipboardTextOutline,
+    mdiClipboardCheck,
+    mdiClipboardRemove, 
+
 } from "@mdi/js";
 
 export default {
@@ -104,17 +107,24 @@ export default {
                
             },
             
+           
             {
                 text: "Ofertas",
-                path: "/ofertas_laborales",
-                icon: mdiAccountGroup,
-                roles: [2]
-            },
-            {
-                text: "Ofertas",
-                path: "/ofertas",
+                path: "",
                 icon: mdiCreditCardOutline,
-                roles: [3]
+                roles: [3],
+                sub: {
+                    0: {
+                        text: "Activas",
+                        icon:  mdiClipboardCheck,
+                        path: "/Ofertas_Activas"
+                    },
+                    1: {
+                        text: "Inactivas",
+                        icon: mdiClipboardRemove,
+                        path: "/Ofertas_Inactivas"
+                    }
+                }
             },
             {
                 text: "Ofertas",
@@ -132,7 +142,7 @@ export default {
             },
 
             {
-                text: "Crear Hoja",
+                text: "Crear Hoja de Vida",
                 path: "/Crear_Hoja",
                 icon: mdiClipboardListOutline,
                 roles: [2],
@@ -149,21 +159,52 @@ export default {
                
             },
 
+             {
+                text: "Ofertas",
+                path: "/ofertas_laborales",
+                icon: mdiAccountGroup,
+                roles: [2]
+            },
+
 
 
             {
                 text: "Postulaciones",
-                path: "/postulaciones",
+                path: "",
                 icon: mdiClipboardTextOutline,
                 roles: [2],
+                 sub: {
+                    0: {
+                        text: "Activas",
+                        icon:  mdiClipboardCheck,
+                        path: "/Postulaciones_Activas"
+                    },
+                    1: {
+                        text: "Inactivas",
+                        icon: mdiClipboardRemove,
+                        path: "/Postulaciones_Inactivas"
+                    }
+                }
                
             },
 
             {
                 text: "Postulaciones",
-                path: "/Postulaciones_Empresa",
+                path: "",
                 icon: mdiClipboardTextOutline,
                 roles: [3],
+                sub: {
+                    0: {
+                        text: "Activas",
+                        icon:  mdiClipboardCheck,
+                        path: "/Postulaciones_Empresa_Activas"
+                    },
+                    1: {
+                        text: "Inactivas",
+                        icon: mdiClipboardRemove,
+                        path: "/Postulaciones_Empresa_Inactivas"
+                    }
+                }
                
             },
             
@@ -183,5 +224,27 @@ export default {
 .btnMenu {
     display: -webkit-box;
     background: #456a70;
+    width: 104%;
+    border-radius: 11px;
 }
+
+.v-expansion-panel-header {
+   
+    width: 104%;
+    border-radius: 12px;
+}
+
+button, html [type=button] {
+    -webkit-appearance: button;
+    background: #456a70;
+}
+
+.v-expansion-panel-content {
+
+    background: #456a70;
+}
+
+
+
+
 </style>

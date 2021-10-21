@@ -249,4 +249,11 @@ export default {
     bottom: 0%;
     right: 0%;
 }
+
+.card {
+    
+    background: #426FAF;
+   
+    border-radius: 33px;
+}
 </style>

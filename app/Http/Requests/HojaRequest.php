@@ -35,6 +35,10 @@ class HojaRequest extends FormRequest
             'TELEFONOS'=>'required|numeric|digits:10',
             'COLEGIO'=>'required',
             'TITULOCOLEGIO'=>'required',
+            'TELEFONOA'=>'digits:10',
+            'TELEFONOB'=>'digits:10',
+            'TELEFONORA'=>'digits:10',
+            'TELEFONORB'=>'digits:10',
             'CODUSUARIO'=>Rule::unique('hojavida')->ignore($this->route('id'))
 
 
@@ -63,6 +67,10 @@ class HojaRequest extends FormRequest
             'TELEFONOS.digits'=>'Debe tener 10 digitos',
             'COLEGIO.required'=>'Campo Obligatorio',
             'TITULOCOLEGIO.required'=>'Campo Obligatorio',
+            'TELEFONOA.digits'=>'Debe tener 10 digitos',
+            'TELEFONOB.digits'=>'Debe tener 10 digitos',
+            'TELEFONORA.digits'=>'Debe tener 10 digitos',
+            'TELEFONORB.digits'=>'Debe tener 10 digitos',
             
         ];
 

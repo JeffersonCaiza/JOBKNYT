@@ -42,6 +42,7 @@ Route::get('ofertas', [App\Http\Controllers\HomeController::class, 'index'])->mi
 Route::get('ofertas_laborales', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
 Route::get('ofertasr', [App\Http\Controllers\ControllerOferta::class, 'index'])->middleware('auth');
+Route::get('ofertasri', [App\Http\Controllers\ControllerOfertaInactiva::class, 'index'])->middleware('auth');
 
 Route::get('postulaciones', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('lista_postulaciones', [App\Http\Controllers\ControllerPostulacion::class, 'show'])->middleware('auth');
@@ -66,6 +67,10 @@ Route::get('administrador', [App\Http\Controllers\HomeController::class, 'index'
 Route::get('registro_empresa', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('perfil_empresa', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('lista_ofertas', [App\Http\Controllers\ControllerOfertap::class, 'index'])->name('ofertas')->middleware('auth');
+
+Route::get('lista_ofertaso', [App\Http\Controllers\ControllerOfertap::class, 'show'])->name('ofertas')->middleware('auth');
+
+
 Route::post('ofertas', [App\Http\Controllers\ControllerOferta::class, 'store'])->name('ofertas')->middleware('auth');
 Route::put('ofertas/{id}', [App\Http\Controllers\ControllerOferta::class, 'update'])->name('ofertas')->middleware('auth');
 Route::delete('ofertas/{id}', [App\Http\Controllers\ControllerOferta::class, 'destroy'])->name('ofertas')->middleware('auth');
@@ -81,3 +86,18 @@ Route::put('hoja/{id}', [App\Http\Controllers\ControllerHoja::class, 'update'])-
 Route::get('Crear_Hoja', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('Hoja_de_vida', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 Route::get('hojas', [App\Http\Controllers\ControllerHoja::class, 'show'])->name('hoja')->middleware('auth');
+
+
+Route::get('Ofertas_Inactivas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('Ofertas_Activas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+
+Route::get('lista_postulacioneses', [App\Http\Controllers\ControllerEmpreIna::class, 'show'])->middleware('auth');
+
+Route::get('Postulaciones_Empresa_Activas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('Postulaciones_Empresa_Inactivas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+
+Route::get('Postulaciones_Activas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('Postulaciones_Inactivas', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+
+Route::get('lista_postulacionesi', [App\Http\Controllers\ControllerPostulacionA::class, 'show'])->middleware('auth');
+

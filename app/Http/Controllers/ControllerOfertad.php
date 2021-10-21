@@ -31,6 +31,8 @@ class ControllerOfertad extends Controller
 
         //return Oferta::all();
 
+        
+
     }
 
     public function show()

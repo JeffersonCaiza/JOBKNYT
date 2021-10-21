@@ -30,6 +30,7 @@ class ControllerPostulacionP extends Controller
     public function show()
     {
         $postulaciones=Postulacion::join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
+        ->where('ofertas.Estado' ,'=', 'Activa')
         ->where('ofertas.CODUSUARIO' ,'=',Auth::id())->get();
         
 

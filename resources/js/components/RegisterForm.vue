@@ -175,11 +175,34 @@
                                         <input id="password" type="password"
                                                class="form-control" name="password" v-model="fields.password"
                                                required autocomplete="new-password" minlength="8">
+                                               
 
                                         <span v-for="error in errors" class="text-danger">
                                         {{ error['password'] }}
                                     </span>
                                     </div>
+                                                
+
+
+                                                 <v-btn
+                        small
+                        class="mr-2"
+                        onclick="mostrarContrasena()"
+                        style="background-color: #38c172; width: 7%;
+    margin-top: 12px;
+    margin-left: -65px;
+    height: 37px;"
+                    >
+                          <v-icon
+                            
+                            color="#fff"
+                        >
+                            mdi-Eye-Outline
+                            
+                        </v-icon>
+                    </v-btn>
+
+
                                 </div>
                                  <br>
 
@@ -192,6 +215,23 @@
                                                name="password_confirmation" v-model="fields.password_confirmation"
                                                required autocomplete="new-password">
                                     </div>
+                                      <v-btn
+                        small
+                        class="mr-2"
+                        onclick="mostrarContrasenia()"
+                        style="background-color: #38c172; width: 7%;
+    margin-top: 12px;
+    margin-left: -65px;
+    height: 37px;"
+                    >
+                          <v-icon
+                            
+                            color="#fff"
+                        >
+                           mdi-Eye-Outline
+                            
+                        </v-icon>
+                    </v-btn>
                                 </div>
                                  <br>
 
@@ -228,8 +268,15 @@
 </template>
 
 <script>
+
+
+
+
+
 export default {
     name: "RegisterForm",
+
+    
 
     data() {
         return {
@@ -264,7 +311,12 @@ export default {
                 });
             }
         },
+
+
+     
     },
+
+    
 }
 </script>
 
@@ -284,4 +336,29 @@ export default {
 .card{
     background: darkred;
 }
+
+.boton{
+    background: rgb(0, 72, 139);
+    width: 10%;
+    height: 39px;
+    margin-top: 11px;
+    border-radius: 12px;
+    margin-left: -14px;
+
+}
+
+.boton1{
+    background: rgb(0, 72, 139);
+    width: 10%;
+    height: 39px;
+    margin-top: 20px;
+    border-radius: 12px;
+
+    margin-top: 11px;
+   
+    margin-left: -14px;
+
+}
+
+
 </style>

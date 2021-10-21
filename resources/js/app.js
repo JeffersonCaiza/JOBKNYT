@@ -38,12 +38,15 @@
  import Administrador from "./components/Administrador";
  import Bachilleres from "./components/Bachilleres";
  import Empresa from "./components/Empresa";
+ import EmpresaInactiva from "./components/EmpresaInactiva";
+ import PostulacionEmpreInactiva from "./components/PostulacionEmpreInactiva";
  import PostulacionForm from "./components/PostulacionForm";
  import Oferta from "./components/Oferta";
  import Hoja from "./components/Hoja";
  import Formvida from "./components/Formvida";
 
  import Postulacion from "./components/Postulacion";
+ import PostulacionInactiva from "./components/PostulacionInactiva";
  import PostulacionEmpresa from "./components/PostulacionEmpresa";
  import RegisterEmpresa from "./components/RegisterEmpresa";
  import RegisterEstudiante from "./components/RegisterEstudiante";
@@ -63,8 +66,8 @@
         } ,
         
          {
-             path: '/ofertas',
-             name: 'ofertas',
+             path: '/Ofertas_Activas',
+             name: 'ofertas_activas',
              component: Empresa
          },
          {
@@ -110,15 +113,27 @@
         },
 
         {
-            path: '/Postulaciones',
-            name: 'postulaciones',
+            path: '/Postulaciones_Activas',
+            name: 'postulaciones_activas',
             component: Postulacion
         },
 
         {
-            path: '/Postulaciones_Empresa',
-            name: 'postulaciones_empresa',
+            path: '/Postulaciones_Inactivas',
+            name: 'postulaciones_inactivas',
+            component: PostulacionInactiva
+        },
+
+        {
+            path: '/Postulaciones_Empresa_Activas',
+            name: 'postulaciones_empresa_activas',
             component: PostulacionEmpresa
+        },
+
+        {
+            path: '/Postulaciones_Empresa_Inactivas',
+            name: 'postulaciones_empresa_inactivas',
+            component: PostulacionEmpreInactiva
         },
 
         {
@@ -132,6 +147,14 @@
             name: 'crear_hoja',
             component: Formvida
         },
+
+        {
+            path: '/Ofertas_Inactivas',
+            name: 'ofertas_inactivas',
+            component: EmpresaInactiva
+        },
+
+
 
 
         

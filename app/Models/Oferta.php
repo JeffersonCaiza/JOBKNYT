@@ -10,7 +10,7 @@ use App\Models\User;
 class Oferta extends Model
 {
     protected $fillable =['NombreEmpresa','TituloOferta','DescripcionOferta','LinkTest','Disponibilidad','EducacionMinima','Edad','FechaPubicacion','CODUSUARIO',
-    'FechaPublicacionFin','Requisitos','Beneficios','Cualidades'];
+    'FechaPublicacionFin','Requisitos','Beneficios','Cualidades','Estado'];
     public $timestamps = false;
     protected $primaryKey ='IdOferta';
     protected $table = 'ofertas';

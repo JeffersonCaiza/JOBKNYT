@@ -50,7 +50,7 @@
                                             <label for="NOMBRES"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Oferta</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IdOferta.TituloOferta" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IdOferta.TituloOferta" type="label" class="form-control"
                                                        id="NOMBRES"
                                                        placeholder="Nombres">
                                                        <span class="text-danger"
@@ -141,7 +141,7 @@
                                             <label for="NOMBRES"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nombres</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.NOMBRESC" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.NOMBRESC" type="label" class="form-control"
                                                        id="NOMBRES"
                                                        placeholder="Nombres">
                                                        <span class="text-danger"
@@ -158,7 +158,7 @@
                                             <label for="EDAD"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Edad</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.EDAD" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.EDAD" type="label" class="form-control"
                                                        id="EDAD"
                                                        placeholder="Edad">
                                                        <span class="text-danger"
@@ -176,7 +176,7 @@
                                             <label for="CEDULA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Cedula</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.CEDULA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.CEDULA" type="label" class="form-control"
                                                        id="CEDULA" placeholder="Cedula">
                                                        <span class="text-danger"
                                                       v-if="errores.CEDULA">{{ errores.CEDULA[0] }}</span>
@@ -188,7 +188,7 @@
                                             <label for="DOMICILIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Domicilio</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.DOMICILIO" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.DOMICILIO" type="label" class="form-control"
                                                        id="DOMICILIO" placeholder="Domicilio">
                                                        <span class="text-danger"
                                                       v-if="errores.DOMICILIO">{{ errores.DOMICILIO[0] }}</span>
@@ -200,7 +200,7 @@
                                             <label for="TELEFONOS"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Telefonos</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.TELEFONOS" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.TELEFONOS" type="label" class="form-control"
                                                        id="	TELEFONOS" placeholder="Telefonos">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOS">{{ errores.TELEFONOS[0] }}</span>
@@ -211,7 +211,7 @@
                                             <label for="EMAIL"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Email</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.EMAIL" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.EMAIL" type="label" class="form-control"
                                                        id="EMAIL" placeholder="Email">
                                                        <span class="text-danger"
                                                       v-if="errores.EMAIL">{{ errores.EMAIL[0] }}</span>
@@ -227,7 +227,7 @@
                                             <label for="COLEGIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Colegio</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.COLEGIO" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.COLEGIO" type="label" class="form-control"
                                                        id="COLEGIO" placeholder="Nombre Colegio">
                                                        <span class="text-danger"
                                                       v-if="errores.COLEGIO">{{ errores.COLEGIO[0] }}</span>
@@ -238,7 +238,7 @@
                                             <label for="TITULOCOLEGIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Titulo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.TITULOCOLEGIO" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.TITULOCOLEGIO" type="label" class="form-control"
                                                        id="TITULOCOLEGIO" placeholder="Titulo Colegio">
                                                        <span class="text-danger"
                                                       v-if="errores.TITULOCOLEGIO">{{ errores.TITULOCOLEGIO[0] }}</span>
@@ -254,7 +254,7 @@
                                             <label for="UNIVERSIDAD"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Universidad</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.UNIVERSIDAD" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.UNIVERSIDAD" type="label" class="form-control"
                                                        id="UNIVERSIDAD" placeholder="Nombre Universidad">
                                                        <span class="text-danger"
                                                       v-if="errores.UNIVERSIDAD">{{ errores.UNIVERSIDAD[0] }}</span>
@@ -266,7 +266,7 @@
                                             <label for="TITULOUNIVERSIDAD"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Titulo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.TITULOUNIVERSIDAD" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.TITULOUNIVERSIDAD" type="label" class="form-control"
                                                        id="TITULOUNIVERSIDAD" placeholder="Titulo Universidad">
                                                        <span class="text-danger"
                                                       v-if="errores.TITULOUNIVERSIDAD">{{ errores.TITULOUNIVERSIDAD[0] }}</span>
@@ -287,32 +287,27 @@
                                             <label for="CURSOA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Idioma</strong></label>
                                             <div class="col-md-6">
-                                                <select v-model="estudiante.IDHOJA.CURSOA">
-                                                <option disabled value="">Seleccione un Idioma</option>
-                                                <option>Ingles</option>
-                                                <option>Frances</option>
-                                                <option>Ruso</option>
-                                                <option>koreano</option>
-                                                <option>Japones</option>
-                                                <option>Chino</option>
+                                                <input disabled v-model="estudiante.IDHOJA.CURSOA" type="label" class="form-control"
+                                                       id="CURSOA" placeholder="CURSOA">
+                        
 
-                                                </select>
+                                                
                                                        <span class="text-danger"
                                                       v-if="errores.CURSOA">{{ errores.CURSOA[0] }}</span>
                                             </div>
                                         </div>
+
+                                        
 
                                         <div class="row">
                                             <label for="NIVELA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nivel</strong></label>
                                             <div class="col-md-6">
 
-                                                <select v-model="estudiante.IDHOJA.NIVELA">
-                                                <option disabled value="">Seleccione el nivel</option>
-                                                <option>Basico</option>
-                                                <option>Intermedio</option>
-                                                <option>Avanzado</option>
-                                                </select>
+                                                <input disabled v-model="estudiante.IDHOJA.NIVELA" type="label" class="form-control"
+                                                       id="NIVELA" placeholder="NIVELA">
+                                                
+                                                
                                                 <span class="text-danger"
                                                       v-if="errores.NIVELA">{{ errores.NIVELA[0] }}</span>
 
@@ -332,15 +327,10 @@
                                             <label for="CURSOB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Idioma</strong> </label>
                                             <div class="col-md-6">
-                                                <select v-model="estudiante.IDHOJA.CURSOB">
-                                                <option disabled value="">Seleccione un Idioma</option>
-                                                <option>Ingles</option>
-                                                <option>Frances</option>
-                                                <option>Ruso</option>
-                                                <option>koreano</option>
-                                                <option>Japones</option>
-                                                <option>Chino</option>
-                                                </select>
+                                                <input disabled v-model="estudiante.IDHOJA.CURSOB" type="label" class="form-control"
+                                                       id="CURSOB" placeholder="CURSOB">
+                                               
+                                                
                                                        <span class="text-danger"
                                                       v-if="errores.CURSOB">{{ errores.CURSOB[0] }}</span>
                                             </div>
@@ -350,12 +340,10 @@
                                             <label for="NIVELB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nivel</strong></label>
                                             <div class="col-md-6">
-                                                <select v-model="estudiante.IDHOJA.NIVELB">
-                                                <option disabled value="">Seleccione el nivel</option>
-                                                <option>Basico</option>
-                                                <option>Intermedio</option>
-                                                <option>Avanzado</option>
-                                                </select>
+                                                <input disabled v-model="estudiante.IDHOJA.NIVELB" type="label" class="form-control"
+                                                       id="NIVELB" placeholder="NIVELB">
+                                               
+                                                
                                                        <span class="text-danger"
                                                       v-if="errores.NIVELB">{{ errores.NIVELB[0] }}</span>
                                             </div>
@@ -378,7 +366,7 @@
                                             <label for="EMPRESAA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nombre Empresa</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.EMPRESAA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.EMPRESAA" type="label" class="form-control"
                                                        id="EMPRESAA" placeholder="Nombre Empresa">
                                                        <span class="text-danger"
                                                       v-if="errores.EMPRESAA">{{ errores.EMPRESAA[0] }}</span>
@@ -389,7 +377,7 @@
                                             <label for="FUNCIONA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Cargo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.FUNCIONA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.FUNCIONA" type="label" class="form-control"
                                                        id="FUNCIONA" placeholder="Cargo">
                                                        <span class="text-danger"
                                                       v-if="errores.FUNCIONA">{{ errores.FUNCIONA[0] }}</span>
@@ -400,7 +388,7 @@
                                             <label for="AREAA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Area de Trabajo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.AREAA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.AREAA" type="label" class="form-control"
                                                        id="AREAA" placeholder="Area de Trabajo">
                                                        <span class="text-danger"
                                                       v-if="errores.AREAA">{{ errores.AREAA[0] }}</span>
@@ -409,9 +397,9 @@
 
                                         <div class="row">
                                             <label for="FECHAA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Tiempo que Trabajó</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Desde cuando trabajo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.FECHAA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.FECHAA" type="label" class="form-control"
                                                        id="FECHAA" placeholder="Tiempo que Trabajo">
                                                        <span class="text-danger"
                                                       v-if="errores.FECHAA">{{ errores.FECHAA[0] }}</span>
@@ -419,10 +407,21 @@
                                         </div>
 
                                          <div class="row">
-                                            <label for="TELEFONOA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                            <label for="FECHAAA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Hasta cuando trabajo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.TELEFONOA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.FECHAAA" type="label" class="form-control"
+                                                       id="FECHAAA" placeholder="Tiempo que Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FECHAAA">{{ errores.FECHAAA[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                         <div class="row">
+                                            <label for="TELEFONOA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
+                                            <div class="col-md-6">
+                                                <input disabled v-model="estudiante.IDHOJA.TELEFONOA" type="label" class="form-control"
                                                        id="	TELEFONOA" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOA">{{ errores.TELEFONOA[0] }}</span>
@@ -441,7 +440,7 @@
                                             <label for="EMPRESAB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nombre Empresa</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.EMPRESAB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.EMPRESAB" type="label" class="form-control"
                                                        id="EMPRESAB" placeholder="Nombre Empresa">
                                                        <span class="text-danger"
                                                       v-if="errores.EMPRESAB">{{ errores.EMPRESAB[0] }}</span>
@@ -452,7 +451,7 @@
                                             <label for="FUNCIONB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Cargo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.FUNCIONB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.FUNCIONB" type="label" class="form-control"
                                                        id="FUNCIONB" placeholder="Cargo">
                                                        <span class="text-danger"
                                                       v-if="errores.FUNCIONB">{{ errores.FUNCIONB[0] }}</span>
@@ -463,7 +462,7 @@
                                             <label for="AREAB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Area de Trabajo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.AREAB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.AREAB" type="label" class="form-control"
                                                        id="AREAB" placeholder="Area de Trabajo">
                                                        <span class="text-danger"
                                                       v-if="errores.AREAB">{{ errores.AREAB[0] }}</span>
@@ -472,20 +471,31 @@
 
                                         <div class="row">
                                             <label for="FECHAB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Tiempo que Trabajó</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Desde cuando trabajo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.FECHAB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.FECHAB" type="label" class="form-control"
                                                        id="FECHAB" placeholder="Tiempo que Trabajo">
                                                        <span class="text-danger"
                                                       v-if="errores.FECHAB">{{ errores.FECHAB[0] }}</span>
                                             </div>
                                         </div>
 
+                                        <div class="row">
+                                            <label for="FECHABB"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Hasta cuando trabajo</strong></label>
+                                            <div class="col-md-6">
+                                                <input disabled v-model="estudiante.IDHOJA.FECHABB" type="label" class="form-control"
+                                                       id="FECHABB" placeholder="Tiempo que Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FECHABB">{{ errores.FECHABB[0] }}</span>
+                                            </div>
+                                        </div>
+
                                          <div class="row">
                                             <label for="TELEFONOB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.TELEFONOB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.TELEFONOB" type="label" class="form-control"
                                                        id="	TELEFONOB" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOB">{{ errores.TELEFONOB[0] }}</span>
@@ -511,7 +521,7 @@
                                             <label for="NOMBREA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nombres</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.NOMBREA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.NOMBREA" type="label" class="form-control"
                                                        id="	NOMBREA" placeholder="Nombres">
                                                        <span class="text-danger"
                                                       v-if="errores.NOMBREA">{{ errores.NOMBREA[0] }}</span>
@@ -520,9 +530,9 @@
 
                                         <div class="row">
                                             <label for="TELEFONORA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.TELEFONORA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.TELEFONORA" type="label" class="form-control"
                                                        id="	TELEFONORA" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORA">{{ errores.TELEFONORA[0] }}</span>
@@ -533,7 +543,7 @@
                                             <label for="OCUPACIONA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Que funcion Realiza</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.OCUPACIONA" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.OCUPACIONA" type="label" class="form-control"
                                                        id="OCUPACIONA" placeholder="Que funcion Realiza">
                                                        <span class="text-danger"
                                                       v-if="errores.OCUPACIONA">{{ errores.	OCUPACIONA[0] }}</span>
@@ -555,7 +565,7 @@
                                             <label for="NOMBREB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nombres</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.NOMBREB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.NOMBREB" type="label" class="form-control"
                                                        id="	NOMBREB" placeholder="Nombres">
                                                        <span class="text-danger"
                                                       v-if="errores.NOMBREB">{{ errores.NOMBREB[0] }}</span>
@@ -564,9 +574,9 @@
 
                                         <div class="row">
                                             <label for="TELEFONORB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.TELEFONORB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.TELEFONORB" type="label" class="form-control"
                                                        id="	TELEFONORB" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORB">{{ errores.TELEFONORB[0] }}</span>
@@ -577,7 +587,7 @@
                                             <label for="OCUPACIONB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Que funcion Realiza</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.IDHOJA.OCUPACIONB" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.IDHOJA.OCUPACIONB" type="label" class="form-control"
                                                        id="OCUPACIONB" placeholder="Que funcion Realiza">
                                                        <span class="text-danger"
                                                       v-if="errores.OCUPACIONB">{{ errores.	OCUPACIONB[0] }}</span>
@@ -662,10 +672,11 @@
                         style="background-color: #38c172"
                     >
                         <v-icon
-                            small
+                            
                             color="#fff"
                         >
-                            mdi-pencil
+                            mdi-card-search
+                            
                         </v-icon>
                     </v-btn>
 
@@ -702,11 +713,14 @@ export default {
             cod: '',
             codBanco: '',
             headers: [
-                {text: 'Codigo Oferta', value:'IdOferta.IdOferta'},
+                //{text: 'Codigo Oferta', value:'IdOferta.IdOferta'},
+                {text: 'Empresa', value: 'CODUSUARIO.NOMBRE'},
+                //{text: 'Empresa', value: 'IdOferta.NOMBRE'},
                 {text: 'Oferta', value: 'IdOferta.TituloOferta'},
                 {text: 'Descripcion Oferta', value:'IdOferta.DescripcionOferta'},
                 //{text: 'Email', value:'EMAIL'},
                 //{text: 'Postulante', value: 'NOMBRES'},
+                {text: 'Estado', value:'IdOferta.Estado'},
                 {text: 'Detalles Postulacion', value: 'actions'},
   
             ],

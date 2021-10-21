@@ -24,18 +24,25 @@ class ControllerOfertap extends Controller
         //return $ofertaso;
 
 
-        return new OfertaCollection(Oferta::paginate(25));
+        //return new OfertaCollection(Oferta::paginate(25));
 
         //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', '12')->get();
         //return $ofertaso;
 
         //return Oferta::all();
 
+        $Oferta=Oferta::where('Estado','=','Activa')->get();
+        
+        
+
+        return new OfertaCollection($Oferta);
+
     }
 
     public function show()
     {
-        return Oferta::all();
+        $hoja = DB::table('ofertas')->where('Estado', '=', 'Activa' )->get();
+        return $hoja;
         //return new OfertaCollection(Oferta::paginate(25));
 
         

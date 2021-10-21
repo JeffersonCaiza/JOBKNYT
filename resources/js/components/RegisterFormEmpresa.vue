@@ -168,6 +168,23 @@
                                         {{ error['password'] }}
                                     </span>
                                     </div>
+                                     <v-btn
+                        small
+                        class="mr-2"
+                        onclick="mostrarContrasena()"
+                        style="background-color: #38c172; width: 7%;
+    margin-top: 12px;
+    margin-left: -65px;
+    height: 37px;"
+                    >
+                          <v-icon
+                            
+                            color="#fff"
+                        >
+                            mdi-Eye-Outline
+                            
+                        </v-icon>
+                    </v-btn>
                                 </div>
                                 <br>
 
@@ -180,6 +197,23 @@
                                                name="password_confirmation" v-model="fields.password_confirmation"
                                                required autocomplete="new-password">
                                     </div>
+                                                <v-btn
+                        small
+                        class="mr-2"
+                        onclick="mostrarContrasenia()"
+                        style="background-color: #38c172; width: 7%;
+    margin-top: 12px;
+    margin-left: -65px;
+    height: 37px;"
+                    >
+                          <v-icon
+                            
+                            color="#fff"
+                        >
+                           mdi-Eye-Outline
+                            
+                        </v-icon>
+                    </v-btn>
                                 </div>
                                 <br>
 
@@ -202,7 +236,7 @@
                          class="alert"
                          transition="scale-transition"
                 >
-                    Usuario registrado con exito
+                    Empresa registrada con exito
                 </v-alert>
             </div>
                 </div>

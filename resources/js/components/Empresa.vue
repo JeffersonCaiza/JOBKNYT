@@ -48,7 +48,7 @@
 
                                         <div class="row">
                                             <label for="CODUSUARIO"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
                                             <div class="col-md-6">
                                                 
 
@@ -306,6 +306,21 @@
                                             </div>
                                         </div>-->
 
+                                        <div class="row">
+                                            <label for="Estado"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Estado de ofertas</strong></label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.Estado">
+                                                <option disabled value="">Seleccione el estado de su oferta</option>
+                                                <option>Activa</option>
+                                                <option>Inactiva</option>
+                                             
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.Estado">{{ errores.Estado[0] }}</span>
+                                            </div>
+                                        </div>
+
 
 
                                          <div class="row">
@@ -337,6 +352,9 @@
                                             </div>
 
                                         </div>
+
+                                        
+                                         
 
                                        
 
@@ -429,10 +447,11 @@ export default {
             cod: '',
             codBanco: '',
             headers: [
-                {text: 'Codigo de Oferta', value: 'IdOferta',},
-                //{text: 'Nombre Empresa', value: 'NombreEmpresa'},
+                //{text: 'Codigo de Oferta', value: 'IdOferta',},
+                //{text: 'Empresa', value: 'CODUSUARIO.NOMBRE'},
                 {text: 'Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion', value: 'DescripcionOferta'},
+                {text: 'Estado', value: 'Estado'},
                 {text: 'Fecha Publicacion', value: 'FechaPubicacion'},
                 {text: 'Opciones', value: 'actions'},
                 
@@ -454,6 +473,7 @@ export default {
                 Beneficios:'',
                 Cualidades:'',
                 CODUSUARIO:'',
+                Estado:'',
             },
             id: 0,
             update: true,
@@ -551,6 +571,7 @@ export default {
                 this.estudiante.Requisitos = data.Requisitos;
                 this.estudiante.Beneficios = data.Beneficios;
                 this.estudiante.Cualidades = data.Cualidades;
+                this.estudiante.Estado = data.Estado;
                 
             } else {
                 this.titleModal = "Crear Nueva Oferta";
@@ -567,6 +588,7 @@ export default {
                 this.estudiante.Requisitos = '';
                 this.estudiante.Beneficios = '';
                 this.estudiante.Cualidades = '';
+                 this.estudiante.Estado = '';
                 
             }
         },

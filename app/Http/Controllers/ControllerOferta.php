@@ -20,8 +20,8 @@ class ControllerOferta extends Controller
 {
     public function index()
     {
-        $ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', Auth::id() )->get();
-        return $ofertaso;
+        //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $ofertaso;
 
 
         //return new OfertaCollection(Oferta::paginate(25));
@@ -30,6 +30,14 @@ class ControllerOferta extends Controller
         //return $ofertaso;
 
         //return Oferta::all();
+
+        $ofertaso = DB::table('ofertas')
+        ->where('Estado', '=', 'Activa')
+        ->where('CODUSUARIO', '=', Auth::id() )
+        ->get();
+        
+        
+        return $ofertaso;
 
     }
 

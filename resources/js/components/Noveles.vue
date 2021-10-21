@@ -167,12 +167,20 @@
         
       >
         <template v-slot:item.actions="{ item }">
-          <v-icon small class="mr-2" @click="update = true; openModal(item);">
-            mdi-pencil
-          </v-icon>
-         <v-icon small  @click="borrar = true; openModal(item);">
-            mdi-delete
-          </v-icon>
+          <v-btn
+                        small
+                        class="mr-2"
+                        @click="update = true; openModal(item);"
+                        style="background-color: #38c172"
+                    >
+                        <v-icon
+                            small
+                            color="#fff"
+                        >
+                            mdi-delete
+                        </v-icon>
+                    </v-btn>
+        
         </template>
       </v-data-table>
     </v-card>
@@ -390,6 +398,7 @@ export default {
 
 .modal-content{
     width:120%;
+     background: darkred;
 }
 
 .fade-enter-active,
@@ -414,5 +423,15 @@ export default {
   color: #fff;
   background-color: #e3342f !important;
   border-color: #6c757d;
+}
+
+.theme--light.v-card {
+    color: rgba(0,0,0,.87);
+    background: #FFAE00;
+}
+
+.theme--light.v-data-table {
+    background-color:#00455E;
+    color: rgb(0 0 6 / 104%);
 }
 </style>

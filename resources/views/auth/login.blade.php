@@ -1,5 +1,17 @@
 @extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('JOBJC')])
+<script>
+  function mostrarContrasena(){
+      var tipo = document.getElementById("password");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
+  }
+</script>
 
+
+  
 @section('content')
 <div class="imagen1">
   <img src="{{URL::asset('img/snk.png')}}" width="100" height="100">
@@ -42,7 +54,14 @@
                     <i class="material-icons">lock_outline</i>
                   </span>
                 </div>
-                <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Password...') }}">
+                <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Password...') }}" >
+                
+
+              
+            <button class="btn-default" type="button" onclick="mostrarContrasena()"><i class="material-icons">remove_red_eye</i></button>
+          
+
+
               </div>
               @if ($errors->has('password'))
                 <div id="password-error" class="error text-danger pl-3" for="password" style="display: block;">

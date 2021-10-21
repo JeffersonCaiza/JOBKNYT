@@ -1,5 +1,32 @@
 @extends('layouts.app')
 
+<script>
+
+
+    function mostrarContrasenia(){
+        
+        var tipo = document.getElementById("password-confirm");
+        //var tipo = document.getElementById("password_confirmation");
+        if(tipo.type == "password"){
+            tipo.type = "text";
+        }else{
+            tipo.type = "password";
+        }
+    }
+    function mostrarContrasena(){
+        
+        var tipo = document.getElementById("password");
+        //var tipo = document.getElementById("password_confirmation");
+        if(tipo.type == "password"){
+            tipo.type = "text";
+        }else{
+            tipo.type = "password";
+        }
+    }
+  </script>
+
+  
+
 @section('content')
 <div class="container">
     <nav class="navbar navbar-dark bg-dark" style="right: 120px; bottom: 27px; width: 548px;">

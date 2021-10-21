@@ -309,7 +309,7 @@ export default {
 
 .card {
     
-    background: darkred;
+    background: #426FAF;
    
     border-radius: 33px;
 }

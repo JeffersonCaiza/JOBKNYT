@@ -69,7 +69,7 @@
                       </div>
                     </div>
 
-                    <div class="row">
+                    <!--<div class="row">
                       <label
                         for="Descripcion Oferta"
                         class="col-md-4 col-form-label text-md-right"
@@ -89,7 +89,7 @@
                           >{{ errores.DescripcionOferta[0] }}</span
                         >
                       </div>
-                    </div>
+                    </div>-->
 
                     <div class="row">
                       <label
@@ -177,7 +177,7 @@
                       </div>
                     </div>
 
-                    <div class="row">
+                    <!--<div class="row">
                       <label
                         for="Link Test"
                         class="col-md-4 col-form-label text-md-right"
@@ -195,7 +195,7 @@
                           errores.LinkTest[0]
                         }}</span>
                       </div>
-                    </div>
+                    </div>-->
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -252,16 +252,19 @@
         no-results-text="No se encontraron resultados"
       >
         <template v-slot:item.actions="{ item }">
-          <v-icon
-            small
-            class="mr-2"
-            @click="
-              update = true;
-              openModal(item);
-            "
-          >
-            mdi-pencil
-          </v-icon>
+          <v-btn
+                        small
+                        class="mr-2"
+                        @click="update = true; openModal(item);"
+                        style="background-color: #38c172"
+                    >
+                        <v-icon
+                            small
+                            color="#fff"
+                        >
+                            mdi-delete
+                        </v-icon>
+                    </v-btn>
           
         </template>
       </v-data-table>
@@ -498,12 +501,12 @@ export default {
   }
 }
 
-.modal-content {
-    
-    width: 168%;
-    
-    margin-left: -138px;
+.modal-content{
+    width: 190%;
+    background: darkred;
+    margin-left: -200px;
 }
+
 
 
 
@@ -529,5 +532,23 @@ export default {
   color: #fff;
   background-color: #e3342f !important;
   border-color: #6c757d;
+}
+
+select {
+  word-wrap: normal;
+  background: crimson;
+  border-radius: 6px;
+  -webkit-appearance: revert;
+}
+
+
+.theme--light.v-card {
+    color: rgba(0,0,0,.87);
+    background: #68A8DA;
+}
+
+.theme--light.v-data-table {
+    background-color:#426FAF;
+    color: rgb(0 0 6 / 104%);
 }
 </style>

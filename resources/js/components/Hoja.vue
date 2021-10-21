@@ -145,7 +145,7 @@
                                             <label for="EDAD"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Edad</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.EDAD" type="text" class="form-control"
+                                                <input v-model="estudiante.EDAD" type="number" class="form-control"
                                                        id="EDAD"
                                                        placeholder="Edad">
                                                        <span class="text-danger"
@@ -163,7 +163,7 @@
                                             <label for="CEDULA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Cedula</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.CEDULA" type="text" class="form-control"
+                                                <input v-model="estudiante.CEDULA" type="number" class="form-control"
                                                        id="CEDULA" placeholder="Cedula">
                                                        <span class="text-danger"
                                                       v-if="errores.CEDULA">{{ errores.CEDULA[0] }}</span>
@@ -187,7 +187,7 @@
                                             <label for="TELEFONOS"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Telefonos</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONOS" type="text" class="form-control"
+                                                <input v-model="estudiante.TELEFONOS" type="number" class="form-control"
                                                        id="	TELEFONOS" placeholder="Telefonos">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOS">{{ errores.TELEFONOS[0] }}</span>
@@ -396,20 +396,31 @@
 
                                         <div class="row">
                                             <label for="FECHAA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Tiempo que Trabajó</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Desde cuando trabajo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.FECHAA" type="text" class="form-control"
+                                                <input v-model="estudiante.FECHAA" type="date" class="form-control"
                                                        id="FECHAA" placeholder="Tiempo que Trabajo">
                                                        <span class="text-danger"
                                                       v-if="errores.FECHAA">{{ errores.FECHAA[0] }}</span>
                                             </div>
                                         </div>
 
+                                        <div class="row">
+                                            <label for="FECHAAA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Hasta cuando trabajo</strong></label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FECHAAA" type="date" class="form-control"
+                                                       id="FECHAAA" placeholder="Tiempo que Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FECHAAA">{{ errores.FECHAAA[0] }}</span>
+                                            </div>
+                                        </div>
+
                                          <div class="row">
                                             <label for="TELEFONOA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONOA" type="text" class="form-control"
+                                                <input v-model="estudiante.TELEFONOA" type="number" class="form-control"
                                                        id="	TELEFONOA" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOA">{{ errores.TELEFONOA[0] }}</span>
@@ -459,20 +470,31 @@
 
                                         <div class="row">
                                             <label for="FECHAB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Tiempo que Trabajó</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Desde cuando trabajo</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.FECHAB" type="text" class="form-control"
+                                                <input v-model="estudiante.FECHAB" type="date" class="form-control"
                                                        id="FECHAB" placeholder="Tiempo que Trabajo">
                                                        <span class="text-danger"
                                                       v-if="errores.FECHAB">{{ errores.FECHAB[0] }}</span>
                                             </div>
                                         </div>
 
+                                        <div class="row">
+                                            <label for="FECHABB"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Hasta cuando trabajo</strong></label>
+                                            <div class="col-md-6">
+                                                <input v-model="estudiante.FECHABB" type="date" class="form-control"
+                                                       id="FECHABB" placeholder="Tiempo que Trabajo">
+                                                       <span class="text-danger"
+                                                      v-if="errores.FECHABB">{{ errores.FECHABB[0] }}</span>
+                                            </div>
+                                        </div>
+
                                          <div class="row">
                                             <label for="TELEFONOB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONOB" type="text" class="form-control"
+                                                <input v-model="estudiante.TELEFONOB" type="number" class="form-control"
                                                        id="	TELEFONOB" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOB">{{ errores.TELEFONOB[0] }}</span>
@@ -507,9 +529,9 @@
 
                                         <div class="row">
                                             <label for="TELEFONORA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONORA" type="text" class="form-control"
+                                                <input v-model="estudiante.TELEFONORA" type="number" class="form-control"
                                                        id="	TELEFONORA" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORA">{{ errores.TELEFONORA[0] }}</span>
@@ -551,9 +573,9 @@
 
                                         <div class="row">
                                             <label for="TELEFONORB"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefono</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONORB" type="text" class="form-control"
+                                                <input v-model="estudiante.TELEFONORB" type="number" class="form-control"
                                                        id="	TELEFONORB" placeholder="Telefono">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORB">{{ errores.TELEFONORB[0] }}</span>

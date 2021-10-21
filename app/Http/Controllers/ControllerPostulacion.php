@@ -31,13 +31,20 @@ class ControllerPostulacion extends Controller
 
     public function show()
     {
-        $postulacion = Postulacion::where('CODUSUARIO', '=', Auth::id() )->get();
-        //return $postulacion;
+        //$postulacion = Postulacion::where('CODUSUARIO', '=', Auth::id() )->get();
         
-        return new PostulacionCollection($postulacion);
+        
+        //return new PostulacionCollection($postulacion);
 
        //$postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
         //return $postulacion;
+
+        $postulaciones=Postulacion::join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
+        ->where('ofertas.Estado' ,'=', 'Activa')
+        ->where('postulacion.CODUSUARIO' ,'=',Auth::id())->get();
+        
+
+        return new PostulacionCollection($postulaciones);
 
     }
 

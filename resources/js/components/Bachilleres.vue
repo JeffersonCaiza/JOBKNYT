@@ -5,11 +5,11 @@
             <div style="display: flex; justify-content: flex-end;" class="">
         </div>
 
-         <div class="row">
+         <!--<div class="row">
                                     <div class="col-md-6 offset-md-4">
                                         <router-link to="/Postulacion" class="nav-link">Crea tu Postulacion</router-link>
                                     </div>
-                                </div>
+                                </div>-->
             </div>
 
         <v-card>
@@ -56,9 +56,9 @@
                       </div>
                     </div>-->
 
-                     <div class="row">
+                     <!--<div class="row">
                                             <label for="CODUSUARIO"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
                                             <div class="col-md-6">
                                                 
 
@@ -84,7 +84,23 @@
 
                                             </div>
 
+                                        </div>-->
+
+
+                                        <div class="row">
+                                            <label for="CODUSUARIO"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
+                                            <div class="col-md-6">
+                                                <input disabled v-model="estudiante.CODUSUARIO.NOMBRE" type="text" class="form-control"
+                                                       id="CODUSUARIO"
+                                                       placeholder="Empresa y Titulo de Oferta">
+                                                       <span class="text-danger"
+                                                      v-if="errores.TituloOferta">{{ errores.TituloOferta[0] }}</span>
+                                               
+                                            </div>
                                         </div>
+
+                                        
                     
 
 
@@ -92,7 +108,7 @@
                                             <label for="Titulo Oferta"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Titulo de Oferta</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TituloOferta" type="text" class="form-control"
+                                                <input disabled v-model="estudiante.TituloOferta" type="text" class="form-control"
                                                        id="Titulo Oferta"
                                                        placeholder="Empresa y Titulo de Oferta">
                                                        <span class="text-danger"
@@ -103,18 +119,31 @@
 
                                     
 
-                                           <div class="row">
+                                         
+
+                                         <div class="row">
                                             <label for="Disponibilidad"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Disponibilidad</strong></label>
                                             <div class="col-md-6">
-                                                <select v-model="estudiante.Disponibilidad">
-                                                <option disabled value="">Seleccione disponibilidad</option>
-                                                <option>Tiempo Completo</option>
-                                                <option>Tiempo Parcial</option>
-                                                <option>Por Horas</option>
-                                                </select>
+                                                <input disabled v-model="estudiante.Disponibilidad" type="text" class="form-control"
+                                                       id="Disponibilidad"
+                                                       placeholder="Disponibilidad">
                                                        <span class="text-danger"
                                                       v-if="errores.Disponibilidad">{{ errores.Disponibilidad[0] }}</span>
+                                               
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label for="Educacion"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Educacion</strong></label>
+                                            <div class="col-md-6">
+                                                <input disabled v-model="estudiante.EducacionMinima" type="text" class="form-control"
+                                                       id="EducacionMinima"
+                                                       placeholder="EducacionMinima">
+                                                       <span class="text-danger"
+                                                      v-if="errores.EducacionMinima">{{ errores.EducacionMinima[0] }}</span>
+                                               
                                             </div>
                                         </div>
 
@@ -128,20 +157,7 @@
 
                                          
 
-                                        <div class="row">
-                                            <label for="EducacionMinima"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Educacion</strong></label>
-                                            <div class="col-md-6">
-                                                <select v-model="estudiante.EducacionMinima">
-                                                <option disabled value="">Seleccione nivel de educacion</option>
-                                                <option>Bachillerato</option>
-                                                <option>Tecnico Superior</option>
-                                                <option>Tercer Nivel (grado)</option>
-                                                </select>
-                                                       <span class="text-danger"
-                                                      v-if="errores.EducacionMinima">{{ errores.EducacionMinima[0] }}</span>
-                                            </div>
-                                        </div>
+                                       
 
                                        
                                         
@@ -149,23 +165,23 @@
 
 
 
-                                        
-
                                         <div class="row">
                                             <label for="Edad"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Edad</strong></label>
                                             <div class="col-md-6">
-                                                <select v-model="estudiante.Edad">
-                                                <option disabled value="">Seleccione el rango de edad</option>
-                                                <option>18-25</option>
-                                                <option>26-30</option>
-                                                <option>31-35</option>
-                                                <option>36-40</option>
-                                                </select>
+                                                <input disabled v-model="estudiante.Edad" type="text" class="form-control"
+                                                       id="Edad"
+                                                       placeholder="Edad">
                                                        <span class="text-danger"
                                                       v-if="errores.Edad">{{ errores.Edad[0] }}</span>
+                                               
                                             </div>
                                         </div>
+
+                                        
+                                        
+                                        
+                                        
 
 
 
@@ -185,7 +201,7 @@
                                                 
 
                                                     <div class="descripcion">
-                                                      <v-textarea
+                                                      <v-textarea disabled
                                                       v-model="estudiante.DescripcionOferta" type="text" 
                                                       clearable
                                                       clear-icon="mdi-close-circle"
@@ -207,8 +223,8 @@
                                                 
 
                                                     <div class="descripcion">
-                                                      <v-textarea
-                                                      v-model="estudiante.Requisitos" type="text" 
+                                                      <v-textarea disabled
+                                                      v-model="estudiante.Requisitos" type="label" 
                                                       clearable
                                                       clear-icon="mdi-close-circle"
                                                       label="Requisitos"
@@ -231,8 +247,8 @@
                                                 
 
                                                     <div class="descripcion">
-                                                      <v-textarea
-                                                      v-model="estudiante.Beneficios" type="text" 
+                                                      <v-textarea disabled
+                                                      v-model="estudiante.Beneficios" type="label" 
                                                       clearable
                                                       clear-icon="mdi-close-circle"
                                                       label="Beneficios"
@@ -254,8 +270,8 @@
                                                 
 
                                                     <div class="descripcion">
-                                                      <v-textarea
-                                                      v-model="estudiante.Cualidades" type="text" 
+                                                      <v-textarea disabled
+                                                      v-model="estudiante.Cualidades" type="label" 
                                                       clearable
                                                       clear-icon="mdi-close-circle"
                                                       label="Cualidades"
@@ -281,7 +297,7 @@
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha Inicio de publicacion</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.FechaPubicacion" type="date" class="form-control"
+                                                <input disabled v-model="estudiante.FechaPubicacion" type="date" class="form-control"
                                                        id="FechaPubicacion" placeholder="Inicio de publicacion">
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPubicacion">{{ errores.FechaPubicacion[0] }}</span>
@@ -292,10 +308,26 @@
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha Fin de publicacion</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.FechaPublicacionFin	" type="date" class="form-control"
+                                                <input disabled v-model="estudiante.FechaPublicacionFin	" type="date" class="form-control"
                                                        id="FechaPublicacionFin	" placeholder="Fin de publicacion">
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPublicacionFin	">{{ errores.FechaPublicacionFin	[0] }}</span>
+                                            </div>
+                                        </div>
+
+                                       
+
+                                        
+                                       <div class="row">
+                                            <label for="Estado"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Estado de oferta</strong></label>
+                                            <div class="col-md-6">
+                                                <input disabled v-model="estudiante.Estado" type="text" class="form-control"
+                                                       id="Titulo Oferta"
+                                                       placeholder="Empresa y Titulo de Oferta">
+                                                       <span class="text-danger"
+                                                      v-if="errores.Estado">{{ errores.Estado[0] }}</span>
+                                               
                                             </div>
                                         </div>
 
@@ -323,7 +355,7 @@
                     </div>-->
 
 
-                      <div class="row">
+                      <!--<div class="row">
                                             <label for="CODUSUARIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Envia tu curriculum y postulate</strong></label>
                                             <div class="col-md-6">
@@ -351,6 +383,20 @@
 
                                             </div>
 
+                                        </div>-->
+
+
+                                        <div class="row">
+                                            <label for="CODUSUARIO"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Envia tu curriculum y postulate</strong></label>
+                                            <div class="col-md-6">
+                                                <input disabled v-model="estudiante.CODUSUARIO.email" type="text" class="form-control"
+                                                       id="CODUSUARIO"
+                                                       placeholder="">
+                                                       <span class="text-danger"
+                                                      v-if="errores.CODUSUARIO">{{ errores.CODUSUARIO[0] }}</span>
+                                               
+                                            </div>
                                         </div>
 
 
@@ -398,7 +444,7 @@
                 :headers="headers"
                 :items="estudiantes"
                 :search="search"
-                :items-per-page="perPage"
+                
                 hide-default-footer
                 class="elevation-1"
                 loading
@@ -413,24 +459,47 @@
                         style="background-color: #38c172"
                     >
                         <v-icon
-                            small
+                            
+                            color="#fff"
+                        >
+                            mdi-card-search
+                            
+                        </v-icon>
+
+                    </v-btn>                   
+                </template>
+
+                <template v-slot:item.actionse="{ item }">
+                    <v-btn
+                        icon href="/Postulacion"
+                        small
+                        class="mr-2"
+                        style="background-color: #38c172"
+                    >
+                        <v-icon
+                            
                             color="#fff"
                         >
                             mdi-pencil
+                            
                         </v-icon>
-                    </v-btn>
+
+                    </v-btn>                   
                 </template>
+
+                
+
             </v-data-table>
         </v-card>
         
-        <div class="text-center pt-2">
+        <!--<div class="text-center pt-2">
             <v-pagination
                 v-model="page"
                 :length="totalPages"
                 total-visible="7"
                 @input="handlePage"
             ></v-pagination>
-        </div>
+        </div>-->
 
         <!--<Postulacion></Postulacion>-->
     </div>
@@ -449,11 +518,17 @@ export default {
             cod: '',
             codBanco: '',
             headers: [
-                {text: 'Codigo', value: 'IdOferta',},
-                //{text: 'Nombre Empresa', value: 'NombreEmpresa'},
+                //{text: 'Codigo', value: 'IdOferta',},
+                {text: 'Empresa', value: 'CODUSUARIO.NOMBRE'},
                 {text: 'Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion Oferta', value: 'DescripcionOferta'},
+                {text: 'Estado', value: 'Estado'},
                 {text: 'Detalles', value: 'actions'},
+                {text: 'Postulate', value: 'actionse'},
+               
+               
+
+                 
                
             ],
 
@@ -472,14 +547,15 @@ export default {
                 Beneficios:'',
                 Cualidades:'',
                 CODUSUARIO:'',
+                Estado:'',
                 },
             id: 0,
             update: true,
             modal: 0,
             titleModal: ' ',
             estudiantes: [],
-            totalPages: 0,
-            perPage: 0,
+           // totalPages: 0,
+           // perPage: 0,
             errores: {},
             show: false,
             usuarios: [],
@@ -496,11 +572,11 @@ export default {
     },
     methods: {
         list() {
-            axios.get(`lista_ofertas?page=${this.page}`).then(res => {
+            axios.get(`lista_ofertas`).then(res => {
                 this.est = res.data;
                 this.estudiantes = this.est.data;
-                this.totalPages = this.est.meta.last_page;
-                this.perPage = this.est.meta.per_page;
+               // this.totalPages = this.est.meta.last_page;
+               // this.perPage = this.est.meta.per_page;
             });
 
 
@@ -542,6 +618,7 @@ export default {
                 this.estudiante.Requisitos = data.Requisitos;
                 this.estudiante.Beneficios = data.Beneficios;
                 this.estudiante.Cualidades = data.Cualidades;
+                this.estudiante.Estado = data.Estado;
                 
             } else {
                 this.titleModal = "Crear Estudiante";
@@ -718,12 +795,8 @@ export default {
 }
 
 a {
-    color: #3490dc;
-    text-decoration: none;
-    margin-left: -346px;
-    margin-right: 675px;
-    background: black;
-    border-radius: 47px;
+    border-radius: 6px;
+    margin-left: 12px;
 }
 
 select {
