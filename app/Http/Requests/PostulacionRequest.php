@@ -25,7 +25,8 @@ class PostulacionRequest extends FormRequest
     {
         return [
            
-            //'IdOferta'=>'required',
+            'IdOferta'=>'required',
+            'IDHOJA'=>'required',
             //'NOMBRES'=>'required',
             //'CEDULA'=>'required|numeric|digits:10',
             //'EMAIL'=>'required|email|max:255|',
@@ -45,7 +46,8 @@ class PostulacionRequest extends FormRequest
     public function messages()
     {
         return [
-            //'IdOferta.required'=>'Seleccione la oferta a la cual desea postularse',
+            'IdOferta.required'=>'Seleccione la oferta',
+            'IDHOJA.required'=>'Crea tu hoja de vida para poder postularte'
             //'NOMBRES.required'=>'Campo Obligatorio',
             //'CEDULA.required'=>'Campo Obligatorio',
             //'CEDULA.numeric'=>'Debe ser un numero',

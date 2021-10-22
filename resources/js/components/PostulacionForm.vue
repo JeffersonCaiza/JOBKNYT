@@ -13,6 +13,9 @@
                             <div class="form-group">
 
                                 <h1 align="left"><strong>Detalles de Postulacion</strong></h1>
+
+                                <h2 class="titulo">Para postularte debes crear tu hoja de vida primero</h2>
+                                <h2 class="titulo1">Si ya creaste tu hoja de vida, podras ingresar tu nombre</h2>
                                         <br>
                                         
 
@@ -226,6 +229,23 @@ select {
   -webkit-appearance: revert;
 }
 
+.titulo{
+    color: aquamarine;
+    margin-left: 54px;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 184px;
+    margin-left: 311px;
+}
+
+.titulo1{
+    color: aquamarine;
+    margin-left: 54px;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 124px;
+    margin-left: 286px;
+}
 
 
 
