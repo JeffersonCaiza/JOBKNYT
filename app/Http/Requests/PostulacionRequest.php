@@ -47,7 +47,7 @@ class PostulacionRequest extends FormRequest
     {
         return [
             'IdOferta.required'=>'Seleccione la oferta',
-            'IDHOJA.required'=>'Crea tu hoja de vida para poder postularte'
+            'IDHOJA.required'=>'Si no aparece tu nombre crea tu hoja de vida primero para poder postularte'
             //'NOMBRES.required'=>'Campo Obligatorio',
             //'CEDULA.required'=>'Campo Obligatorio',
             //'CEDULA.numeric'=>'Debe ser un numero',

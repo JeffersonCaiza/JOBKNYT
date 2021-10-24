@@ -14,8 +14,6 @@
 
                                 <h1 align="left"><strong>Detalles de Postulacion</strong></h1>
 
-                                <h2 class="titulo">Para postularte debes crear tu hoja de vida primero</h2>
-                                <h2 class="titulo1">Si ya creaste tu hoja de vida, podras ingresar tu nombre</h2>
                                         <br>
                                         
 
@@ -26,12 +24,12 @@
                                                 
 
 
-                                                <select required aria-required="true"
+                                                <select 
                                                 class="form-control"
                                                 name="IdOferta" id="IdOferta"
                                                 v-model="estudiante.IdOferta"
                                         >
-                                            <option value="" disabled selected> seleccione la oferta a la cual quiere postularse...</option>
+                                            <option value="" disabled selected> seleccione la oferta...</option>
                                             <option v-for="ofertas in ofertasos" :value="ofertas.IdOferta">{{ ofertas.TituloOferta }}</option>
                                         </select>
                                         <span class="text-danger"
@@ -85,24 +83,22 @@
                                                 
 
 
-                                                <select required aria-required="true"
+                                                <select 
                                                 class="form-control"
                                                 name="IDHOJA" id="IDHOJA"
                                                 v-model="estudiante.IDHOJA"
+                                              
                                         >
-                                          
-                                            <option v-for="hojavida in vida" :value="hojavida.IDHOJA">{{ hojavida.NOMBRESC }}</option>
+                                            
+                                            <option v-for="hojavida in vida" :value="hojavida.IDHOJA" >{{ hojavida.NOMBRESC }}</option>
                                         </select>
                                         <span class="text-danger"
                                                       v-if="errores.IDHOJA">{{ errores.IDHOJA[0] }}</span>
-
-                                                       
-
-
-                                                    
-                                               
                                             </div>
                                         </div>
+
+
+                                       
                                     
 
 
@@ -142,6 +138,16 @@
                 >
                     Postulacion enviada con exito
                 </v-alert>
+                <v-alert v-if="success===true"
+                         id="alertSuccess"
+                         name="alertSuccess"
+                         dismissible
+                         type="success"
+                         class="alert"
+                         transition="scale-transition"
+                >
+                    Recuerda solo puedes postularte una vez a una oferta
+                </v-alert>
             </div>
                 </div>
             </div>
@@ -159,6 +165,7 @@ export default {
         return {
          
             estudiante: {
+            
            
             },
             errores: {},
