@@ -421,7 +421,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOA" type="number" class="form-control"
-                                                       id="	TELEFONOA" placeholder="Telefono">
+                                                       id="	TELEFONOA" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOA">{{ errores.TELEFONOA[0] }}</span>
                                             </div>
@@ -495,7 +495,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONOB" type="number" class="form-control"
-                                                       id="	TELEFONOB" placeholder="Telefono">
+                                                       id="	TELEFONOB" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOB">{{ errores.TELEFONOB[0] }}</span>
                                             </div>
@@ -532,7 +532,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORA" type="number" class="form-control"
-                                                       id="	TELEFONORA" placeholder="Telefono">
+                                                       id="	TELEFONORA" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORA">{{ errores.TELEFONORA[0] }}</span>
                                             </div>
@@ -576,7 +576,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
                                                 <input v-model="estudiante.TELEFONORB" type="number" class="form-control"
-                                                       id="	TELEFONORB" placeholder="Telefono">
+                                                       id="	TELEFONORB" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORB">{{ errores.TELEFONORB[0] }}</span>
                                             </div>
