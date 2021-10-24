@@ -288,7 +288,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Idioma</strong></label>
                                             <div class="col-md-6">
                                                 <input disabled v-model="estudiante.IDHOJA.CURSOA" type="label" class="form-control"
-                                                       id="CURSOA" placeholder="CURSOA">
+                                                       id="CURSOA" placeholder="Idioma">
                         
 
                                                 
@@ -305,7 +305,7 @@
                                             <div class="col-md-6">
 
                                                 <input disabled v-model="estudiante.IDHOJA.NIVELA" type="label" class="form-control"
-                                                       id="NIVELA" placeholder="NIVELA">
+                                                       id="NIVELA" placeholder="Nivel">
                                                 
                                                 
                                                 <span class="text-danger"
@@ -328,7 +328,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Idioma</strong> </label>
                                             <div class="col-md-6">
                                                 <input disabled v-model="estudiante.IDHOJA.CURSOB" type="label" class="form-control"
-                                                       id="CURSOB" placeholder="CURSOB">
+                                                       id="CURSOB" placeholder="Idioma">
                                                
                                                 
                                                        <span class="text-danger"
@@ -341,7 +341,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nivel</strong></label>
                                             <div class="col-md-6">
                                                 <input disabled v-model="estudiante.IDHOJA.NIVELB" type="label" class="form-control"
-                                                       id="NIVELB" placeholder="NIVELB">
+                                                       id="NIVELB" placeholder="Nivel">
                                                
                                                 
                                                        <span class="text-danger"
@@ -721,7 +721,7 @@ export default {
                 //{text: 'Email', value:'EMAIL'},
                 //{text: 'Postulante', value: 'NOMBRES'},
                 {text: 'Estado', value:'IdOferta.Estado'},
-                {text: 'Detalles Postulacion', value: 'actions'},
+                {text: 'Detalles', value: 'actions'},
   
             ],
 

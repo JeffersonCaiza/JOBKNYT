@@ -350,7 +350,7 @@
                                                    class="col-md-4 col-form-label text-md-right"><strong>Hasta cuando trabajo</strong></label>
                                             <div class="col-md-6">
                                                 <input disabled v-model="estudiante.IDHOJA.FECHAAA" type="label" class="form-control"
-                                                       id="FECHAAA" placeholder="Tiempo que Trabajo">
+                                                       id="FECHAAA" placeholder="">
                                                        <span class="text-danger"
                                                       v-if="errores.FECHAAA">{{ errores.FECHAAA[0] }}</span>
                                             </div>
@@ -650,7 +650,7 @@ export default {
                 {text: 'Descripcion Oferta', value:'IdOferta.DescripcionOferta'},
                 {text: 'Estado', value:'IdOferta.Estado'},
                 {text: 'Postulante', value: 'IDHOJA.NOMBRESC'},
-                {text: 'Detalles Oferta', value: 'actions'},
+                {text: 'Informacion postulante', value: 'actions'},
                 
                
                 

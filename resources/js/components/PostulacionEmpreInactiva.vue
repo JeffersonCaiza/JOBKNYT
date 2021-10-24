@@ -650,7 +650,7 @@ export default {
                 {text: 'Descripcion Oferta', value:'IdOferta.DescripcionOferta'},
                 {text: 'Estado', value:'IdOferta.Estado'},
                 {text: 'Postulante', value: 'IDHOJA.NOMBRESC'},
-                {text: 'Detalles Oferta', value: 'actions'},
+                {text: 'Informacion postulante', value: 'actions'},
                 
                
                 
