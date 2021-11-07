@@ -4,6 +4,7 @@ namespace App\Models;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Hoja;
 
 class Postulacion extends Model
 {
@@ -20,7 +21,6 @@ class Postulacion extends Model
         $postulacion->CODUSUARIO = Auth::id();
         });
     }
-
    
 
  

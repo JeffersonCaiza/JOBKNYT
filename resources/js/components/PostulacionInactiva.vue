@@ -661,7 +661,7 @@
                
                 class="elevation-1"
                 loading
-                loading-text="Cargando... Por favor espere"
+                loading-text="Aun no hay postulaciones"
                 no-results-text="No se encontraron resultados"
             >
                 <template v-slot:item.actions="{ item }">

@@ -28,7 +28,7 @@
 </head>
 <body style="background-image: url('{{ asset('img/imagen.jpg') }}'); background-size: cover; background-position: top center;align-items: center;" data-color="purple">
     
-<div id="app" >
+<div id="app">
     
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
         <div class="imagen1">

@@ -5,6 +5,15 @@
         <h1 class="text-center"><strong>Hoja de Vida</strong></h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
+                 <v-btn @click="update=false; openModal();" class="btn-blue">
+                    <v-icon
+                        small
+                        style="margin-right: 3px"
+                    >
+                        mdi-plus-box
+                    </v-icon>
+                    Crea tu hoja de vida
+                </v-btn>
                 
                 
             </div>
@@ -593,6 +602,17 @@
                                             </div>
                                         </div>
 
+                                         <v-alert v-if="success===true"
+                         id="alertSuccess"
+                         name="alertSuccess"
+                         dismissible
+                         type="success"
+                         class="alert"
+                         transition="scale-transition"
+                >
+                    Recuerda que solo puedes crear una hoja de vida
+                </v-alert>
+
                                         
 
 
@@ -662,7 +682,7 @@
                
                 class="elevation-1"
                 loading
-                loading-text="Cargando... Por favor espere"
+                loading-text="Aun no creas tu hoja de vida"
                 no-results-text="No se encontraron resultados"
             >
                 <template v-slot:item.actions="{ item }">
@@ -712,6 +732,7 @@ export default {
             search: '',
             cod: '',
             codBanco: '',
+            success: false,
             headers: [
                 //{text: 'Codigo Oferta', value:'IdOferta.IdOferta'},
                 {text: 'Nombres', value: 'NOMBRESC'},
@@ -816,10 +837,12 @@ export default {
             try {
                 if (this.update) {
                     const res = await axios.put('hoja/' + this.id, this.estudiante);
+                    this.closeModal();
                 } else {
                     const res = await axios.post('hojavida', this.estudiante);
+                    this.success = true;
                 }
-                this.closeModal();
+                //this.closeModal();
                 this.list();
 
             } catch (error) {
@@ -844,7 +867,7 @@ export default {
             this.modal = 1;
             
             if (this.update) {
-                
+                this.success = false;
                 this.id = data.IDHOJA,
                 this.titleModal = "EDITAR HOJA DE VIDA";
                 
@@ -890,7 +913,7 @@ export default {
                 
             } else {
                
-                this.titleModal = "Crear Nueva Postulacion";
+                this.titleModal = "Crea tu hoja de vida";
                 
                 this.estudiante.NOMBRESC = '';
                 this.estudiante.CEDULA = '';

@@ -31,8 +31,9 @@ class ControllerPostulacion extends Controller
         ->join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
         ->where('ofertas.Estado' ,'=', 'Activa')
         ->where('postulacion.CODUSUARIO' ,'=',Auth::id())
-        ->unique('ofertas.IdOferta')->get();
-        return $postulaciones;
+        ->distinct('IdOferta')
+        ->get();
+        return $postulacionesa=$postulaciones->unique('IdOferta');
 
     }
 
@@ -45,13 +46,21 @@ class ControllerPostulacion extends Controller
 
        //$postulacion = DB::table('postulacion')->where('CODUSUARIO', '=', Auth::id() )->get();
         //return $postulacion;
+        //Postulacion::distinct()->get(['IdOferta']);
 
         $postulaciones=Postulacion::join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
+        ->distinct('IdOferta')
         ->where('ofertas.Estado' ,'=', 'Activa')
-        ->where('postulacion.CODUSUARIO' ,'=',Auth::id())->get();
-        
+        ->where('postulacion.CODUSUARIO' ,'=',Auth::id())
+        //->distinct()
+        ->distinct('IdOferta')
+        ->get();
 
-        return new PostulacionCollection($postulaciones);
+        
+        
+        $postulacionesp=$postulaciones->unique('IdOferta');
+
+        return new PostulacionCollection($postulacionesp);
 
     }
 

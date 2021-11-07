@@ -46,7 +46,7 @@
                                         </div>-->
 
 
-                                        <div class="row">
+                                        <!--<div class="row">
                                             <label for="CODUSUARIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Empresa</strong></label>
                                             <div class="col-md-6">
@@ -74,7 +74,7 @@
 
                                             </div>
 
-                                        </div>
+                                        </div>-->
 
 
 
@@ -323,7 +323,7 @@
 
 
 
-                                         <div class="row">
+                                        <!--<div class="row">
                                             <label for="CODUSUARIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Correo envio de curriculum</strong></label>
                                             <div class="col-md-6">
@@ -351,7 +351,7 @@
 
                                             </div>
 
-                                        </div>
+                                        </div>-->
 
                                         
                                          

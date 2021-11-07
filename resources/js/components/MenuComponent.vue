@@ -141,13 +141,13 @@ export default {
                
             },
 
-            {
-                text: "Crear Hoja de Vida",
-                path: "/Crear_Hoja",
-                icon: mdiClipboardListOutline,
-                roles: [2],
+            //{
+              //  text: "Crear Hoja de Vida",
+              // path: "/Crear_Hoja",
+              //  icon: mdiClipboardListOutline,
+              //  roles: [2],
                
-            },
+            //},
 
 
 

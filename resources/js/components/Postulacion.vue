@@ -654,16 +654,20 @@
                 :headers="headers"
                 :items="estudiantes"
                 :search="search"
-                :items-per-page="perPage"
-                
-               
+              
+             
                 hide-default-footer
-               
                 class="elevation-1"
                 loading
-                loading-text="Cargando... Por favor espere"
+                loading-text="Aun no hay postulaciones"
                 no-results-text="No se encontraron resultados"
+                
             >
+         
+            
+            
+          
+    
                 <template v-slot:item.actions="{ item }">
                     <v-btn
                         small
@@ -708,11 +712,13 @@
 export default {
     data() {
         return {
-            page: 1,
+            //page: 1,
             search: '',
-            cod: '',
-            codBanco: '',
+            //cod: '',
+            //codBanco: '',
             headers: [
+
+                
                 //{text: 'Codigo Oferta', value:'IdOferta.IdOferta'},
                 {text: 'Empresa', value: 'CODUSUARIO.NOMBRE'},
                 //{text: 'Empresa', value: 'IdOferta.NOMBRE'},
@@ -724,6 +730,7 @@ export default {
                 {text: 'Detalles', value: 'actions'},
   
             ],
+            
 
 
             estudiante: {
@@ -776,6 +783,8 @@ export default {
             ofertasos: [],
             borrar: true,
             usuarios:[],
+            loading: false
+           
            
         }
 
@@ -784,7 +793,7 @@ export default {
     
 
     mounted() {
-        //this.list();
+        this.list();
 
         //axios.get('ofertasos').then((response) => {
           //  this.ofertasos = response.data;
@@ -797,11 +806,12 @@ export default {
     methods: {
        list() {
            axios.get(`lista_postulaciones`).then(res => {
-               this.est = res.data;
+            this.est = res.data;
             this.estudiantes = this.est.data;
                 //this.totalPages = this.est.meta.last_page;
                // this.perPage = this.est.meta.per_page;
             });
+            
 
             //async list() {
 

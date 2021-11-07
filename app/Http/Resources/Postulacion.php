@@ -8,6 +8,8 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use App\Models\Oferta;
 use App\Models\User;
 use App\Models\Hoja;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class Postulacion extends JsonResource
 {
     /**
@@ -18,6 +20,15 @@ class Postulacion extends JsonResource
      */
     public function toArray($request)
     {
+        //$postulaciones=DB::table('postulacion')
+        //->join('hojavida','hojavida.IDHOJA','=','postulacion.IDHOJA')
+        //->where('hojavida.CODUSUARIO' ,'=',Auth::id())->get();
+
+        //$postulaciones=DB::table('hojavida')
+        //->join('postulacion','postulacion.IDHOJA','=','hojavida.IDHOJA')
+        //->where('hojavida.CODUSUARIO' ,'=',Auth::id())->get();
+
+        //$hoj=$postulaciones->IDHOJA;
 
        
 
@@ -60,6 +71,7 @@ class Postulacion extends JsonResource
             //'IdOferta'=> Oferta::find(User::find($this->IdOferta)),
             'CODUSUARIO'=> User::find($this->CODUSUARIO),
             'IDHOJA'=> Hoja::find($this->IDHOJA), 
+            //'IDHOJA'=> 17,
             'CODUSUARIOH' => Hoja::find($this->CODUSUARIOH), 
         ];
     }

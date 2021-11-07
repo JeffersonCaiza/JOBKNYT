@@ -513,6 +513,7 @@ export default {
             loaded: true,
             errors: {},
             ofertasos:[],
+            
 
         }
     },

@@ -386,9 +386,9 @@
                                         </div>-->
 
 
-                                        <div class="row">
+                                        <!--<div class="row">
                                             <label for="CODUSUARIO"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Envia tu curriculum y postulate</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Envia tu curriculum</strong></label>
                                             <div class="col-md-6">
                                                 <input disabled v-model="estudiante.CODUSUARIO.email" type="text" class="form-control"
                                                        id="CODUSUARIO"
@@ -397,7 +397,7 @@
                                                       v-if="errores.CODUSUARIO">{{ errores.CODUSUARIO[0] }}</span>
                                                
                                             </div>
-                                        </div>
+                                        </div>-->
 
 
 
@@ -426,6 +426,152 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
+
+                 <!-- Modal 1-->
+                <div v-if="show1" class="modal__backdrop">
+                    <div class="modal__backdrop" @click="closeModal1()"></div>
+                    <div class="modal1" :class="{show1:modal1}">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLabel">{{ titleModal1 }}</h3>
+                                    <button @click="closeModal1();" type="button" class="btn-close"
+                                            
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                  <div>
+
+                       <div class="row">
+                                            <label for="IdOferta"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Seleccione la Oferta</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+
+                                                <select 
+                                                class="form-control"
+                                                name="IdOferta" id="IdOferta"
+                                                v-model="estudiante1.IdOferta"
+                                        >
+                                            
+                                            <option value="" disabled selected> seleccione la oferta...</option>
+                                            <option 
+                                           
+                                            v-for="ofertas in ofertasos" :value="ofertas.IdOferta">{{ ofertas.TituloOferta }}</option>
+                                        </select>
+                                        <span class="text-danger"
+                                                      v-if="errores.IdOferta">{{ errores.IdOferta[0] }}</span>                                               
+                                            </div>
+                                        </div>
+
+
+
+
+                                         <div class="row">
+                                            <label for="IDHOJA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
+                                            <div class="col-md-6">
+                                                
+
+
+                                                <select 
+                                                class="form-control"
+                                                name="IDHOJA" id="IDHOJA"
+                                                v-model ="estudiante1.IDHOJA"
+                                              
+                                        >
+                                          
+                                            <option 
+                                            v-for="hojavida in vida"
+                                            :value="hojavida.IDHOJA" 
+                                           
+                                            >{{ hojavida.NOMBRESC }}</option>
+                                            
+                                        </select>
+                                        <span class="text-danger"
+                                                      v-if="errores.IDHOJA">{{ errores.IDHOJA[0] }}</span>
+                                            </div>
+                                        </div>
+
+
+
+
+ 
+
+
+
+
+                                        
+
+
+
+
+
+
+
+
+
+
+                                                        <v-alert v-if="success===true"
+                         id="alertSuccess"
+                         name="alertSuccess"
+                         dismissible
+                         type="success"
+                         class="alert"
+                         transition="scale-transition"
+                >
+                    Recuerda solo puedes postularte una vez a una oferta
+                </v-alert>
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button @click="closeModal1();" type="button" class="btn btn-secondary"
+                                            >
+                                        Cerrar
+                                    </button>
+
+                                    <button @click="save1();" type="button" class="btn btn-success btn-blue"
+                                            >
+                                        Enviar Postulación
+                                    </button>
+
+                   
+                     
+
+                                
+
+                                    
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
 
 
                 <v-spacer></v-spacer>
@@ -487,6 +633,24 @@
                     </v-btn>                   
                 </template>
 
+                <template v-slot:item.actionsea="{ item }">
+                    <v-btn
+                       small
+                        class="mr-2"
+                        @click="update1 = false; openModal1(item);"
+                        style="background-color: #38c172"
+                    >
+                        <v-icon
+                            
+                            color="#fff"
+                        >
+                            mdi-pencil
+                            
+                        </v-icon>
+
+                    </v-btn>                   
+                </template>
+
                 
 
             </v-data-table>
@@ -513,6 +677,8 @@ export default {
   components: { Postulacion },
     data() {
         return {
+
+
             page: 1,
             search: '',
             cod: '',
@@ -524,12 +690,8 @@ export default {
                 {text: 'Descripcion Oferta', value: 'DescripcionOferta'},
                 {text: 'Estado', value: 'Estado'},
                 {text: 'Detalles', value: 'actions'},
-                {text: 'Postulate', value: 'actionse'},
-               
-               
-
-                 
-               
+                //{text: 'Postulate', value: 'actionse'},   
+                {text: 'Postulate', value: 'actionsea'},   
             ],
 
 
@@ -548,6 +710,8 @@ export default {
                 Cualidades:'',
                 CODUSUARIO:'',
                 Estado:'',
+                
+               
                 },
             id: 0,
             update: true,
@@ -559,6 +723,22 @@ export default {
             errores: {},
             show: false,
             usuarios: [],
+
+
+
+               estudiante1: {
+                   
+            },
+
+            
+            modal1: 0,
+            titleModal1: ' ',
+            show1: false,
+            update1: true,
+            ofertasos:[],
+            vida:[],
+            success: false,
+           
         }
 
     },
@@ -568,6 +748,15 @@ export default {
 
         axios.get('lista_noveleses').then((response) => {
             this.usuarios = response.data;
+        })
+
+
+          axios.get('ofertasos').then((response) => {
+            this.ofertasos = response.data;
+        })
+
+        axios.get('hojas').then((response) => {
+            this.vida = response.data;
         })
     },
     methods: {
@@ -597,6 +786,33 @@ export default {
                 }
             }
         },
+
+
+        async save1() {
+            try {
+                if (this.update1) {
+                    const res = await axios.put('ofertas/' + this.id, this.estudiante1);
+                } else {
+                    const res = await axios.post('postulaciones', this.estudiante1);
+                    //this.success = true;
+                    this.closeModal1()
+                }
+                //this.closeModal1();
+                //this.list();
+
+            } catch (error) {
+                if (error.response.data) {
+                    this.errores = error.response.data.errors
+                }
+            }
+        },
+
+         
+    
+
+
+         
+    
 
        
 
@@ -632,10 +848,53 @@ export default {
 
 
 
+        openModal1(data = {}) {
+            //this.show1 = true;
+            //this.modal1 = 1;
+            if (this.update1) {
+                this.id = data.IdOferta,
+                this.titleModal = "Detalles de la oferta";
+                this.estudiante.CODUSUARIO = data.CODUSUARIO;
+                this.estudiante.TituloOferta = data.TituloOferta;
+                this.estudiante.Disponibilidad = data.Disponibilidad;
+                this.estudiante.EducacionMinima = data.EducacionMinima;
+                this.estudiante.Edad = data.Edad;
+                this.estudiante.FechaPubicacion = data.FechaPubicacion;
+                this.estudiante.LinkTest = data.LinkTest;
+                this.estudiante.FechaPublicacionFin = data.FechaPublicacionFin;
+                this.estudiante.DescripcionOferta = data.DescripcionOferta;
+                this.estudiante.Requisitos = data.Requisitos;
+                this.estudiante.Beneficios = data.Beneficios;
+                this.estudiante.Cualidades = data.Cualidades;
+                this.estudiante.Estado = data.Estado;
+                
+            } else {
+                 this.show1 = true;
+                 this.modal1 = 1;
+               
+               
+                this.titleModal1 = "Postulacion";
+                this.estudiante1.IdOferta = '';
+                this.estudiante1.IDHOJA = '';
+               
+            }
+        },
+
+
+
+
+
         closeModal() {
             this.modal = 0;
             this.errores = {};
             this.show = false;
+        },
+
+
+         closeModal1() {
+            this.modal1 = 0;
+            this.errores = {};
+            this.show1 = false;
         },
 
         cancelSearch() {
@@ -755,8 +1014,88 @@ export default {
 
 }
 
+
+
+
+.modal1 {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+
+    &__backdrop {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__dialog {
+        background-color: #ffffff;
+        position: absolute;
+        max-width: 800px;
+        min-width: 600px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        z-index: 2;
+        @media screen and (max-width: 992px) {
+            width: 90%;
+        }
+    }
+
+    &__error {
+        background-color: #ffffff;
+        position: absolute;
+        max-width: 400px;
+        min-width: 200px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        z-index: 2;
+        @media screen and (max-width: 992px) {
+            width: 90%;
+        }
+    }
+
+
+    &__close {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__header {
+        padding: 20px 20px 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__body {
+        padding: 10px 20px 10px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
+
+
 .modal-content{
-    width: 190%;
+    width: 182%;
     background: darkred;
     margin-left: -200px;
 }
