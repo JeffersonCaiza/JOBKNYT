@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Collection;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -49,18 +50,22 @@ class ControllerPostulacion extends Controller
         //Postulacion::distinct()->get(['IdOferta']);
 
         $postulaciones=Postulacion::join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
-        ->distinct('IdOferta')
         ->where('ofertas.Estado' ,'=', 'Activa')
         ->where('postulacion.CODUSUARIO' ,'=',Auth::id())
         //->distinct()
-        ->distinct('IdOferta')
+        //->select('postulacion')
+        //->distinct('postulacion.IdOferta')
         ->get();
 
         
         
-        $postulacionesp=$postulaciones->unique('IdOferta');
+        //$postulaciones=$postulaciones->unique('IdOferta');
 
-        return new PostulacionCollection($postulacionesp);
+        $todo= new PostulacionCollection($postulaciones);
+
+        return  $unicos=$todo->unique('IdOferta');
+
+        
 
     }
 
@@ -69,6 +74,8 @@ class ControllerPostulacion extends Controller
        // $postulaciones=DB::table('postulacion')
        // ->join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
        // ->where('ofertas.IdOferta' ,'=','postulacion.IdOferta')->get();
+
+
 
 
        // if( $postulaciones===null){

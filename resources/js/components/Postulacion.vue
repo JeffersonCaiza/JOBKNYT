@@ -775,6 +775,7 @@ export default {
             update: true,
             modal: 0,
             titleModal: ' ',
+            
             estudiantes: [],
             //totalPages: 0,
            // perPage: 0,
