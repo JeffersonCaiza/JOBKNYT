@@ -34,7 +34,12 @@ class ControllerPostulacionP extends Controller
         ->where('ofertas.CODUSUARIO' ,'=',Auth::id())->get();
         
 
-        return new PostulacionCollection($postulaciones);
+        //return new PostulacionCollection($postulaciones);
+
+        $todo =new PostulacionCollection($postulaciones->unique('IDHOJA'));
+
+        return  $todo;
+
 
        //$postulacion = Postulacion::where('CODUSUARIO', '=', Auth::id() )->get();
         //return $postulacion;

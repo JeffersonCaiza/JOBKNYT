@@ -692,7 +692,7 @@
             <v-pagination
                 v-model="page"
                 :length="totalPages"
-                total-visible="7"
+                total-visible="25"
                 @input="handlePage"
             ></v-pagination>
         </div>-->

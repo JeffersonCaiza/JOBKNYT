@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Collection;
+//use Illuminate\Support\Collection;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -61,9 +61,12 @@ class ControllerPostulacion extends Controller
         
         //$postulaciones=$postulaciones->unique('IdOferta');
 
-        $todo= new PostulacionCollection($postulaciones);
 
-        return  $unicos=$todo->unique('IdOferta');
+        //return new PostulacionCollection($postulaciones);
+
+        $todo =new PostulacionCollection($postulaciones->unique('IdOferta'));
+
+        return  $todo;
 
         
 

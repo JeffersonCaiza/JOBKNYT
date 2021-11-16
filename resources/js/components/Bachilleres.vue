@@ -295,7 +295,7 @@
 
                                         <div class="row">
                                             <label for="FechaPubicacion"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Fecha Inicio de publicacion</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Fecha de publicacion</strong></label>
                                             <div class="col-md-6">
                                                 <input disabled v-model="estudiante.FechaPubicacion" type="date" class="form-control"
                                                        id="FechaPubicacion" placeholder="Inicio de publicacion">
@@ -304,7 +304,7 @@
                                             </div>
                                         </div>
 
-                                         <div class="row">
+                                        <!-- <div class="row">
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha Fin de publicacion</strong></label>
                                             <div class="col-md-6">
@@ -313,7 +313,7 @@
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPublicacionFin	">{{ errores.FechaPublicacionFin	[0] }}</span>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                        
 
@@ -487,12 +487,16 @@
                                                 class="form-control"
                                                 name="IDHOJA" id="IDHOJA"
                                                 v-model ="estudiante1.IDHOJA"
+                                                
                                               
                                         >
                                           
                                             <option 
                                             v-for="hojavida in vida"
-                                            :value="hojavida.IDHOJA" 
+                                            :value="hojavida.IDHOJA"
+                                            :key="hojavida.IDHOJA"
+                                           
+                                             
                                            
                                             >{{ hojavida.NOMBRESC }}</option>
                                             
@@ -714,6 +718,7 @@ export default {
                
                 },
             id: 0,
+            
             update: true,
             modal: 0,
             titleModal: ' ',
@@ -755,8 +760,13 @@ export default {
             this.ofertasos = response.data;
         })
 
+       // axios.get('hojas').then((response) => {
+          //  this.vida = response.data;
+        //})
+
         axios.get('hojas').then((response) => {
             this.vida = response.data;
+            //this.vida=this.vidas.vida
         })
     },
     methods: {
@@ -795,8 +805,9 @@ export default {
                 } else {
                     const res = await axios.post('postulaciones', this.estudiante1);
                     //this.success = true;
-                    this.closeModal1()
+                    //this.closeModal1()
                 }
+                this.success = true;
                 //this.closeModal1();
                 //this.list();
 
@@ -871,6 +882,8 @@ export default {
             } else {
                  this.show1 = true;
                  this.modal1 = 1;
+                 this.idh = data.IDHOJA
+               
                
                
                 this.titleModal1 = "Postulacion";

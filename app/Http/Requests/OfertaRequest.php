@@ -32,7 +32,7 @@ class OfertaRequest extends FormRequest
             'EducacionMinima'=>'required',
             'Edad'=>'required',
             'FechaPubicacion'=>'required|date|after:yesterday|',
-            'FechaPublicacionFin'=>'required|date|after_or_equal:FechaPubicacion',
+            //'FechaPublicacionFin'=>'required|date|after_or_equal:FechaPubicacion',
             'Estado'=>'required',
            
         ];
@@ -57,9 +57,9 @@ class OfertaRequest extends FormRequest
             'FechaPubicacion.after'=>'No puede ser una fecha anterior',
 
 
-            'FechaPublicacionFin.required'=>'Campo Obligatorio',
-            'FechaPublicacionFin.date'=>'Debe ser una fecha',
-            'FechaPublicacionFin.after_or_equal'=>'No puede ser una fecha anterior',
+            //'FechaPublicacionFin.required'=>'Campo Obligatorio',
+           // 'FechaPublicacionFin.date'=>'Debe ser una fecha',
+           // 'FechaPublicacionFin.after_or_equal'=>'No puede ser una fecha anterior',
 
 
 

@@ -46,7 +46,7 @@
                                         </div>-->
 
 
-                                        <div class="row">
+                                       <!-- <div class="row">
                                             <label for="CODUSUARIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
                                             <div class="col-md-6">
@@ -74,7 +74,7 @@
 
                                             </div>
 
-                                        </div>
+                                        </div>-->
 
                                         <div class="row">
                                             <label for="Titulo Oferta"
@@ -267,7 +267,7 @@
 
                                         <div class="row">
                                             <label for="FechaPubicacion"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Fecha Inicio de publicacion</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Fecha de publicacion</strong></label>
                                             <div class="col-md-6">
                                                 <input disabled v-model="estudiante.FechaPubicacion" type="date" class="form-control"
                                                        id="FechaPubicacion" placeholder="Inicio de publicacion">
@@ -276,7 +276,7 @@
                                             </div>
                                         </div>
 
-                                         <div class="row">
+                                         <!--<div class="row">
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha Fin de publicacion</strong></label>
                                             <div class="col-md-6">
@@ -285,7 +285,7 @@
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPublicacionFin	">{{ errores.FechaPublicacionFin	[0] }}</span>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                        
 
@@ -314,7 +314,7 @@
                                         
 
 
-                                         <div class="row">
+                                        <!-- <div class="row">
                                             <label for="CODUSUARIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Correo envio de curriculum</strong></label>
                                             <div class="col-md-6">
@@ -342,7 +342,7 @@
 
                                             </div>
 
-                                        </div>
+                                        </div>-->
 
                                         
                                          
@@ -392,7 +392,7 @@
                 hide-default-footer
                 class="elevation-1"
                 loading
-                loading-text="Aun no hay postulaciones"
+                loading-text="Aun no hay ofertas inactivas"
                 no-results-text="No se encontraron resultados"
             >
                 <template v-slot:item.actions="{ item }">
@@ -445,7 +445,7 @@ export default {
                 {text: 'Descripcion', value: 'DescripcionOferta'},
                 {text: 'Estado', value: 'Estado'},
                 {text: 'Fecha Publicacion', value: 'FechaPubicacion'},
-                {text: 'Opciones', value: 'actions'},
+                {text: 'Detalles', value: 'actions'},
                 
                
             ],

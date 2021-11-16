@@ -44,7 +44,12 @@ class ControllerPostulacionA extends Controller
         ->where('postulacion.CODUSUARIO' ,'=',Auth::id())->get();
         
 
-        return new PostulacionCollection($postulaciones);
+        //return new PostulacionCollection($postulaciones);
+
+        $todo =new PostulacionCollection($postulaciones->unique('IdOferta'));
+
+        return  $todo;
+
 
     }
 

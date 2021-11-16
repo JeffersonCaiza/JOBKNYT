@@ -101,3 +101,4 @@ Route::get('Postulaciones_Inactivas', [App\Http\Controllers\HomeController::clas
 
 Route::get('lista_postulacionesi', [App\Http\Controllers\ControllerPostulacionA::class, 'show'])->middleware('auth');
 
+//Route::get('hojas', [App\Http\Controllers\ControllerHojas::class, 'show'])->name('hoja')->middleware('auth');
