@@ -23,6 +23,7 @@ class Oferta extends JsonResource
 
         return [
             
+            'IdOferta'=> $this->IdOferta,
             'NombreEmpresa'=> $this->NombreEmpresa,
             'TituloOferta'=> $this->TituloOferta,
             'DescripcionOferta'=> $this->DescripcionOferta,

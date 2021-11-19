@@ -364,7 +364,7 @@ export default {
       this.modal = 1;
       if (this.update) {
         (this.id = data.IdOferta),
-          (this.titleModal = "Edita o elimina la oferta laboral");
+        (this.titleModal = "Elimina la oferta laboral");
         this.estudiante.NombreEmpresa = data.NombreEmpresa;
         this.estudiante.TituloOferta = data.TituloOferta;
         this.estudiante.DescripcionOferta = data.DescripcionOferta;

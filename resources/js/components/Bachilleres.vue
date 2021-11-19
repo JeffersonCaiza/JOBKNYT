@@ -495,6 +495,7 @@
                                             v-for="hojavida in vida"
                                             :value="hojavida.IDHOJA"
                                             :key="hojavida.IDHOJA"
+                                            :selected="vida==hojavida.IDHOJA"
                                            
                                              
                                            
@@ -715,6 +716,7 @@ export default {
                 CODUSUARIO:'',
                 Estado:'',
                 
+                
                
                 },
             id: 0,
@@ -732,6 +734,8 @@ export default {
 
 
                estudiante1: {
+                   //IDHOJA:'',
+                   //IdOferta:''
                    
             },
 
@@ -741,7 +745,10 @@ export default {
             show1: false,
             update1: true,
             ofertasos:[],
-            vida:[],
+            vida:[
+               
+                
+            ],
             success: false,
            
         }
@@ -846,6 +853,8 @@ export default {
                 this.estudiante.Beneficios = data.Beneficios;
                 this.estudiante.Cualidades = data.Cualidades;
                 this.estudiante.Estado = data.Estado;
+
+              
                 
             } else {
                 this.titleModal = "Crear Estudiante";
@@ -862,6 +871,7 @@ export default {
         openModal1(data = {}) {
             //this.show1 = true;
             //this.modal1 = 1;
+            
             if (this.update1) {
                 this.id = data.IdOferta,
                 this.titleModal = "Detalles de la oferta";
@@ -878,16 +888,18 @@ export default {
                 this.estudiante.Beneficios = data.Beneficios;
                 this.estudiante.Cualidades = data.Cualidades;
                 this.estudiante.Estado = data.Estado;
+                this.estudiantes.IdOferta=data.IdOferta;
                 
             } else {
                  this.show1 = true;
                  this.modal1 = 1;
-                 this.idh = data.IDHOJA
+                
+              
                
                
-               
+                
                 this.titleModal1 = "Postulacion";
-                this.estudiante1.IdOferta = '';
+                this.estudiante1.IdOferta = ''
                 this.estudiante1.IDHOJA = '';
                
             }
