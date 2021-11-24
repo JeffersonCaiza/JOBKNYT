@@ -760,7 +760,7 @@ export default {
     mounted() {
         this.list();
 
-        //this.hojitas();
+        this.hojitas();
 
         axios.get('lista_noveleses').then((response) => {
             this.usuarios = response.data;
@@ -771,11 +771,11 @@ export default {
             this.ofertasos = response.data;
         })
 
-        axios.get('hojas').then((response) => {
-            this.vida = response.data;
-        })
-
         //axios.get('hojas').then((response) => {
+        //    this.vida = response.data;
+        //})
+
+        ////axios.get('hojas').then((response) => {
           //  this.vida = response.data;
             //this.vida=this.vidas.vida
         //})
@@ -914,7 +914,7 @@ export default {
                 
                 this.titleModal1 = "Postulacion";
                 this.estudiante1.IdOferta = data.IdOferta;
-                this.estudiante1.IDHOJA = data.IDHOJA;
+                this.estudiante1.IDHOJA = data.IDHOJA
                
             }
         },
