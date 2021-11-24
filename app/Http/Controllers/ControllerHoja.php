@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Requests\HojaRequest;
 use App\Models\Hoja;
 use App\Http\Resources\Hoja as HojaResource;
-//use App\Http\Resources\OfertaCollection;
+use App\Http\Resources\HojaCollection;
 
 
 
@@ -36,11 +36,11 @@ class ControllerHoja extends Controller
     public function show()
     {
         $hoja = DB::table('hojavida')->where('CODUSUARIO', '=', Auth::id() )->get();
-        return $hoja;
+        //return $hoja;
         
         
         //return Hoja::all();
-        //return new OfertaCollection(Oferta::paginate(25));
+        return new HojaCollection($hoja);
 
         
         //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', Auth::id() )->get();

@@ -458,6 +458,7 @@
 
 
                                                 <select 
+                                                disabled
                                                 class="form-control"
                                                 name="IdOferta" id="IdOferta"
                                                 v-model="estudiante1.IdOferta"
@@ -484,6 +485,7 @@
 
 
                                                 <select 
+                                              
                                                 class="form-control"
                                                 name="IDHOJA" id="IDHOJA"
                                                 v-model ="estudiante1.IDHOJA"
@@ -494,7 +496,7 @@
                                             <option 
                                             v-for="hojavida in vida"
                                             :value="hojavida.IDHOJA"
-                                            :key="hojavida.IDHOJA"
+                                          
                                             :selected="vida==hojavida.IDHOJA"
                                            
                                              
@@ -758,6 +760,8 @@ export default {
     mounted() {
         this.list();
 
+        //this.hojitas();
+
         axios.get('lista_noveleses').then((response) => {
             this.usuarios = response.data;
         })
@@ -767,14 +771,14 @@ export default {
             this.ofertasos = response.data;
         })
 
-       // axios.get('hojas').then((response) => {
-          //  this.vida = response.data;
-        //})
-
         axios.get('hojas').then((response) => {
             this.vida = response.data;
-            //this.vida=this.vidas.vida
         })
+
+        //axios.get('hojas').then((response) => {
+          //  this.vida = response.data;
+            //this.vida=this.vidas.vida
+        //})
     },
     methods: {
         list() {
@@ -787,6 +791,16 @@ export default {
 
 
         },
+
+        hojitas(){axios.get('hojas').then(res => {
+            this.esta = res.data;
+            this.vida = this.esta.data;
+            //this.vida=this.vidas.vida
+        })},
+
+
+
+
         async save() {
             try {
                 if (this.update) {
@@ -899,8 +913,8 @@ export default {
                
                 
                 this.titleModal1 = "Postulacion";
-                this.estudiante1.IdOferta = ''
-                this.estudiante1.IDHOJA = '';
+                this.estudiante1.IdOferta = data.IdOferta;
+                this.estudiante1.IDHOJA = data.IDHOJA;
                
             }
         },
