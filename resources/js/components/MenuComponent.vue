@@ -223,7 +223,7 @@ export default {
 
 .btnMenu {
     display: -webkit-box;
-    background: #456a70;
+    background:  steelblue;
     width: 104%;
     border-radius: 11px;
 }
@@ -236,12 +236,13 @@ export default {
 
 button, html [type=button] {
     -webkit-appearance: button;
-    background: #456a70;
+    background:   steelblue;
+  
 }
 
 .v-expansion-panel-content {
 
-    background: #456a70;
+    background:   steelblue;
 }
 
 

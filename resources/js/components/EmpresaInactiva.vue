@@ -265,7 +265,7 @@
 
 
 
-                                        <div class="row">
+                                       <!-- <div class="row">
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha de publicacion</strong></label>
                                             <div class="col-md-6">
@@ -274,7 +274,7 @@
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPubicacion">{{ errores.FechaPubicacion[0] }}</span>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                          <!--<div class="row">
                                             <label for="FechaPubicacion"
@@ -290,7 +290,7 @@
                                        
 
                                         
-                                       <div class="row">
+                                      <!-- <div class="row">
                                             <label for="Estado"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Estado de oferta</strong></label>
                                             <div class="col-md-6">
@@ -300,6 +300,21 @@
                                                        <span class="text-danger"
                                                       v-if="errores.Estado">{{ errores.Estado[0] }}</span>
                                                
+                                            </div>
+                                        </div>-->
+
+                                        <div class="row">
+                                            <label for="Estado"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Estado de oferta</strong></label>
+                                            <div class="col-md-6">
+                                                <select v-model="estudiante.Estado">
+                                                <option disabled value="">Seleccione el estado de su oferta</option>
+                                                <option>Activa</option>
+                                                <option>Inactiva</option>
+                                             
+                                                </select>
+                                                       <span class="text-danger"
+                                                      v-if="errores.Estado">{{ errores.Estado[0] }}</span>
                                             </div>
                                         </div>
 
@@ -358,10 +373,10 @@
                                             data-bs-dismiss="modal">
                                         Cerrar
                                     </button>
-                                    <!--<button @click="save();" type="button" class="btn btn-success btn-blue"
+                                    <button @click="save();" type="button" class="btn btn-success btn-blue"
                                             data-bs-dismiss="modal">
                                         Guardar
-                                    </button>-->
+                                    </button>
 
                                     
 
@@ -444,7 +459,7 @@ export default {
                 {text: 'Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion', value: 'DescripcionOferta'},
                 {text: 'Estado', value: 'Estado'},
-                {text: 'Fecha Publicacion', value: 'FechaPubicacion'},
+                //{text: 'Fecha Publicacion', value: 'FechaPubicacion'},
                 {text: 'Detalles', value: 'actions'},
                 
                
@@ -723,7 +738,7 @@ export default {
 
 .modal-content{
     width: 190%;
-    background: darkred;
+    background: steelblue;
     margin-left: -200px;
 }
 
@@ -755,7 +770,7 @@ export default {
 
 select {
   word-wrap: normal;
-  background: crimson;
+  background: #136fbb;
   border-radius: 6px;
   -webkit-appearance: revert;
 }

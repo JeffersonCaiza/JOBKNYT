@@ -746,11 +746,13 @@ export default {
                 FUNCIONA:'',
                 AREAA:'',
                 FECHAA:'',
+                FECHAAA:'',
                 TELEFONOA:'',
                 EMPRESAB:'',
                 FUNCIONB:'',
                 AREAB:'',
                 FECHAB:'',
+                FECHABB:'',
                 TELEFONOB:'',
                 NOMBREA:'',
                 TELEFONORA:'',
@@ -871,11 +873,13 @@ export default {
                 this.estudiante.FUNCIONA = data.FUNCIONA;
                 this.estudiante.AREAA = data.AREAA;
                 this.estudiante.FECHAA = data.FECHAA;
+                this.estudiante.FECHAAA = data.FECHAAA;
                 this.estudiante.TELEFONOA = data.TELEFONOA;
                 this.estudiante.EMPRESAB = data.EMPRESAB;
                 this.estudiante.FUNCIONB = data.FUNCIONB;
                 this.estudiante.AREAB = data.AREAB;
                 this.estudiante.FECHAB = data.FECHAB;
+                this.estudiante.FECHABB = data.FECHABB;
                 this.estudiante.TELEFONOB = data.TELEFONOB;
                 this.estudiante.NOMBREA = data.NOMBREA;
                 this.estudiante.TELEFONORA = data.TELEFONORA;
@@ -1060,7 +1064,7 @@ export default {
 
 .modal-content{
     width: 230%;
-    background: darkred;
+    background: steelblue;
     margin-left: -310px;
 }
 
@@ -1094,7 +1098,7 @@ export default {
 
 select {
   word-wrap: normal;
-  background: crimson;
+  background: #136fbb;
   border-radius: 6px;
   -webkit-appearance: revert;
 }

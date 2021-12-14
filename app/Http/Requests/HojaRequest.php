@@ -57,7 +57,7 @@ class HojaRequest extends FormRequest
             'CEDULA.numeric'=>'Debe ser un numero',
             'CEDULA.digits'=>'Debe tener 10 digitos',
             'EMAIL.required'=>'Campo Obligatorio',
-            'EMAIL.email'=>'El email debe tener @',
+            'EMAIL.email'=>'Ingrese un correo electronico valido',
             'EDAD.required'=>'Campo Obligatorio',
             'EDAD.numeric'=>'Debe ser un numero',
             'EDAD.digits'=>'Debe tener 2 digitos y ser mayor que 16',

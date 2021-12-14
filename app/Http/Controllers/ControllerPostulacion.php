@@ -74,20 +74,20 @@ class ControllerPostulacion extends Controller
 
     public function store(PostulacionRequest $request)
     {
-       // $postulaciones=DB::table('postulacion')
-       // ->join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
-       // ->where('ofertas.IdOferta' ,'=','postulacion.IdOferta')->get();
+       //$postulaciones=DB::table('postulacion')
+        //->join('ofertas','ofertas.IdOferta','=','postulacion.IdOferta')
+        //->where('postulacion.CODUSUARIO ' ,'=',Auth::id())->get();
 
 
 
 
-       // if( $postulaciones===null){
+       //if( $postulaciones===null){
         $Postulacion = new Postulacion;
         $Postulacion->create($request->all());
 
-      //  }else{
-     //       return('aaaaa');
-      //  }
+        //}else{
+          //  return('aaaaa');
+       //}
 
         
         

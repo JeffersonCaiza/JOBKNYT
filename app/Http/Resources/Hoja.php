@@ -6,11 +6,11 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 
 //use App\Models\Oferta;
-//use App\Models\User;
-use App\Models\Hoja;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
-class Postulacion extends JsonResource
+use App\Models\User;
+//use App\Models\Hoja;
+//use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\Auth;
+class Hoja extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -67,7 +67,10 @@ class Postulacion extends JsonResource
             'NOMBREB'=> $this->NOMBREB,
             'TELEFONORB'=> $this->TELEFONORB,
             'OCUPACIONB'=> $this->OCUPACIONB,
-           'CODUSUARIO'=> $this->CODUSUARIO,
+           //'CODUSUARIO'=> $this->CODUSUARIO,
+
+           'CODUSUARIO'=> User::find($this->CODUSUARIO),
+           
             
         ];
     }

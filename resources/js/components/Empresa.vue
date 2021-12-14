@@ -271,7 +271,7 @@
 
 
 
-                                        <div class="row">
+                                        <!--<div class="row">
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha de publicacion</strong></label>
                                             <div class="col-md-6">
@@ -280,7 +280,7 @@
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPubicacion">{{ errores.FechaPubicacion[0] }}</span>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                          <!--<div class="row">
                                             <label for="FechaPubicacion"
@@ -401,7 +401,7 @@
                 hide-default-footer
                 class="elevation-1"
                 loading
-                loading-text="Cargando... Por favor espere"
+                loading-text="Aun no hay ofertas creadas"
                 no-results-text="No se encontraron resultados"
             >
                 <template v-slot:item.actions="{ item }">
@@ -588,7 +588,7 @@ export default {
                 this.estudiante.Requisitos = '';
                 this.estudiante.Beneficios = '';
                 this.estudiante.Cualidades = '';
-                 this.estudiante.Estado = '';
+                this.estudiante.Estado = '';
                 
             }
         },
@@ -731,7 +731,7 @@ export default {
 
 .modal-content{
     width: 190%;
-    background: darkred;
+    background: steelblue;
     margin-left: -200px;
 }
 
@@ -763,7 +763,7 @@ export default {
 
 select {
   word-wrap: normal;
-  background: crimson;
+  background: #136fbb;
   border-radius: 6px;
   -webkit-appearance: revert;
 }

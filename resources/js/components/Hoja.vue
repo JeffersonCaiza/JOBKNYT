@@ -5,6 +5,8 @@
         <h1 class="text-center"><strong>Hoja de Vida</strong></h1>
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
+                
+                
                  <v-btn @click="update=false; openModal();" class="btn-blue">
                     <v-icon
                         small
@@ -14,6 +16,9 @@
                     </v-icon>
                     Crea tu hoja de vida
                 </v-btn>
+               
+
+                
                 
                 
             </div>
@@ -154,7 +159,7 @@
                                             <label for="EDAD"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Edad</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.EDAD" type="number" class="form-control"
+                                                <input v-model="estudiante.EDAD" type="text" class="form-control"
                                                        id="EDAD"
                                                        placeholder="Edad">
                                                        <span class="text-danger"
@@ -172,7 +177,7 @@
                                             <label for="CEDULA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Cedula</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.CEDULA" type="number" class="form-control"
+                                                <input v-model="estudiante.CEDULA" type="text" class="form-control"
                                                        id="CEDULA" placeholder="Cedula">
                                                        <span class="text-danger"
                                                       v-if="errores.CEDULA">{{ errores.CEDULA[0] }}</span>
@@ -194,26 +199,29 @@
 
                                         <div class="row">
                                             <label for="TELEFONOS"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Telefonos</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONOS" type="number" class="form-control"
+                                                <input v-model="estudiante.TELEFONOS" type="text" class="form-control"
                                                        id="	TELEFONOS" placeholder="Telefonos">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOS">{{ errores.TELEFONOS[0] }}</span>
                                             </div>
                                         </div>
 
+                                       
+
                                          <div class="row">
-                                            <label for="EMAIL"
+                                            <label for="CODUSUARIO"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Email</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.EMAIL" type="text" class="form-control"
-                                                       id="EMAIL" placeholder="Email">
-                                                       <span class="text-danger"
+                                                <input  v-model="estudiante.EMAIL" type="text" class="form-control"
+                                                       id="CODUSUARIO" placeholder="Email">   
+                                                         <span class="text-danger"
                                                       v-if="errores.EMAIL">{{ errores.EMAIL[0] }}</span>
                                             </div>
                                         </div>
                                         <br>
+
                                         <h1 align="left"><strong>Formacion Academica</strong></h1>
                                         <br>
 
@@ -429,7 +437,7 @@
                                             <label for="TELEFONOA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONOA" type="number" class="form-control"
+                                                <input v-model="estudiante.TELEFONOA" type="text" class="form-control"
                                                        id="	TELEFONOA" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOA">{{ errores.TELEFONOA[0] }}</span>
@@ -503,7 +511,7 @@
                                             <label for="TELEFONOB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONOB" type="number" class="form-control"
+                                                <input v-model="estudiante.TELEFONOB" type="text" class="form-control"
                                                        id="	TELEFONOB" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONOB">{{ errores.TELEFONOB[0] }}</span>
@@ -540,7 +548,7 @@
                                             <label for="TELEFONORA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONORA" type="number" class="form-control"
+                                                <input v-model="estudiante.TELEFONORA" type="text" class="form-control"
                                                        id="	TELEFONORA" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORA">{{ errores.TELEFONORA[0] }}</span>
@@ -584,7 +592,7 @@
                                             <label for="TELEFONORB"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Celular</strong></label>
                                             <div class="col-md-6">
-                                                <input v-model="estudiante.TELEFONORB" type="number" class="form-control"
+                                                <input v-model="estudiante.TELEFONORB" type="text" class="form-control"
                                                        id="	TELEFONORB" placeholder="Celular">
                                                        <span class="text-danger"
                                                       v-if="errores.TELEFONORB">{{ errores.TELEFONORB[0] }}</span>
@@ -734,10 +742,10 @@ export default {
             codBanco: '',
             success: false,
             headers: [
-                //{text: 'Codigo Oferta', value:'IdOferta.IdOferta'},
+                //{text: 'Codigo Oferta', value:'CODUSUARIO.email'},
                 {text: 'Nombres', value: 'NOMBRESC'},
                 {text: 'Direccion', value:'DOMICILIO'},
-                {text: 'Email', value:'EMAIL'},
+                //{text: 'Email', value:'EMAIL'},
                 //{text: 'Postulante', value: 'NOMBRES'},
                 {text: 'Detalles', value: 'actions'},
   
@@ -764,11 +772,13 @@ export default {
                 FUNCIONA:'',
                 AREAA:'',
                 FECHAA:'',
+                FECHAAA:'',
                 TELEFONOA:'',
                 EMPRESAB:'',
                 FUNCIONB:'',
                 AREAB:'',
                 FECHAB:'',
+                FECHABB:'',
                 TELEFONOB:'',
                 NOMBREA:'',
                 TELEFONORA:'',
@@ -776,8 +786,7 @@ export default {
                 NOMBREB:'',
                 TELEFONORB:'',
                 OCUPACIONB:'',
-                //IdOferta:'',
-                //CODUSUARIO:'',
+                CODUSUARIO:'',
                 
                 
                 
@@ -795,6 +804,7 @@ export default {
             ofertasos: [],
             borrar: true,
             lista_noveles:[],
+            
            
         }
 
@@ -822,12 +832,24 @@ export default {
                // this.perPage = this.est.meta.per_page;
             //});
 
-            async list() {
+            //async list() {
 
-       const res = await axios.get("/hoja");
-            this.estudiantes = res.data;
+     //  const res = await axios.get("/hoja");
+     //       this.estudiantes = res.data;
           
+    //},
+
+    list() {
+            axios.get(`hoja`).then(res => {
+                this.est = res.data;
+               this.estudiantes = this.est.data;
+          //      this.totalPages = this.est.meta.last_page;
+          //      this.perPage = this.est.meta.per_page;
+            });
+
     },
+
+
 
     
 
@@ -840,7 +862,10 @@ export default {
                     this.closeModal();
                 } else {
                     const res = await axios.post('hojavida', this.estudiante);
+
                     this.success = true;
+                    
+                   
                 }
                 //this.closeModal();
                 this.list();
@@ -872,7 +897,7 @@ export default {
                 this.titleModal = "EDITAR HOJA DE VIDA";
                 
                 //this.estudiante.IdOferta = data.IdOferta;
-                //this.estudiante.CODUSUARIO = data.CODUSUARIO;
+             
                 this.estudiante.NOMBRESC = data.NOMBRESC;
                 this.estudiante.CEDULA = data.CEDULA;
                 this.estudiante.EMAIL = data.EMAIL;
@@ -891,11 +916,13 @@ export default {
                 this.estudiante.FUNCIONA = data.FUNCIONA;
                 this.estudiante.AREAA = data.AREAA;
                 this.estudiante.FECHAA = data.FECHAA;
+                this.estudiante.FECHAAA = data.FECHAAA;
                 this.estudiante.TELEFONOA = data.TELEFONOA;
                 this.estudiante.EMPRESAB = data.EMPRESAB;
                 this.estudiante.FUNCIONB = data.FUNCIONB;
                 this.estudiante.AREAB = data.AREAB;
                 this.estudiante.FECHAB = data.FECHAB;
+                this.estudiante.FECHABB = data.FECHABB;
                 this.estudiante.TELEFONOB = data.TELEFONOB;
                 this.estudiante.NOMBREA = data.NOMBREA;
                 this.estudiante.TELEFONORA = data.TELEFONORA;
@@ -903,6 +930,7 @@ export default {
                 this.estudiante.NOMBREB = data.NOMBREB;
                 this.estudiante.TELEFONORB = data.TELEFONORB;
                 this.estudiante.OCUPACIONB = data.OCUPACIONB;
+                this.estudiante.CODUSUARIO = data.CODUSUARIO;
               
 
 
@@ -945,6 +973,8 @@ export default {
                 this.estudiante.NOMBREB = '';
                 this.estudiante.TELEFONORB = '';
                 this.estudiante.OCUPACIONB = '';
+                
+        ;
 
                 
                 
@@ -1079,7 +1109,7 @@ export default {
 
 .modal-content{
     width: 230%;
-    background: darkred;
+    background: steelblue;
     margin-left: -310px;
 }
 
@@ -1113,7 +1143,7 @@ export default {
 
 select {
   word-wrap: normal;
-  background: crimson;
+  background: #136fbb;
   border-radius: 6px;
   -webkit-appearance: revert;
 }

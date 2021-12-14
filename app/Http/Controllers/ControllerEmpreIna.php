@@ -54,7 +54,7 @@ class ControllerEmpreIna extends Controller
 
         //return new PostulacionCollection($postulaciones);
 
-        $todo =new PostulacionCollection($postulaciones->unique('IDHOJA'));
+        $todo =new PostulacionCollection($postulaciones->unique('postulacion.IDHOJA'));
 
         return  $todo;
 

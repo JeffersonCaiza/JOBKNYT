@@ -175,9 +175,11 @@
 
                                 <div class="row mb-0">
                                     <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary form-control">
+                                        <button type="submit"  class="btn btn-primary form-control">
                                             Registrar Usuario
                                         </button>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -194,8 +196,14 @@
                          type="success"
                          class="alert"
                          transition="scale-transition"
+                       
+                         
                 >
                     Usuario registrado con exito
+
+                     
+
+
                 </v-alert>
             </div>
         </div>
@@ -229,6 +237,8 @@ export default {
                     this.fields = {}; //Clear input fields.
                     this.loaded = true;
                     this.success = true;
+                
+
                 }).catch(error => {
                     this.loaded = true;
                     if (error.response.status === 422) {

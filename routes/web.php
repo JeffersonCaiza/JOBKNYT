@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Route::get('Registrar_Novel',function(){return view('auth.register');});
 Route::get('Registrar_Empresa',function(){return view('auth.register');});
 

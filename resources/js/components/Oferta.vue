@@ -482,7 +482,7 @@ export default {
 
 .modal-content{
     width: 190%;
-    background: darkred;
+    background: steelblue;
     margin-left: -200px;
 }
 

@@ -224,14 +224,14 @@ export default {
 }
 
 .card{
-    background: darkred;
+    background: steelblue;
     width: 796px;
     margin-left: -110px;
 }
 
 select {
   word-wrap: normal;
-  background: crimson;
+  background: #136fbb;
   border-radius: 6px;
   -webkit-appearance: revert;
 }

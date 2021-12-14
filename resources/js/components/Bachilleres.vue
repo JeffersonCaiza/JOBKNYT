@@ -207,6 +207,7 @@
                                                       clear-icon="mdi-close-circle"
                                                       label="Descripcion"
                                                       value="This is clearable text."
+                                                      
                                                      ></v-textarea>
                                                     </div>
                                                     
@@ -229,6 +230,7 @@
                                                       clear-icon="mdi-close-circle"
                                                       label="Requisitos"
                                                       value="This is clearable text."
+                                                      color="black"
                                                      ></v-textarea>
                                                     </div>
                                                     
@@ -253,6 +255,8 @@
                                                       clear-icon="mdi-close-circle"
                                                       label="Beneficios"
                                                       value="This is clearable text."
+                                                      color="black"
+                                                      
                                                      ></v-textarea>
                                                     </div>
                                                     
@@ -276,6 +280,7 @@
                                                       clear-icon="mdi-close-circle"
                                                       label="Cualidades"
                                                       value="This is clearable text."
+                                                      color="black"
                                                      ></v-textarea>
                                                     </div>
                                                     
@@ -293,7 +298,7 @@
 
 
 
-                                        <div class="row">
+                                       <!-- <div class="row">
                                             <label for="FechaPubicacion"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Fecha de publicacion</strong></label>
                                             <div class="col-md-6">
@@ -302,7 +307,7 @@
                                                        <span class="text-danger"
                                                       v-if="errores.FechaPubicacion">{{ errores.FechaPubicacion[0] }}</span>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                         <!-- <div class="row">
                                             <label for="FechaPubicacion"
@@ -497,7 +502,7 @@
                                             v-for="hojavida in vida"
                                             :value="hojavida.IDHOJA"
                                           
-                                            :selected="vida==hojavida.IDHOJA"
+                                         
                                            
                                              
                                            
@@ -736,8 +741,7 @@ export default {
 
 
                estudiante1: {
-                   //IDHOJA:'',
-                   //IdOferta:''
+                   
                    
             },
 
@@ -749,6 +753,7 @@ export default {
             ofertasos:[],
             vida:[
                
+            
                 
             ],
             success: false,
@@ -760,7 +765,7 @@ export default {
     mounted() {
         this.list();
 
-        this.hojitas();
+        //this.hojitas();
 
         axios.get('lista_noveleses').then((response) => {
             this.usuarios = response.data;
@@ -771,11 +776,11 @@ export default {
             this.ofertasos = response.data;
         })
 
-        //axios.get('hojas').then((response) => {
-        //    this.vida = response.data;
-        //})
+        axios.get('hojas').then((response) => {
+            this.vida = response.data;
+        })
 
-        ////axios.get('hojas').then((response) => {
+        //axios.get('hoja').then((response) => {
           //  this.vida = response.data;
             //this.vida=this.vidas.vida
         //})
@@ -792,11 +797,11 @@ export default {
 
         },
 
-        hojitas(){axios.get('hojas').then(res => {
-            this.esta = res.data;
-            this.vida = this.esta.data;
-            //this.vida=this.vidas.vida
-        })},
+       // hojitas(){axios.get('hojas').then(res => {
+         //   this.esta = res.data;
+           // this.vida = this.esta.data;
+           
+        //})},
 
 
 
@@ -903,6 +908,8 @@ export default {
                 this.estudiante.Cualidades = data.Cualidades;
                 this.estudiante.Estado = data.Estado;
                 this.estudiantes.IdOferta=data.IdOferta;
+
+                
                 
             } else {
                  this.show1 = true;
@@ -914,7 +921,7 @@ export default {
                 
                 this.titleModal1 = "Postulacion";
                 this.estudiante1.IdOferta = data.IdOferta;
-                this.estudiante1.IDHOJA = data.IDHOJA
+                this.estudiante1.IDHOJA = data.IDHOJA;
                
             }
         },
@@ -1135,7 +1142,7 @@ export default {
 
 .modal-content{
     width: 182%;
-    background: darkred;
+    background: steelblue;
     margin-left: -200px;
 }
 
@@ -1165,12 +1172,16 @@ export default {
 
 .descripcion {
     
-    background: white;
-     border-radius: 11px;
-     width: 569px;
+    background: #45d5b4;
+    border-radius: 11px;
+    width: 569px;
     height: 168px;
    
 }
+
+
+
+
 
 a {
     border-radius: 6px;
@@ -1179,7 +1190,7 @@ a {
 
 select {
   word-wrap: normal;
-  background: crimson;
+  background: #136fbb;
   border-radius: 6px;
   -webkit-appearance: revert;
 }
@@ -1193,4 +1204,8 @@ select {
     background-color:#00455E;
     color: rgb(0 0 6 / 104%);
 }
+
+
+
+
 </style>

@@ -256,7 +256,7 @@
                          class="alert"
                          transition="scale-transition"
                 >
-                    Usuario registrado con exito
+                    Usuario registrado con exito 
                 </v-alert>
             </div>
                 </div>
@@ -303,6 +303,8 @@ export default {
                     this.fields = {}; //Clear input fields.
                     this.loaded = true;
                     this.success = true;
+                    window.location.href = '/login'
+                   
                 }).catch(error => {
                     this.loaded = true;
                     if (error.response.status === 422) {
@@ -334,7 +336,7 @@ export default {
 }
 
 .card{
-    background: darkred;
+    background: steelblue;
 }
 
 .boton{

@@ -20,8 +20,11 @@ class ControllerHoja extends Controller
 {
     public function index()
     {
-        $hoja = DB::table('hojavida')->where('CODUSUARIO', '=', Auth::id() )->get();
-        return $hoja;
+        //$hoja = DB::table('hojavida')->where('CODUSUARIO', '=', Auth::id() )->get();
+        //return $hoja;
+
+        $hoja = Hoja::where('CODUSUARIO', '=', Auth::id() )->get();
+        return new HojaCollection($hoja);
 
 
         //return new OfertaCollection(Oferta::paginate(25));
@@ -35,12 +38,12 @@ class ControllerHoja extends Controller
 
     public function show()
     {
-        //$hoja = DB::table('hojavida')->where('CODUSUARIO', '=', Auth::id() )->get();
-        //return $hoja;
-        $hoja = Hoja::where('CODUSUARIO', '=', Auth::id() )->get();
+        $hoja = DB::table('hojavida')->where('CODUSUARIO', '=', Auth::id() )->get();
+        return $hoja;
+        //$hoja = Hoja::where('CODUSUARIO', '=', Auth::id() )->get();
         
         //return Hoja::all();
-        return new HojaCollection($hoja);
+        //return new HojaCollection($hoja);
 
         
         //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', Auth::id() )->get();

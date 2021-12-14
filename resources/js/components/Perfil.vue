@@ -12,7 +12,7 @@
                                     <label
                                         for="NOMBRE"
                                         class="col-md-4 col-form-label text-md-right"
-                                        ><strong>Nombre Estudiante</strong></label
+                                        ><strong>Nombre</strong></label
                                     >
 
                                     <div class="col-md-6">
@@ -333,7 +333,7 @@ export default {
 
 .card {
     
-    background: #00455E;
+    background: steelblue;
    
     border-radius: 33px;
 }

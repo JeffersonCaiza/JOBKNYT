@@ -40,6 +40,10 @@ class RegisterController extends Controller
             'CODROL' => 2,
             'password' => Hash::make($request['password']),
         ]);
+
+        
+       
+
     }
 
     public function index()
